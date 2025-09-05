@@ -1,7 +1,6 @@
 # BSc Project Python Script 
 <img src="umlogo_full_red.png" width="200">
 
----
 
 ## Description
 
@@ -12,9 +11,8 @@ The codebase was used for both data analysis and visualisation.
 
 Development and execution were carried out in **PyCharm 2024.3.3** with **Python 3.12**.
 
----
 
-## Repository structure
+## Structure
 
 At the top level, the project includes three directories and two standalone scripts:
 
