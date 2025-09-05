@@ -1,14 +1,37 @@
 # BSc Project Python Script 
 <img src="umlogo_full_red.png" width="200">
 
+---
+
 ## Description
 
-Repository for storing all the Python code implemented in my BSc (Hons.) in Physics, Medical Physics and Radiation Protection project titled "**Setup and operation of a thermoluminescent dosimetry system for patient organ dosimetry**."
-This code was used to both analyse the data and generate plots.
+This repository contains the Python code developed as part of my M.Sc. Medical Physics project:
+**“Environmental dose evaluation following the installation of a SPECT/CT scanner in a major public hospital using Monte Carlo simulation.”**
 
-The code was excuted on **PyCharm 2021.2.2** running **Python 3.9**.
+The codebase was used for both data analysis and visualisation.
 
-## Structure
+Development and execution were carried out in **PyCharm 2024.3.3** with **Python 3.12**.
+
+---
+
+## Repository structure
+
+At the top level, the project includes three directories and two standalone scripts:
+
+* **`data/`**
+  Contains isotope-specific subdirectories (`tc99m/` and `lu177/`) with simulation outputs.
+
+* **`data_analysis/`**
+  Holds the core analysis scripts for different tasks, along with supporting subfolders.
+
+* **`plot_2Dmaps/`**
+  Scripts for extracting and generating 2D visualisations, plus a subdirectory for storing plots.
+
+* **`run_times.py`**
+  Extracts simulation run times and particle counts, calculating the average runtime per simulation (or simulation set).
+
+* **`update_data.py`**
+  Collects relevant outputs (`tab.lis`, `bnn.lis`, and `.out` files) from the FLUKA project directory and organises them under the correct isotope subfolders in `data/`.
 
 There are 6 top folders. The first folder contains the files needed for producing the annealing heat profiles and the other five are related to each stage carried out during the project.
 
