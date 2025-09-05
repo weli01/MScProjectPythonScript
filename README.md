@@ -31,59 +31,55 @@ At the top level, the project includes three directories and two standalone scri
 * **`update_data.py`**
   Collects relevant outputs (`tab.lis`, `bnn.lis`, and `.out` files) from the FLUKA project directory and organises them under the correct isotope subfolders in `data/`.
 
-There are 6 top folders. The first folder contains the files needed for producing the annealing heat profiles and the other five are related to each stage carried out during the project.
-
-In each folder you will find the following:
-- _data_ folder: contains the data produced either by the oven or the TLD reader
-- _results_ folder: contains plots (numerical results are printed out*)
-- _scripts_: the .py files containg the scripts for each individual task
-- _README_: a short description of each stage
-
-*For ease, most results were printed directly in a very raw format. These have been omitted from the final code for conciseness. However, if one wishes to format the output more neatly or save it to a CSV file, they can refer to the example in _data_analysis.py_ of stage 1 (lines 44-57).
-
 ## Packages
-The packages and their versions used for this project are listed below:
+The packages and their versions installed in the used PyCharm environment are listed below:
 ```
-animation==0.0.7
-brokenaxes==0.6.1
-contourpy==1.2.1
-cycler==0.10.0
-et-xmlfile==1.1.0
-fonttools==4.53.0
-importlib-resources==6.4.0
-joblib==1.2.0
-kaleido==0.2.1
-kiwisolver==1.3.2
-matplotlib==3.9.0
-mpmath==1.2.1
-numpy==1.23.0
-opencv-python==4.7.0.72
-openpyxl==3.0.9
-packaging==23.2
-pandas==1.3.3
-patsy==0.5.6
-Pillow==8.3.2
-plotly==5.13.0
-PyAudio==0.2.12
-pychalk==2.0.1
-pydicom==2.2.2
-pyparsing==2.4.7
-python-dateutil==2.8.2
-pytz==2021.3
-researchpy==0.3.6
-scikit-learn==1.1.3
-scipy==1.7.1
-seaborn==0.11.2
-shapely==2.0.1
-six==1.16.0
-sklearn==0.0.post1
-statsmodels==0.14.1
-sympy==1.11.1
-tenacity==8.2.1
-threadpoolctl==3.1.0
-xlrd==2.0.1
-youtube-dl==2021.12.17
-zipp==3.19.2
+choreographer   1.0.9
+contourpy       1.3.1
+cycler          0.12.1
+Deprecated      1.2.18
+et_xmlfile      2.0.0
+fonttools       4.56.0
+imageio         2.37.0
+joblib          1.4.2
+kaleido         1.0.0
+kiwisolver      1.4.8
+lazy_loader     0.4
+logistro        1.1.0
+lxml            6.0.1
+markdown-it-py  3.0.0
+matplotlib      3.10.0
+mdurl           0.1.2
+narwhals        2.1.0
+networkx        3.4.2
+numpy           2.2.3
+opencv-python   4.11.0.86
+openpyxl        3.2.0b1
+orjson          3.11.1
+packaging       24.2
+pandas          2.2.3
+pikepdf         9.10.2
+pillow          11.1.0
+pip             25.2
+plotly          6.2.0
+Pygments        2.19.1
+PyMuPDF         1.26.4
+pyparsing       3.2.1
+python-dateutil 2.9.0.post0
+pytz            2025.1
+PyWavelets      1.8.0
+rich            13.9.4
+scikit-image    0.25.2
+scikit-learn    1.6.1
+scipy           1.15.2
+seaborn         0.13.2
+simplejson      3.20.1
+six             1.17.0
+tabulate        0.9.0
+threadpoolctl   3.6.0
+tifffile        2025.3.13
+tzdata          2025.1
+wrapt           1.17.3
 ```
 
 ## License
