@@ -32,7 +32,7 @@ At the top level, the project includes three directories and two standalone scri
   Collects relevant outputs (`tab.lis`, `bnn.lis`, and `.out` files) from the FLUKA project directory and organises them under the correct isotope subfolders in `data/`.
 
 ## Packages
-The packages and their versions installed in the used PyCharm environment are listed below:
+The packages and their versions installed in the working PyCharm environment are detailed below:
 ```
 choreographer   1.0.9
 contourpy       1.3.1
