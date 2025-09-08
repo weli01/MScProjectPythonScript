@@ -1,0 +1,9 @@
+source_file,detector,csv_path
+run_25_tab.lis,TLD1fluA,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD1fluA.csv
+run_25_tab.lis,TLD1fluP,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD1fluP.csv
+run_25_tab.lis,TLD1fluE,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD1fluE.csv
+run_25_tab.lis,TLD2flu,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD2flu.csv
+run_25_tab.lis,TLD3flu,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD3flu.csv
+run_25_tab.lis,TLD4flu,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD4flu.csv
+run_25_tab.lis,TLD5flu,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD5flu.csv
+run_25_tab.lis,TLD6flu,/Users/weli/Documents/pyCharm/MPH5008/data_analysis/energy_spectra/datasets/tc99m/pre_study/run_25_tab__TLD6flu.csv

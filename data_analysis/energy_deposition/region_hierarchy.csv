@@ -1,0 +1,74 @@
+Region,Level1,Level2,Level3
+BLKBODY,Facility,Extra,
+AIRt,Facility,Extra,
+AIRr,Facility,Extra,
+AIRb,Facility,Extra,
+EXTa,Facility,Extra,
+W1A,Facility,Walls,Wall 1
+W1G,Facility,Walls,Wall 1
+W1L,Facility,Walls,Wall 1
+W1P,Facility,Walls,Wall 1
+W2A,Facility,Walls,Wall 2
+W2G,Facility,Walls,Wall 2
+W2L,Facility,Walls,Wall 2
+W2P,Facility,Walls,Wall 2
+W3A,Facility,Walls,Wall 3
+W3G,Facility,Walls,Wall 3
+W3L,Facility,Walls,Wall 3
+W3P,Facility,Walls,Wall 3
+W4A,Facility,Walls,Wall 4
+W4G,Facility,Walls,Wall 4
+W4L,Facility,Walls,Wall 4
+W4P,Facility,Walls,Wall 4
+WEG,Facility,Walls,na
+FLOOR,Facility,Extra,na
+CEILING,Facility,Extra,na
+PILLC,Facility,Extra,na
+PILL_P,Facility,Extra,na
+D1L,Facility,Doors,Door 1
+D1P,Facility,Doors,Door 1
+D1J,Facility,Doors,Door 1
+D2L,Facility,Doors,Door 2
+D2P,Facility,Doors,Door 2
+D2J,Facility,Doors,Door 2
+WINDOW,Facility,Window,na
+WINDL,Facility,Window,na
+WINDJ,Facility,Window,na
+PHANTOM,Phantom,Phantom,
+WATER,Phantom,Water,
+TLDA1,TLDs,,
+TLDA2,TLDs,,
+TLDB1,TLDs,,
+TLDB2,TLDs,,
+TLDC1,TLDs,,
+TLDC2,TLDs,,
+TLDD,TLDs,,
+TLDE1,TLDs,,
+TLDE2,TLDs,,
+TLDE3,TLDs,,
+TLDE4,TLDs,,
+PCTT,Scanner,Patient Couch,
+PCTTf,Scanner,Patient Couch,
+PCSUPP,Scanner,Patient Couch,
+PCTBL,Scanner,Patient Couch,
+PCCOV,Scanner,Patient Couch,
+COLL,Scanner,SPECT,
+ALCV,Scanner,SPECT,
+FOAM,Scanner,SPECT,
+CRYS,Scanner,SPECT,
+LTGD,Scanner,SPECT,
+OPTI,Scanner,SPECT,
+PMTS,Scanner,SPECT,
+ELEC,Scanner,SPECT,
+VACU,Scanner,SPECT,
+PBCS,Scanner,SPECT,
+ALCS,Scanner,SPECT,
+XRT,Scanner,CT,
+HEX,Scanner,CT,
+EBD,Scanner,CT,
+HVG,Scanner,CT,
+DTS,Scanner,CT,
+SUPPORTS,Scanner,Extra,
+COVER,Scanner,Extra,
+COVERG,Scanner,Extra,
+COVERA,Scanner,Extra,

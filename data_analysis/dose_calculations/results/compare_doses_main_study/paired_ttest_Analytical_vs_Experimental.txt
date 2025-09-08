@@ -1,0 +1,11 @@
+t-Test: Paired Two Sample for Means — Analytical vs Experimental
+
+Observations (n)       : 11
+Mean(Analytical)     : 216.721
+Mean(Experimental)    : 154.273
+Variance(Analytical) : 114546
+Variance(Experimental): 84785
+Pearson correlation    : 0.978123
+
+t statistic            : 2.5599
+Two-sided p-value      : 0.0283779

@@ -1,0 +1,11 @@
+t-Test: Paired Two Sample for Means — Simulation vs Experimental
+
+Observations (n)       : 6
+Mean(Simulation)     : 131.427
+Mean(Experimental)    : 130.061
+Variance(Simulation) : 1018.69
+Variance(Experimental): 865.823
+Pearson correlation    : 0.997686
+
+t statistic            : 1.02985
+Two-sided p-value      : 0.350297
