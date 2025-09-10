@@ -1,4 +1,4 @@
-# BSc Project Python Script 
+# MSc Project Python Script 
 <img src="umlogo_full_red.png" width="200">
 
 
