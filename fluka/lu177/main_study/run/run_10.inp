@@ -1,0 +1,3015 @@
+TITLE
+Main Study - Lu-177
+*The defaults for precision simulations
+DEFAULTS                                                              PRECISIO
+*
+*
+******   PRIMARY   ****
+*
+*Beam (source) characteristics
+*  ISOTOPE = Radioisotope source
+BEAM                                                                  ISOTOPE
+*  Lu-177
+HI-PROPE          71       177
+*  Centred within phantom
+BEAMPOS   8.80332841   93.3675-1.8712052
+*  Within water region of phantom
+BEAMPOS           0.      10.8        0.      18.6                    CYLI-VOL
+BEAMAXES          0.        0.        1.        0.        1.        0.
+*
+*
+******   GEOMETRY   *****
+GEOBEGIN                                                              COMBNAME
+    0    0          
+*Black body container
+RPP blkbody    -1400 1300 -600 900 -1450 1100
+*Air container
+RPP air        -900 800 -100 400 -950 600
+*
+*----------   FACILITY   ----------
+*
+*Labels follow the notation (mostly):
+*Char. Idx        Input
+*1                W = Wall; D = Door; P = Pillar
+*2 (or 2-3)       Object number (single or double digit)
+*3-8 (or 4-8)     t = top; b = bottom; c = centre; l = left; r = right; a = anterior; p = posterior;
+*                 e = exterior; i = interior;
+*                 G = Gypsum; L = Lead; P = Plywood; A = Air
+*
+*--- WALLS ---
+*Wall 1
+YZP W1i        383.5
+YZP W1GL       385.9
+YZP W1LP       386.1
+YZP W1PA       387.3
+YZP W1AG       396.6
+YZP W1e        399.0
+*Wall 2
+XYP W2i        -263.5
+XYP W2GL       -265.9
+XYP W2LP       -266.3
+XYP W2PA       -267.5
+XYP W2AG       -276.2
+XYP W2e        -278.6
+YZP W2i1       -184.7
+YZP W2GL1      -187.1
+YZP W2LP1      -187.3
+YZP W2PA1      -188.5
+XYP W2i2       -190.1
+XYP W2GL2      -192.5
+XYP W2LP2      -192.7
+XYP W2PA2      -193.9
+XYP W2le       -302.5
+XYP W2li       -300.1
+XYP W2le1      -312.8
+XYP W2li1      -310.4
+*Wall 3
+PLA W3i        0.999762027079909 0 0.021814885034561 -349.216876059012 0
+              -7.61993934257219
+PLA W3GL       0.999762027079909 0 0.021814885034561 -351.616304924004 0
+              -7.67229506665515
+PLA W3LP       0.999762027079909 0 0.021814885034561 -351.81625732942 0
+              -7.67665804366206
+PLA W3PA       0.999762027079909 0 0.021814885034561 -353.015971761916 0
+              -7.70283590570353
+PLA W3AG       0.999762027079909 0 0.021814885034561 -363.113568235423 0
+              -7.9231662445526
+PLA W3e        0.999762027079909 0 0.021814885034561 -365.512997100415 0
+              -7.97552196863555
+XYP W3li       -263.9
+*Wall 4
+XYP W4i        228.0
+XYP W4GL       230.4
+XYP W4LP       230.6
+XYP W4PA       231.8
+XYP W4AG       240.5
+XYP W4e        242.9
+XYP W4e1       200.6
+XYP W4GL1      203
+XYP W4LP1      203.2
+XYP W4PA1      204.4
+XYP W4re       271.0
+XYP W4ri       268.6
+*Wall 5
+YZP W5te       733.8
+YZP W5ti       731.4
+YZP W5be       718.4
+YZP W5bi       720.8
+*Wall 6
+XYP W6le       -221.3
+XYP W6li       -218.9
+*Wall 7
+XYP W7le       526.1
+XYP W7li       528.5
+XYP W7re       563.6
+XYP W7ri       561.2
+*Wall 8
+YZP W8te       492.8
+YZP W8ti       490.4
+XYP W8re       -477.0
+XYP W8ri       -479.4
+XYP W8le       -492.0
+XYP W8li       -489.6
+*Wall 9
+YZP W9be       -314.3
+YZP W9bi       -311.9
+YZP W9te       -299.5
+YZP W9ti       -301.9
+XYP W9re       -464.5
+XYP W9ri       -466.9
+*Wall 10
+XYP W10re      -844.0
+XYP W10ri      -846.4
+XYP W10le      -889.6
+XYP W10li      -887.2
+*Wall 11
+YZP W11te      -806.0
+YZP W11ri      -808.4
+YZP W11be      -836.0
+YZP W11bi      -833.6
+YZP W12te      -543.0
+*Wall 12
+YZP W12ti      -545.4
+YZP W12be      -558.0
+YZP W12bi      -555.6
+*Wall 13
+XYP W13re      27.0
+XYP W13ri      24.6
+XYP W13le      12.0
+XYP W13li      14.4
+*Wall 14
+YZP W14te      -668.7
+YZP W14ti      -671.1
+YZP W14be      -683.6
+YZP W14bi      -681.2
+*Wall 15
+XYP W15re      -187.5
+XYP W15ri      -189.9
+XYP W15le      -202.6
+XYP W15li      -200.2
+*
+*--- DOORS ---
+XZP Dte        205.4
+XZP Dti        205.6
+*Door 1
+XYP D1re       -131
+XYP D1ri       -130.9
+XYP D1le       -204
+YZP D1Lb       396.8
+*(jamb)
+YZP D1Lt       397
+XYP D1jl1e     -209.0
+XYP D1jl1i     -208.8
+YZP D1jl2e     382.0
+YZP D1jl2i     382.2
+XYP D1jl3e     -203.0
+XYP D1jl3i     -203.2
+YZP D1jl4e     390.8
+YZP D1jl4i     391
+XYP D1jl5e     -200.5
+XYP D1jl5i     -200.7
+YZP D1jl6e     394.8
+YZP D1jl6i     394.6
+YZP D1jl7e     400.5
+YZP D1jl7i     400.3
+XYP D1jr1e     -126.0
+XYP D1jr1i     -126.2
+XYP D1jr3e     -132
+XYP D1jr3i     -131.8
+XYP D1jr5e     -134.5
+XYP D1jr5i     -134.3
+YZP D1jl2l     382.4
+XYP D1jl3l     -203.4
+YZP D1jl4l     391.2
+XYP D1jl5l     -200.9
+YZP D1jl6l     394.4
+YZP D1jl7l     400.1
+XYP D1jr3l     -131.6
+XYP D1jr5l     -134.1
+XZP D1jt1e     210.5
+XZP D1jt1i     210.3
+XZP D1jt3e     204.5
+XZP D1jt3i     204.7
+XZP D1jt5e     202
+XZP D1jt5i     202.2
+XZP D1jt3l     204.9
+XZP D1jt5l     202.4
+*Door 2
+YZP D2te       252.15
+YZP D2gap1     155.15
+YZP D2gap2     155.05
+YZP D2be       109.65
+XYP D2Ll       -265.7
+XYP D2Lr       -265.5
+*(astragral - ast)
+YZP D2astt     158.1
+YZP D2astb     152.1
+XYP D2astf     -262.5
+XYP D2astl1    -262.9
+XYP D2astl2    -263.1
+*(jamb - j)
+YZP D2jl1e     257.15
+YZP D2jl1i     256.95
+XYP D2jl2e     -280.1
+XYP D2jl2i     -279.9
+YZP D2jl3e     251.15
+YZP D2jl3i     251.35
+XYP D2jl4e     -271.7
+XYP D2jl4i     -271.5
+YZP D2jl5e     248.65
+YZP D2jl5i     248.85
+XYP D2jl6e     -267.7
+XYP D2jl6i     -267.9
+XYP D2jl7e     -262.0
+XYP D2jl7i     -262.2
+YZP D2jl1l     256.75
+XYP D2jl2l     -279.7
+YZP D2jl3l     251.55
+XYP D2jl4l     -271.3
+YZP D2jl5l     249.05
+XYP D2jl6l     -268.1
+XYP D2jl7l     -262.4
+YZP D2jr1e     104.65
+YZP D2jr1i     104.85
+YZP D2jr3e     110.65
+YZP D2jr3i     110.45
+YZP D2jr5e     113.15
+YZP D2jr5i     112.95
+YZP D2jr1l     105.05
+YZP D2jr3l     110.25
+YZP D2jr5l     112.75
+XZP D2jt1l     210.1
+XZP D2jt3l     204.3
+XZP D2jt5l     201.8
+*Door 3
+YZP D3te       622.2
+YZP D3ti       624.6
+YZP D3be       533.7
+YZP D3bi       531.3
+*Door 4
+XYP D4re       206.3
+XYP D4ri       208.7
+XYP D4le       138.5
+XYP D4li       136.1
+*Door 5
+YZP D5te       51.4
+YZP D5ti       53.8
+*Door 6
+YZP D6te       243.4
+YZP D6ti       245.8
+YZP D6be       154.8
+YZP D6bi       152.4
+*Door 8
+YZP D8te       -359.0
+YZP D8ti       -356.6
+YZP D8be       -519.8
+YZP D8bi       -522.2
+*Door 9
+YZP D9te       -406.3
+YZP D9ti       -403.9
+YZP D9be       -494.9
+YZP D9bi       -497.3
+*Door 10
+YZP D10te      -577.9
+YZP D10ti      -575.5
+YZP D10be      -646.6
+YZP D10bi      -649.0
+*Door 12
+YZP D12te      -699.8
+YZP D12ti      -697.4
+YZP D12be      -788.6
+YZP D12bi      -791.0
+*
+*--- PILLARS ---
+*Pillar 1
+YZP P1te       -195.1
+YZP P1ti       -196.3
+XYP P1re       -204.8
+XYP P1ri       -205.9
+YZP P1be       -271.5
+YZP P1bi       -270.3
+XYP P1le       -281.0
+XYP P1li       -279.8
+*Pillar 2
+YZP P2te       -297.8
+YZP P2ti       -299.0
+XYP P2re       -219.0
+XYP P2ri       -220.2
+*Pillar 4
+PLA P4te       0.9993908270191 0 0.0348994967025 -295.69968902538 0
+              -10.326060679237
+PLA P4ti       0.9993908270191 0 0.0348994967025 -296.8989580178 0
+              -10.36794007528
+PLA P4be       0.9993908270191 0 0.0348994967025 -342.72244849253 0
+              -11.968131623455
+PLA P4bi       0.9993908270191 0 0.0348994967025 -341.5231795001 0
+              -11.926252227412
+PLA P4le       -0.0348994967025 0 0.9993908270191 -7.7680252265649 0
+              222.44713789598
+PLA P4li       -0.0348994967025 0 0.9993908270191 -7.8099046226079 0
+              223.64640688842
+PLA P4re       -0.0348994967025 0 0.9993908270191 -9.4077394964722 0
+              269.40241104067
+PLA P4ri       -0.0348994967025 0 0.9993908270191 -9.3658601004292 0
+              268.20314204825
+*Pillar 5
+YZP P5t        520.9
+XYP P5r        -208.5
+YZP P5b        451.6
+*Pillar 7
+YZP P7t        534.0
+XYP P7r        575.5
+YZP P7b        434.0
+*Pillar 8
+YZP P8t        -184.5
+YZP P8b        -284.0
+*Pillar 9
+XYP P9l        -859.0
+XYP P9r        -813.5
+YZP P9b        -343.0
+*Pillar 10
+YZP P10t       -821.0
+YZP P10b       -866.0
+XYP P10l       -868.5
+XYP P10r       -823.5
+*Pillar 11
+XYP P11r       -760.5
+XYP P11l       -805.5
+*
+*--- EXTRA ---
+*Window (lead-glass)
+XYP WINDr      130.9
+XYP WINDl      -51.0
+XZP WINDb      98.1
+YZP WINDa      386.8
+YZP WINDp      387.0
+XYP Wjl1e      -56.0
+XYP Wjl1i      -55.8
+XYP Wjl3e      -49.0
+XYP Wjl3i      -49.2
+YZP Wjl4li     386.6
+XYP Wjl5       -50.8
+XYP Wjl3l      -49.4
+YZP Wjl4l      386.4
+YZP Wjl4li1    387.2
+XYP Wjr1e      135.9
+XYP Wjr1i      135.7
+XYP Wjr3e      128.9
+XYP Wjr3i      129.1
+XYP Wjr5e      130.7
+XYP Wjr5i      130.6
+XYP Wjr3l      129.3
+XZP Wjt3e      203.5
+XZP Wjt3i      203.7
+XZP Wjt5       205.2
+XZP Wjt3l      203.9
+XZP Wjb1e      93
+XZP Wjb1i      93.2
+XZP Wjb3e      100
+XZP Wjb3i      99.8
+XZP Wjb5e      98.5
+XZP Wjb5i      98.3
+XZP Wjb3l      99.6
+*Floor
+XZP floot      0.0
+XZP floob      -50
+*Ceiling
+XZP ceilt      378
+XZP ceilb      328
+*Lead (pb) (top height @ 2 m)
+XZP pbt        200.0
+*
+*--- TLDs ---
+*  A1, A2, B1, B2, C1, D: y=110 cm
+*  C2                   : y=150 cm
+*  E1, E2, E3, E4       : y=113 cm
+XZP tldt       110.16
+XZP tldb       109.84
+YZP tldA2      387.09
+YZP tldA1      386.71
+XYP tldAl      -0.16
+XYP tldAr      0.16
+XYP tldB1      -263.41
+XYP tldB2      -278.69
+YZP tldBDt     0.16
+YZP tldBDb     -0.16
+PLA tldC1      0.999762027079909 0 0.021814885034561 -349.126897476575 0
+              -7.61797600291909
+PLA tldC2      0.999762027079909 0 0.021814885034561 -365.602975682852 0
+              -7.97748530828866
+PLA tldCl      -0.02181488503456 0 0.999762027079909 0.00349038160553 0
+              7.46003807566721
+PLA tldCr      -0.02181488503456 0 0.999762027079909 -0.00349038160553 0
+              7.779961924332786
+XZP tldtopC2   150.16
+XZP tldbotC2   149.84
+XYP tldD       227.91
+*
+*--- SPECT/CT Scanner ---
+*Scanner bounding box
+RPP BBscan     -290.0 330.0 0 220.0 -120.0 180.0
+*Apply -12 deg Ry rotation to entire scanner
+$start_transform rot_scan
+*--- TLDs (contd.) ---
+XZP tldEt      113.16
+XZP tldEb      112.84
+XYP tldE1r     53.66
+XYP tldE1l     53.34
+XYP tldE2l     -53.66
+XYP tldE2r     -53.34
+YZP tldE       -38.71
+YZP tldE34l    -116.84
+YZP tldE34r    -117.16
+XYP tldE3      102.59
+XYP tldE4      -102.59
+*
+*--- Jaszczack phantom geometry ---
+*Internal cylidner
+YCC jzint      0 9.0 10
+*External cylinder
+YCC jzext      0 9.0 11.12
+*Phantom lid
+YCC jzlid      0 9.0 13
+*Top plane, external
+PLA jztop1     0 -1.0 0 9.0 82.8435 0
+*Top plane, internal
+PLA jztop2     0 -1.0 0 9.0 84.0675 0
+*Bottom plane, internal
+PLA jzbot1     0 -1.0 0 9.0 105.1155 0
+*Bottom plane, external
+PLA jzbot2     0 -1.0 0 9.0 102.6675 0
+*Plane along source for score visuals
+XZP score      110
+*
+*--- Scanner (contd.) ---
+*-- Couch --
+*- Table top (tt) -
+XCC ttarce     128.1944 0 46.6944
+XCC ttarci     128.1944 0 46.8944
+XYP ttle       -20.0
+XYP ttli       -19.8
+XYP ttre       20.0
+XYP ttri       19.8
+XZP ttbe       79.5
+XZP ttbi       79.7
+PLA ttdiagle   0 9.0 6.5 0 79.5 -14.0
+PLA ttdiagli   0 9.0 6.5 0 79.6622 -13.8828
+PLA ttdiagre   0 -9.0 6.5 0 79.5 14.0
+PLA ttdiagri   0 -9.0 6.5 0 79.6622 13.8828
+YZP ttae       233
+YZP ttai       232.8
+YZP ttpe       -31
+YZP ttpi       -30.8
+XZP ttbound    86.0
+*- Support (sup) -
+XYP supl       -15.0
+XYP supr       15.0
+XYP supre      10.0
+XYP supri      -10.0
+XZP supbt      10.0
+XZP suptt      61.2
+XZP suptb      51.2
+YZP supfe      258.0
+YZP supfi      255.5
+YZP supbe      51.0
+YZP supbi      56
+YZP supce      130.0
+YZP supci      125
+PLA supdiag1   -41.2 74.0 0 51.0 10 0.0
+PLA supdiag2   -41.2 74.0 0 56.0 10 0.0
+PLA supdiag3   -41.2 -74.0 0 125.0 10 0.0
+PLA supdiag4   -41.2 -74.0 0 130.0 10 0.0
+*- Table (tbl) -
+XCC tblarcl    72.5 7.4 37.5
+XCC tblarcr    72.5 -7.4 37.5
+PLA tbldial1   0 9.6 -2.7 0 90.5 0
+PLA tbldiar1   0 -9.6 -2.7 0 90.5 0
+YZP tblbe      47.0
+YZP tblbi      47.2
+XYP tbll       -20.4
+XYP tblr       20.4
+XZP tbltp      78.0
+YZP tblb       319.0
+PLA tbldial2   0 -0.6 -0.7 0 81.6 -20.9
+PLA tbldiar2   0 0.6 -0.7 0 81.6 20.9
+*- Table cover (tblcov) -
+XYP tblcovre   27.2
+XYP tblcovri   27.0
+XYP tblcovli   -27.0
+XYP tblcovle   -27.2
+YZP tblcovfe   48.0
+YZP tblcovfi   48.2
+YZP tblcovbe   261.0
+YZP tblcovbi   260.8
+*-- SPECT detector heads --
+*- Foam layer (foam)
+XYP foamr      27.08
+XYP foaml      -27.08
+YZP foama      29.08
+YZP foamp      -11.08
+XZP foam1      123.4
+XZP foam2      73.6
+*- Light guide (ltgd) -
+XYP ltgdr      28.2
+XYP ltgdl      -28.2
+YZP ltgda      30.2
+YZP ltgdp      -12.2
+XZP ltgd1      125.9425
+XZP ltgd2      71.0575
+*- Vacuum (vacu) -
+XYP vacur      28.7
+XYP vacul      -28.7
+YZP vacua      30.7
+YZP vacup      -12.7
+*- Lead casing (pbcs) -
+XYP pbcsr      30.5
+XYP pbcsl      -30.5
+YZP pbcsa      32.5
+YZP pbcsp      -14.5
+XZP pbcs1t     141.1625
+XZP pbcs1b     142.9625
+XZP pbcs2t     55.8375
+XZP pbcs2b     54.0375
+*- Aluminium casing (alcs) -
+XYP alcsr      33.2
+XYP alcsl      -33.2
+YZP alcsa      35.2
+YZP alcsp      -17.2
+YZP collf      29.2
+XZP alcv1      123.32
+XZP alcs1      145.6625
+XZP alcv2      73.68
+XZP alcs2      51.3375
+*- Collimator (coll) -
+YZP collb      -11.2
+XZP coll1t     120
+XZP coll1b     123.2
+XZP coll2t     77.0
+XZP coll2b     73.8
+*- Scintillator crystal (crys) -
+YZP crysa      29.0
+YZP crysp      -11.0
+XZP crys1      124.99
+XZP crys2      72.01
+*- Optical coupling (opti) -
+XZP opti1      125.9625
+XZP opti2      71.0375
+*- PMTs (pmts) -
+XZP pmts1      138.6625
+XZP pmts2      58.3375
+*- Electronics -
+XZP elec1t     139.6625
+XZP elec1b     140.1625
+XZP elec2t     57.3375
+XZP elec2b     56.8375
+*- Detector head covers (cvdt)
+PLA cvdt1dle   0.0 -7.07 -7.07 0 132.25 -44.5
+PLA cvdt1dli   0 -7.07 -7.07 0 132.3 -44.0
+PLA cvdt1dre   0 -7.07 7.07 0 87.75 0
+PLA cvdt1dri   0 -7.07 7.07 0 87.8 -0.5
+XYP cvdt1le    -44.75
+XYP cvdt1li    -44.35
+XYP cvdt1re    45.25
+XYP cvdt1ri    44.85
+XZP cvdt1bi    120.4
+YZP cvdt1pe    -23.0
+YZP cvdt1pi    -22.6
+YZP cvdt1ae    41.0
+YZP cvdt1ai    40.6
+XZP cvdt1te    154.0
+XZP cvdt1ti    153.6
+QUA cvdt1ele   0.0042533081285 1.0 0 0 0 0 -2.3985800976333 -314.2 0
+              24657.462785847
+QUA cvdt1eli   0.0042533081285 1.0 0 0 0 0 -2.4100596225181 -313.4 0
+              24532.384201916
+PLA cvdt2dle   0 7.07 -7.07 0 64.75 -44.75
+PLA cvdt2dli   0 7.07 -7.07 0 64.70 -44.25
+PLA cvdt2dre   0 7.07 7.07 0 109.25 0.25
+PLA cvdt2dri   0 7.07 7.07 0 109.2 -0.25
+PLA cvdt2bi    0 -1.0 0 0 76.6 0
+PLA cvdt2pe    -1.0 0 0 23.0 197.0 0
+PLA cvdt2pi    -1.0 0 0 22.8 197.0 0
+PLA cvdt2ae    -1.0 0 0 -41.0 197.0 0
+PLA cvdt2ai    -1.0 0 0 -40.8 197.0 0
+PLA cvdt2te    0 -1.0 0 0 43.0 0
+PLA cvdt2ti    0 -1.0 0 0 43.4 0
+QUA cvdt2ele   0.0042533081285 1.0 0 0 0 0 -2.3985365873169 -80.2 0
+              1585.0505175103
+QUA cvdt2eli   0.0042533081285 1.0 0 0 0 0 -2.4109104841957 -81.2 0
+              1626.0953071099
+*-- Gantry bore (common for both SPECT & CT) --
+XCC ganbore    113.0 0 35
+XCC ganbori    113.0 0 35.4
+YZP ganborp    -145.9
+*-- SPECT (MM) gantry components --
+*- Layer 0 (NM0) - Main support 'legs' -
+XZP NM0t       3.0
+XYP NM0le      -52.5
+XYP NM0ri      37.5
+XYP NM0re      52.5
+XYP NM0li      -37.5
+YZP NM0a       0
+*- Layer 1 (NM1) - Main support -
+XZP NM1te      158.4
+XZP NM1ti      157.4
+PLA NM1dtle    0 -7 7 -51.680590642912 159.0 -21.0
+PLA NM1dtli    0 -7. 7. -51.680590642912 158.6 -19.95
+PLA NM1dtre    0 -7.0 -7.0 51.680590642912 159.0 21.0
+PLA NM1dtri    0 -7. -7. 51.680590642912 158.8 19.75
+XYP NM1re      45.4
+XYP NM1ri      44.4
+XYP NM1le      -45.4
+XYP NM1li      -44.4
+PLA NM1dble    0 7.0 7.0 51.680590642912 67.0 -21.0
+PLA NM1dbli    0 7. 7. 51.680590642912 67.35 -19.95
+PLA NM1dbre    0 7.0 -7.0 -51.680590642912 67.0 21.0
+PLA NM1dbri    0 7. -7. -51.680590642912 67.175 19.75
+XZP NM1be      67.6
+YZP NM1p1      -65.0
+YZP NM1p2      -70.0
+PLA NM1pd      45.4 -5 0 -70 113 0
+*- Layer 2 (NM2) - Secondary support -
+XCC NM2e       113 0 70.0
+XCC NM2i       113 0 69.6
+YZP NM2pe      -55
+YZP NM2pi      -56.0
+YZP NM2s       -54.8
+*- Layer 3 (NM3) - Rotating gantry -
+XCC NM3le      113.0 88 160
+XCC NM3li      113.0 88.4 160
+XCC NM3re      113.0 -88 160
+XCC NM3ri      113.0 -88.4 160
+XCC NM3e       113 0 88
+XCC NM3i       113 0 87.6
+YZP NM3ae      -50.0
+YZP NM3ai      -49.6
+YZP NM3pe      -38.8
+YZP NM3pi      -39.
+YZP NM3s       -47.6
+*- Layer 4 (NM4) - Up-down gantry -
+XCC NM4le1     120.0 175 230.0
+XCC NM4li1     120.0 175.4 230.0
+XCC NM4ri1     120.0 -168.4 230.0
+XCC NM4re1     120.0 -168.0 230.0
+XZP NM4be1     116.0
+XCC NM4te1     83.0 0 97.0
+XCC NM4ti1     83.0 0 96.6
+XCC NM4ce1     107.0 0 35.0
+XCC NM4ci1     107.0 0 35.4
+XZP NM4bi1     116.4
+YZP NM4ae      -38.0
+YZP NM4ai      -37.6
+YZP NM4s       -35.6
+YZP NM4pe      -27.0
+YZP NM4pi      -27.2
+XCC NM4le2     81.5 175.0 230.0
+XCC NM4li2     81.5 175.4 230.0
+XCC NM4re2     81.5 -168.0 230.0
+XCC NM4ri2     81.5 -168.4 230.0
+PLA NM4be2     0 -1.0 0 0 85.5 0
+PLA NM4bi2     0 -1.0 0 0 85.1 0
+XCC NM4te2     118.5 0 97.0
+XCC NM4ti2     118.5 0 96.6
+XCC NM4ce2     94.5 0 35.0
+XCC NM4ci2     94.5 0 35.4
+*- Layer 5 (NM5) - Detectors support -
+XZP NM5te1     174.5
+YZP NM5p       -26.5
+YZP NM5s       -24.5
+YZP NM5ae      -23.4
+YZP NM5ai      -23.8
+XZP NM5ti1     174.1
+XCC NM5tre1    160.0 5.0 14.5
+XCC NM5tri1    160.0 5.0 14.1
+XCC NM5bre1    91.0 44.0 51.0
+XCC NM5bri1    91.0 44.0 51.4
+XYP NM5le      -9.5
+XYP NM5li      -9.1
+XYP NM5re      43.6
+XYP NM5ri      44.0
+XYP NM5ce      41.8
+XYP NM5ci      41.4
+PLA NM5de1     0 2.490410398106199 -9.6849293259685 -24.870547194534
+              133.54617151608 43.820444104135
+PLA NM5di1     0 2.490410398106199 -9.6849293259685 -24.870547194534
+              133.54617151608 44.25
+XZP NM5be1     133.0
+XZP NM5bi1     133.4
+PLA NM5ext1    0 -7.0467270023999 7.0953251196579 -25.70187995492 174.1 5.0
+PLA NM5te2     0 -1.0 0 0 27.0 0
+PLA NM5ti2     0 -1.0 0 0 27.4 0
+XCC NM5tre2    41.5 5.0 14.5
+XCC NM5tri2    41.5 5.0 14.1
+XCC NM5bre2    110.5 44.0 51.0
+XCC NM5bri2    110.5 44.0 51.4
+XZP NM5be2     68.2
+PLA NM5bi2     0 -1.0 0 0 68.6 0.0
+PLA NM5de2     0 -2.4904103981062 -9.6849293259685 0 67.95382848392
+              43.820444104135
+PLA NM5di2     0 -2.4904103981062 -9.6849293259685 0 67.95382848392 44.25
+PLA NM5ext2    0 7.0467270023999 7.0953251196579 0 27.4 5.0
+*-- SPECT gantry components --
+*- X-ray tube (XRT) -
+YZP XRTcyl1p   -130.9
+XCC XRTcyl1    175.0 0 13.0
+XZP XRTbox2b   152.0
+XZP XRTbox2t   162.0
+YZP XRTbox2p   -120.0
+YZP XRTbox2a   -90.0
+YZP XRTcyl1a   -79.7
+XCC XRTcyl4    167.8 25.0 6.75
+XCC XRTcyl5    181.4 24.0 4.35
+YZP XRTcyl4p   -84.4
+YZP XRTcyl4a   -136
+YZP XRTcyl5p   -96.0
+YZP XRTcyl5a   -115.4
+XYP XRTbox1r   17.9
+XZP XRTbox1t   186.8
+XZP XRTbox1b   165.0
+YZP XRTbox1a   -116.0
+YZP XRTbox1p   -100
+ZCC XRTcyl2    -88.7 185.3 4.4
+XYP XRTcyl2r   -8.9
+XYP XRTcyl2l   8.7
+ZCC XRTcyl3    -122.6 185.3 4.4
+*- Heat exchanger (HEX) -
+PLA HEXl       0 1.7803145720971 9.8402479655941 15.0 187.50940829386
+              -21.257075510255
+PLA HEXr       0 1.7803145720971 9.8402479655941 15.0 189.39197233721
+              -42.774880989036
+PLA HEXt       0 9.8402479655941 -1.7803145720971 15.0 182.85007729744
+              -41.591310096397
+PLA HEXb       0 9.8402479655941 -1.7803145720971 15.0 163.0 -38.0
+*- Electronic board (EBD) -
+PLA EBDl       0 -0.7071067811865 0.7071067811865 0 63.464466094067
+              -32.464466094067
+PLA EBDr       0 -0.7071067811865 0.7071067811865 0 70.535533905933
+              -39.535533905933
+PLA EBDt       0 0.7071067811865 0.7071067811865 0 163.2132034356
+              61.213203435597
+PLA EBDb       0 0.7071067811865 0.7071067811865 0 142.0 40.0
+*- High voltage generators (HVG)
+PLA HVG1r      0 -0.1736481776669 0.9848077530122 0 1.4141212009702
+              31.276939132575
+PLA HVG1l      0 -0.1736481776669 0.9848077530122 0 -2.0588423523685
+              50.973094192818
+PLA HVG2l      0 -0.1736481776669 0.9848077530122 0 18.778938967664
+              -67.203836168646
+PLA HVG2r      0 -0.1736481776669 0.9848077530122 0 22.251902521002
+              -86.899991228891
+PLA HVG1t      0 0.9848077530122 0.1736481776669 0 136.15192246988
+              4.2635182233306
+PLA HVGb       0 0.9848077530122 0.1736481776669 0 106.60768987952
+              -0.9459271066775
+PLA HVG2t      0 0.9848077530122 0.1736481776669 0 146.0 6.0
+YZP HVGp       -130.0
+*- Detector system, CT (DTS) -
+XCC DTSt       150.0 0 73.0
+XCC DTSc       150.0 0 86.5
+XCC DTSb       150.0 0 100.0
+PLA DTSl       0 5.7357643635105 8.1915204428899 0 155.81058193585
+              5.3235002751623
+PLA DTSr       0 -5.73576436351047 8.191520442889924 0 155.81058193585
+              -5.3235002751623
+*-- CT gantry --
+*- CT ring (for holding components) -
+YZP CTringa    -110.0
+YZP CTringp    -115.0
+XCC CTringe    113 0 55.0
+*- CT support (main support for CT components and gantry) -
+YZP CTsuppp    -142
+YZP CTsuppc    -137
+YZP CTsuppa    -132
+XCC CTsuppt    86.0 0 100.0
+XCC CTsuppb    140.0 0 100.0
+PLA CTsuppd1   0 -7.7714596145698 6.2932039104984 0 180.08120910625
+              -42.710891454081
+PLA CTsuppd2   0 7.7714596145698 6.293203910498401 0 180.08120910625
+              42.710891454081
+PLA CTsuppd3   0 7.7714596145698 6.2932039104984 0 46.0 -42.710891454081
+PLA CTsuppd4   0 -7.7714596145698 6.293203910498401 0 46.0 42.710891454081
+XYP CTsuppr    -96.3
+XYP CTsuppl    96.3
+XYP CTsupex1   62.5
+XYP CTsupex2   -62.5
+*- Cover (grey, bottom part; for both SPECT & CT) -
+XZP covgt      24.0
+XZP covgte     9.9
+XZP covgti     9.5
+YCC covgrce    45.0 -5 10.0
+YCC covgrci    45.0 -5 9.6
+YCC covglce    -45 -5 10.0
+YCC covglci    -45.0 -5 9.6
+XYP covg1rre   55.0
+XYP covg1rri   54.6
+XYP covg1rle   35
+XYP covg1rli   35.4
+XYP covg1lle   -55.0
+XYP covg1lli   -54.6
+XYP covg1lre   -35
+XYP covg1lri   -35.4
+YZP covg1b     -5.0
+PLA covgde     14.1 27 0 -50 24 0
+PLA covgdi     14.1 27 0 -50.4 24 0
+XYP covg2le    -70.0
+XYP covg2li    -69.6
+XYP covg2re    69.6
+XYP covg2ri    70
+YZP covg3i     -50.4
+XYP covg4le    -73.4
+XYP covg4li    -73.0
+XYP covg4re    73.4
+XYP covg4ri    73.0
+PLA covgdli    0 -0.7563631724521 -0.6541519329316 0 24.0 -73.0
+PLA covgdle    0 -0.7563631724521 -0.6541519329316 0 24.0 -73.4
+PLA covgdri    0 0.7563631724521 -0.6541519329316 0 24.0 73.0
+PLA covgdre    0 0.7563631724521 -0.6541519329316 0 24.0 73.4
+*- CT gantry cover (CTcov) -
+XCC CTcov11e   111.5 0 74.0
+XCC CTcov11i   111.5 0 73.6
+XCC CTcov12e   60.0 296.6 375.0
+XCC CTcov12i   60.0 296.6 374.6
+XCC CTcov13e   60.0 -296.6 375.0
+XCC CTcov13i   60.0 -296.6 374.6
+PLA CTcov1d1   0 9.771380554652202 -2.1260578675487 0 111 0
+PLA CTcov1d2   0 -9.7713805546522 -2.1260578675487 0 111 0
+XZP CTcovc     111.5
+YZP CTcov2ae   -77.8
+YZP CTcov2ai   -78.2
+XCC CTcov31e   111.5 0 93.5
+XCC CTcov31i   111.5 0 93.1
+XCC CTcov32e   -41. 35 250.0
+XCC CTcov32i   -41.04 35 249.6
+XCC CTcov33e   -41.04 -35 250.0
+XCC CTcov33i   -41.04 -35 249.6
+XCC CTcov34e   138.81 -52.5 50.0
+XCC CTcov34i   138.81 -52.5 49.6
+XCC CTcov35e   138.81 52.5 50.0
+XCC CTcov35i   138.81 52.5 49.6
+PLA CTcov3d1   0 -2.2485950669876 -9.7439119569462 0 112.0 0
+PLA CTcov3d2   0 2.248595066987599 -9.7439119569462 0 112.0 0
+PLA CTcov3d3   0.0 -4.3015819649975 -9.0275352449275 0 139.0 -53.0
+PLA CTcov3d4   0 4.301581964997499 -9.0275352449275 0 139.0 53.0
+XYP CTcov3le   -102.5
+XYP CTcov3li   -102.1
+XYP CTcov3re   102.5
+XYP CTcov3ri   102.1
+XZP CTcov3b    138.81
+YZP CTcov4pe   -161.0
+YZP CTcov4pi   -160.6
+TRC CTcovcne   -145.9 113.0 0 -15.1 0 0 35.4 65.4
+TRC CTcovcni   -145.9 113.0 0 -15.1 0 0 35 65
+YZP stdpe      -273.8
+YZP stdpi      -273.4
+*--- Extras (mostly used to bound circular geometry within cover) ---
+XZP ext1       121.48784904893
+XZP ext2       126.67823131119
+XYP ext3       0
+XZP ext4       175.0
+XZP ext5       164.41794242875
+XZP body50     64.684308442315
+XYP ext7       0.16
+$end_transform
+END
+*
+****   REGIONS   ***
+*
+*Black hole
+BLKBODY      5 +blkbody -air
+               | +air +W8le -P5t
+               | +air +P5t +W8le -W8te
+               | +air +W8le -W9te
+               | +air +W10le
+               | +air +P10l +W11be -W10le
+               | +air +P10b
+               | +air +W11be -P10b -P11r
+               | +air +P8b -W7re -W11be
+               | +air -P7r -P8b
+               | +air +P7r +P7b -W7re -P8t
+               | +air +P7r -W7re -P7t
+               | +air -W5te
+*-- Facility --
+*Air - top (above ceiling)
+AIRt         5 +air +W5te +W7re -ceilt -W8le -W11be
+               | +air +P7t +P7r -ceilt -W7re -P7b
+               | +air +P7r +P8t -ceilt -W7re -P8b
+               | +air +W8le +W9te -ceilt -W10le -W11be
+               | +air +P11r +W11be -ceilt -P10b -P10l
+               | +air +P11r +W11be -ceilt -P10b -P11l
+*Air - room (between ceiling and floor)
+AIRr         5 +air +ceilb +tldD +D1jl2e -W2i1 -floot -BBscan -D2jl7e
+               | +air +ceilb +W2i1 +W4e1 -floot -W2i2 -BBscan -tldC1
+               | +air +ceilb +W4i +W2i1 -floot -P1ti -W4e1
+               | +air +ceilb +tldC1 +tldCl -W2i2 -W3i -floot
+               | +air +W4e1 +ceilb +tldC1 -W3i -floot -tldCr
+               | +air +tldC1 +tldCr +tldb -W3i -floot -tldCl
+               | +air +ceilb +tldC1 +tldCr -W3i -tldCl -tldt
+               | +W1i +W4i +ceilb -floot -tldBDt -tldD
+               | +W4i +ceilb +tldBDb -W2i1 -floot -tldD
+               | +W4i +ceilb +tldBDt -tldt -tldBDb -tldD
+               | +W4i +tldb +tldBDt -floot -tldBDb -tldD
+               | +W1i +ceilb +D1jl1e -W2i -floot -D1jl2e
+               | +W1i +ceilb +D1jr1e -D1jl1e -D1jl2e -D1jt1e
+               | +D1jl4e +D1jr3e +D1jt3e -floot -D1jl2e -D1jl3e
+               | +D1jl6e +D1jr5e +D1jt5e -floot -D1jl4e -D1jl5e
+               | +W1i +ceilb +Wjl1e -floot -D1jl2e -D1jr1e
+               | +W1i +W4i +ceilb -floot -D1jl2e -Wjr1e
+               | +W1i +ceilb +Wjr1e -D1jl2e -Wjl1e -D1jt1e
+               | +W1i +Wjr1e +Wjb1e -floot -D1jl2e -Wjl1e
+               | +ceilb +D1jl2e +D2jl7e -W2i -W2i1 -D1jt1e
+               | +D1jl2e +D2jl7e +D1jt1e -W2i -floot -D2jl1e
+               | +D2jl7e +D2jl3e +D2jt3l -W2i -floot -D2astt
+               | +D2astt +D2jl7e +D2jt3l -floot -D2astb -D2astf
+               | +D2astb +D2jl7e +D2jt3l -W2i -floot -D2jr3e
+               | +D2jl7e +D2jr1e +D1jt1e -W2i1 -floot -tldB1
+               | +WINDa +Wjr3e +Wjt3e -D1jl2e -Wjb3e -tldAr
+               | +WINDa +Wjt3e +tldAl -D1jl2e -Wjl3e -Wjb3e
+               | +WINDa +Wjt3e +tldAr -D1jl2e -tldt -tldAl
+               | +WINDa +tldb +tldAr -D1jl2e -Wjb3e -tldAl
+               | +Wjt3e +tldA2 +tldAr -WINDp -tldt -tldAl
+               | +tldB1 +D1jt1e +D2jr1e -W2i -floot -tldBDt
+               | +tldB1 +tldBDb +D1jt1e -W2i -W2i1 -floot
+               | +tldb +tldB1 +tldBDt -W2i -floot -tldBDb
+               | +tldB1 +tldBDt +D1jt1e -W2i -tldt -tldBDb
+               | +BBscan -tblbe -ttbound
+               | +BBscan +ttbound -tblbe -tblarcr -tblcovre
+               | +BBscan +ttbound +tblcovle -tblbe -tblarcl
+               | +BBscan +ttarce +ttbound -tblbe
+               | +BBscan +ttle +ttbound +tblarcl -tblbe -tbldial1
+               | +BBscan +ttbound +tblarcr +tbldiar1 -ttre -tblbe
+               | +BBscan +ttle +tbldial1 +tbldial2 -tblbe -tbll
+               | +BBscan +ttdiagle +tbldial2 -ttle -tblbe -tbltp
+               | +BBscan +ttbe +ttdiagre -ttdiagle -tblbe -tbltp
+               | +BBscan +ttre -ttdiagre -tblbe -tbltp -tbldiar2
+               | +BBscan +tblr -ttre -tblbe -tbldiar1 -tbldiar2
+               | +BBscan +ttre +ttdiagre -ttarce -ttle -ttbe -ttdiagle -ttae
+               | +BBscan +tbltp +tblcovre -tblb -tblcovle
+               | +BBscan +suptt +tblb +tblcovre -tblcovle -tblcovbe
+               | +tblcovri +BBscan +suptt +tblcovbi -supfe -tblcovli
+               | +BBscan +tblarcr -tblb -tblcovre
+               | +BBscan +tblarcl +tbldial1 +tblcovli -tblb
+               | +BBscan +tbldial1 +tbll -tbltp -tblb -tblcovli
+               | +BBscan -tbll -tbltp -tblb -tbldial2
+               | +BBscan +tblr +tbldiar2 -tbltp -tblb
+               | +BBscan +tblcovre -tbldiar1 -tblr -tbltp -tblb
+               | +tblcovri +BBscan +suptb +supfe -supbt -supfi -tblcovli
+               | +BBscan +suptt +tblarcl +tblcovle -tblbe
+               | +BBscan +suptt +tblarcr -tblbe -tblcovre
+               | +BBscan +suptt +tblcovre +tblcovfe -tblbe -tblcovle
+               | +BBscan +ttle +suptt +supfe -tblcovli -tblcovfi
+               | +tblcovri +BBscan +suptt +supfe -ttre -tblcovfi
+               | +BBscan +ttre +suptt +supbe -ttle -tblcovfi
+               | +BBscan +supr +suptt +supci -floot -supl -supbi -supdiag3
+               | +BBscan +supr +suptt +supci +supdiag4 -floot -supl -supbi
+               | +BBscan +supre +supci +supdiag3 -floot -supri -supbi -supdiag4
+               | +BBscan +supl +suptb +supfi +supdiag2 -ttle -supbt
+               | +BBscan +supr +suptt +supfi -supl -supce
+               | +BBscan +ttre +suptb +supfi +supdiag2 -supr -supbt
+               | +BBscan +supr +suptb +supce +supdiag4 -supl -supci
+               | +BBscan +supre -supri -supbt -supci -supdiag4
+               | +BBscan +ttre +suptb -supr -supbi -supdiag1
+               | +BBscan +supl +suptb -ttle -supbi -supdiag1
+               | +BBscan +ttre +supbi -ttle -supbe -supdiag1 -supdiag3
+               | +BBscan +supre +suptb +supbi +supdiag3 -supri
+               | +BBscan +supl +suptb +supbi +supdiag3 -ttle
+               | +BBscan +ttre +suptb +supbi +supdiag3 -supr
+               | +BBscan +supr +suptb +supbi +supdiag1 -supl -supbt
+               | +cvdt1ri +cvdt1ai +cvdt1ti -alcs1 -cvdt1li -cvdt1pi -cvdt1eli
+               | +alcsl +alcs1 +cvdt1dli +cvdt1ai -cvdt1li -cvdt1pi
+               | +alcsr +alcs1 +cvdt1dli +cvdt1dri +cvdt1ai -alcsl -alcsa -cvdt1bi
+               | +alcs1 +cvdt1dri +cvdt1ri +cvdt1ai -alcsr -cvdt1pi
+               | +alcsr +alcsa +coll1b +cvdt1dri -tblcovre -cvdt1bi -cvdt1pi
+               | +tblcovle +alcsa +coll1b +cvdt1dli -alcsl -cvdt1bi -cvdt1pi
+               | +tblcovre +alcsa +coll1b -tblcovle -collf -cvdt1bi
+               | +tblcovre +collb +coll1b -tblcovle -cvdt1bi -cvdt1pi
+               | +BBscan +alcs2 +cvdt1ri +cvdt1ai +cvdt2ti -cvdt1li -cvdt1pi -cvdt2eli
+               | +alcsl +cvdt1ai +cvdt2dli -alcs2 -cvdt1li -cvdt1pi
+               | +cvdt1ri +cvdt1ai +cvdt2dri -alcsr -alcs2 -cvdt1pi
+               | +alcsr +alcsp +cvdt2dli +cvdt2dri -alcsl -alcs2 -cvdt1pi -cvdt2bi
+               | +alcsr +cvdt1ai +cvdt2dli +cvdt2dri -alcsl -alcsa -alcs2 -cvdt2bi
+               | +alcsr +collb +cvdt2dli +cvdt2dri -alcsl -alcsp -coll2b -cvdt2bi
+               | +alcsr +alcsa +cvdt2dli +cvdt2dri -alcsl -collf -coll2b -cvdt2bi
+               | +alcsr +collf +cvdt2dri -tblcovre -collb -coll2b -cvdt2bi
+               | +tblcovle +collf +cvdt2dli -alcsl -collb -coll2b -cvdt2bi
+               | +alcsr +alcsp +alcs1 -alcsl -coll1b -cvdt1pi
+               | +NM4pi +NM4ti2 +NM4li2 +NM4ri2 -NM4s -NM4bi2 -NM4ci2
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4pi -NM4bi1 -NM4ti1 -NM4s
+               | +NM3pi +NM3li +NM3ri +NM3i -NM3s -ganbori
+               | +NM3ae +NM2i -ganbori -NM2s
+               | +NM4ti2 +NM4ri2 +NM5ai -NM4bi2 -NM5ri -NM5s
+               | +NM5ri +NM5ai +NM5di2 -NM4bi2 -NM5s
+               | +NM4ti2 +NM5ci +NM5ai +NM5ti2 +NM5be2 -NM5li -NM5s -NM5bri2 -NM5ext2
+               | +NM5ai +NM5tri2 +NM5ext2 -NM5s
+               | +NM4ti1 +NM4ri1 +NM5ai -NM4bi1 -NM5ri -NM5s
+               | +NM5ri +NM5di1 +NM5ai -NM4bi1 -NM5s
+               | +NM4ti1 +NM5ti1 +NM5ci +NM5ai -NM5li -NM5bi1 -NM5bri1 -NM5s -NM5ext1
+               | +NM5tri1 +NM5ai +NM5ext1 -NM5s
+               | +BBscan +tblbe +cvdt2te +cvdt2ele
+               | +BBscan +ttarce +tblbe +cvdt1te -cvdt1ae -cvdt1ele
+               | +BBscan +tblbe +cvdt1te +cvdt2te -ttarce -cvdt1re -cvdt1ele -cvdt2ele -NM5ae
+               | +BBscan +ttbe +tblbe +cvdt1re +cvdt2te -cvdt1le -cvdt1ae -cvdt2ele
+               | +BBscan +tblbe +cvdt1re -ttarce -ttre -ttbe -cvdt1ae
+               | +BBscan +ttle +tblbe -ttarce -ttbe -cvdt1le -cvdt1ae
+               | +BBscan +ttdiagle +tblbe -ttle -ttbe -cvdt1ae
+               | +BBscan +ttre +tblbe -ttbe -ttdiagre -cvdt1ae
+               | +BBscan +ttarce +cvdt1ae -coll1t -cvdt1dre -cvdt1pe
+               | +BBscan +ttarce +cvdt1ae -coll1t -cvdt1dle -cvdt1pe
+               | +BBscan +ttarce +cvdt1dle +cvdt1le +cvdt1ae -cvdt1pe
+               | +BBscan +ttarce +cvdt1dre +cvdt1ae -cvdt1re -cvdt1pe
+               | +BBscan +ttarce +cvdt1pe +cvdt1te -NM5ae
+               | +BBscan +cvdt1re +cvdt1pe +cvdt1te -ttarce -cvdt1le -NM5bi1 -NM5ae
+               | +BBscan +ttle +cvdt1pe +cvdt2te -ttarce -cvdt1le -NM5ae
+               | +BBscan +cvdt1re +cvdt1pe +cvdt2te -ttarce -ttre -NM5ae
+               | +BBscan +ttre +ttbe +cvdt1pe +cvdt2te -ttle -NM5ae
+               | +BBscan +ttre +cvdt1pe -ttbe -ttdiagre -NM5ae
+               | +BBscan +ttdiagle +cvdt1pe -ttle -ttbe -NM5ae
+               | +BBscan +ttarce +coll1t +cvdt1ae -jzlid -cvdt1pe
+               | +BBscan +cvdt1ae +cvdt2dre -ttarce -ttre -coll2t -cvdt1pe
+               | +BBscan +ttre +cvdt1ae -ttdiagre -coll2t -cvdt1pe
+               | +BBscan +ttle +cvdt1ae +cvdt2dle -ttarce -coll2t -cvdt1pe
+               | +BBscan +ttdiagle +cvdt1ae -ttle -coll2t -cvdt1pe
+               | +BBscan +ttbe +ttdiagre +cvdt1ae -ttdiagle -coll2t -cvdt1pe
+               | +BBscan +cvdt1ae -cvdt1pe -cvdt1te
+               | +BBscan +tblbe -cvdt1re -cvdt1ae -cvdt1te
+               | +BBscan +tblbe +cvdt1le -cvdt1ae -cvdt1te
+               | +BBscan +ttre +tblbe -ttle -cvdt1ae -cvdt1te
+               | +BBscan +tblbe +cvdt1le +cvdt1te +cvdt1ele
+               | +BBscan +tblbe +cvdt1te +cvdt1ele -cvdt1re
+               | +BBscan +ttarce +tblbe +cvdt1ele -ttre -cvdt1ae
+               | +BBscan +ttarce +tblbe -ttre -cvdt1ae -cvdt1te -cvdt1ele
+               | +BBscan +ttarce +ttle +tblbe +cvdt1ele -cvdt1ae
+               | +BBscan +ttarce +ttle +tblbe -cvdt1ae -cvdt1te -cvdt1ele
+               | +BBscan +ttre +tblbe +cvdt1te +cvdt1ele -ttle
+               | +BBscan +cvdt1re +cvdt1ae +cvdt1te +cvdt1ele -ttre
+               | +BBscan +ttle +cvdt1ae +cvdt1te +cvdt1ele -cvdt1le
+               | +jzlid +jzbot1 +BBscan +coll1t
+               | +BBscan +coll1t +cvdt1re +cvdt1ae -ttarce -cvdt1pe -cvdt2dre
+               | +BBscan +coll1t +cvdt1ae -ttarce -cvdt1le -cvdt1pe -cvdt2dle
+               | +BBscan +cvdt1le +cvdt1pe -cvdt1te -NM5ae
+               | +BBscan +cvdt1pe -cvdt1re -cvdt1te -NM5ae
+               | +BBscan +ttre +cvdt1pe -ttle -cvdt1te -NM5ae
+               | +BBscan +ttarce +cvdt1pe -ttre -cvdt1te -NM5ae
+               | +BBscan +ttarce +ttle +cvdt1pe -cvdt1te -NM5ae
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4pi -NM4bi1 -NM4ci1 -NM4s
+               | +BBscan +tblbe +cvdt1le +cvdt1te +cvdt2te -ttarce -cvdt1ele -cvdt2ele -NM5ae
+               | +BBscan +tblbe +tblcovle -cvdt2te -NM5ae -covgte -covgde
+               | +BBscan +tblbe +covgte +covg1lle -floot -cvdt1pe
+               | +tblbe +covgte +covg1lre -floot -covglce -covg1lle -covg1b
+               | +tblbe +covgte +covg1rre -floot -covgrce -covg1rle -covg1b
+               | +tblbe +covgte +covg1rle -floot -cvdt1pe -covg1lre
+               | +BBscan +tblbe -floot -cvdt1pe -cvdt2te -covg1rre
+               | +BBscan +cvdt1pe -cvdt2te -NM5ae -covg1rre -covgde
+               | +covgti +covg1lri +covg1b -NM5ae -NM0t -covg1lli
+               | +covgti +covglci -NM0t -covg1b
+               | +NM0t +covglci -floot -NM0a
+               | +NM0t +NM0le +NM0a +covglci -floot -covg1b
+               | +NM0t +NM0a +covglci -floot -NM0li -covg1b
+               | +NM0t +NM0le +covg1b -floot -NM5ae -covg1lli
+               | +BBscan +NM0t +covg1lri +covg1b -NM5ae -NM0li
+               | +covgti +covg1rri +covg1b -NM5ae -NM0t -covg1rli
+               | +covgti +covgrci -NM0t -covg1b
+               | +NM0t +covgrci -floot -NM0a
+               | +NM0t +NM0ri +NM0a +covgrci -floot -covg1b
+               | +NM0t +NM0a +covgrci -floot -NM0re -covg1b
+               | +NM0t +NM0ri +covg1b -floot -NM5ae -covg1rli
+               | +NM0t +covg1rri +covg1b -floot -NM5ae -NM0re
+               | +BBscan +NM3pe +tldE4
+               | +BBscan +NM5ae -tldE3
+               | +BBscan +CTcov3re +stdpe -floot -CTcov3le
+               | +BBscan +CTcov4pe +CTcov3re -covgte -CTcov3le -stdpe
+               | +covgti +CTcov4pe +CTcov3ri -floot -CTcov3li -stdpi
+               | +CTcovcni -CTcov4pe
+               | +BBscan +CTcov2ae -CTcov4pe -CTcov3le -CTcov34e -CTcov3b -CTcov3d3
+               | +BBscan +CTcov2ae +CTcov3d3 -CTcov4pe -CTcov32e -CTcov3d1 -CTcov3b
+               | +BBscan +CTcov2ae +CTcov3d1 -CTcov31e -CTcov4pe -CTcov3d2
+               | +BBscan +CTcov2ae +CTcov3d2 -CTcov4pe -CTcov33e -CTcov3b -CTcov3d4
+               | +BBscan +CTcov2ae +CTcov3re +CTcov3d4 -CTcov4pe -CTcov3b -CTcov35e
+               | +ganbore +NM4ae -ganborp
+               | +NM3ae +CTcov1d1 +CTcov3re -CTcov13e -covgt -CTcov2ae
+               | +NM3ae +covgt +CTcov3re -floot -covg4re -CTcov2ae
+               | +NM3ae +CTcov13e +covgdre -covgt -CTcov2ae
+               | +NM3ae +covg4le +covgt -floot -CTcov2ae -CTcov3le
+               | +NM3ae +CTcov12e -covgt -covgdle -CTcov2ae
+               | +NM3ae -CTcov12e -CTcov1d2 -covgt -CTcov2ae -CTcov3le
+               | +BBscan +NM3ae +CTcov1d2 +CTcov3re -CTcov11e -CTcov1d1 -CTcov2ae -CTcov3le
+               | +BBscan +NM3pe +covg2le -NM3le -NM3ae -CTcov3le
+               | +BBscan +NM3pe +CTcov1d2 -NM3le -NM3ae -covg2le
+               | +BBscan +NM3le +NM3re +NM3pe +CTcov1d2 -NM3e -NM3ae
+               | +NM3pe +CTcov3re -floot -NM3re -NM3ae -CTcov1d2 -covg2ri
+               | +NM3pe +covg2ri -NM3e -NM3ae -CTcov1d2 -covgde -covg2le
+               | +NM3e +NM3pe -NM3le -NM3ae -covg2le
+               | +BBscan +NM5ae -NM3pe -NM4le1 -NM4be1 -covgde
+               | +BBscan +NM5ae -NM3pe -NM4le2 -NM4be2 -covgde
+               | +BBscan +cvdt1pe +covgde +covg2le -floot -NM3pe
+               | +BBscan +NM5ae +CTcov3re -NM3pe -NM4re1 -NM4be1
+               | +NM3e +NM3pe +covg2ri -NM3re -NM3ae
+               | +BBscan +NM3pe +CTcov1d2 +CTcov3re -NM3re -NM3ae -covg2ri
+               | +BBscan +NM3pe +CTcov1d2 +covg2ri -NM3re -NM3e -NM3ae
+               | +NM5ae +CTcov3re -W2i -NM3pe -NM4re2 -NM4be2 -covgde
+               | +cvdt1pe +covgde +CTcov3re -floot -NM3pe -covg2ri
+               | +BBscan +cvdt1pe +covgde -floot -NM5ae -CTcov3re
+               | +tblbe +covg1rre -tblcovle -cvdt2te -NM5ae -covgte -covgde
+               | +ttre +tblbe +coll1t -ttarce -ttle -ttbound -NM5ae
+               | +BBscan +NM4le1 +NM4re1 +NM5ae -NM3pe -NM4te1
+               | +NM4te1 +NM5ae -NM4pe -NM5te1
+               | +BBscan +NM4be1 +NM4be2 +NM5ae +tldE2l -NM3pe
+               | +NM4ae +NM4le2 +tldE2l -NM3pe -NM4be2
+               | +NM4le1 +NM4ae +tldE2l -NM3pe -NM4be1
+               | +NM4be1 +NM4be2 +NM5ae +CTcov3re -NM3pe -tldE1r
+               | +NM4ae +NM4le2 +NM4re2 +tldEb +tldE1r -ganbore -NM3pe -covgde -tldE2l
+               | +NM4ae +NM4re2 -NM3pe -NM4be2 -tldE1r
+               | +NM4ae +NM4be2 +tldEb +tldE1r -NM3pe -NM4le2 -tldE2l
+               | +NM4le1 +NM4re1 +NM4te1 +NM4ae +tldE1l -ganbore -NM3pe -tldEb -tldE2r
+               | +NM4le1 +NM4ae +tldE2r -tldEt -tldE2l -tldE
+               | +NM4le1 +tldE2r +tldE -NM3pe -tldEt -tldE2l
+               | +NM4re1 +NM4te1 +NM4ae -NM3pe -NM4be1 -tldE1l
+               | +NM4be1 +NM4ae +tldE1r -tldEt -tldE1l -tldE
+               | +NM4be1 +tldE1r +tldE -NM3pe -tldEt -tldE1l
+               | +NM4le2 +NM4re2 +NM5ae -NM4pe -NM4te2 -NM5bi2 -covgde
+               | +NM4te2 +NM5ae -NM4pe -NM5te2
+               | +NM5ae +NM5te2 +NM5ext2 -NM4pe -NM5le -NM5tre2
+               | +NM4le2 +NM4te2 +NM5ae +NM5le +NM5te2 -NM4pe -NM5bi2
+               | +ttle +NM4le2 +NM5ae +NM5bi2 -NM4pe -NM4be2
+               | +ttle +NM4le1 +NM4te1 +NM4be2 +NM5te1 +NM5ae -NM4pe -tldE2l
+               | +BBscan +NM4be1 +NM4be2 +NM5ae -NM4le1 -NM4pe -tldE2l
+               | +BBscan +NM4le1 +NM4be2 +NM5ae +tldE2l -NM4be1 -NM4pe
+               | +NM5te1 +NM5ae +NM5ext1 -ttle -NM4pe -NM5tre1
+               | +ttarce +NM5ae +NM5le -ttle -NM4pe -NM5ext1
+               | +ttarce +NM5ae +NM5re +NM5be1 -NM4pe -NM5le -NM5de1
+               | +NM5ae +NM5bre1 +NM5re -NM5p -NM5be1
+               | +NM4te1 +NM5ae +NM5re -NM5p -NM5bre1 -NM5ce -NM5be1
+               | +NM4be1 +NM4be2 +NM5ae +NM5de1 +tldE1r -NM4pe
+               | +NM4be1 +NM5ae +NM5bre2 -ttarce -ttre -NM5p -NM5de1
+               | +ttre +ttbe +NM5ae +NM5bi2 -ttle -NM4pe
+               | +ttre +NM5ae -ttbe -ttdiagre -NM5p
+               | +ttdiagle +NM5ae -ttle -ttbe -NM4pe
+               | +ttre +NM5ae +NM5bre2 -NM5p -NM5bi2
+               | +NM5ae +NM5re +NM5de1 +NM5bre2 -NM4be2 -NM5p -NM5de2
+               | +NM4te2 +NM5ae +NM5re -NM5p -NM5ce -NM5bre2
+               | +NM4re1 +NM4te1 +NM5te1 +NM5p -NM4pe -NM5le -NM5be1 -NM5ext1
+               | +NM5p +NM5tre1 +NM5ext1 -NM4pe
+               | +NM4re1 +NM5p +NM5de1 +NM5be1 -NM4be1 -NM4pe
+               | +NM4be1 +NM5p +NM5bi2 -ttarce -ttre -NM4pe -NM5de1
+               | +ttre +NM5p -ttbe -ttdiagre -NM4pe
+               | +NM4re2 +NM4te2 +NM5p +NM5de1 +NM5te2 -NM4pe -NM4be2
+               | +NM5p +NM5te2 -NM4pe -NM5le -NM5de1 -NM5bi2 -NM5ext2
+               | +NM5p +NM5tre2 +NM5ext2 -NM4pe
+               | +BBscan +NM3pe +CTcov3le -tldE34l -tldE4
+               | +BBscan +CTcov3le +tldE34r -tldE4
+               | +BBscan +CTcov3le +tldE34l -tldEt -tldE34r -tldE4
+               | +CTcov3le +tldEb +tldE34l -floot -tldE34r -tldE4
+               | +BBscan +tldE34r +tldE3 -CTcov3re
+               | +BBscan +NM5ae +tldE3 -CTcov3re -tldE34l
+               | +BBscan +tldE34l +tldE3 -CTcov3re -tldEt -tldE34r
+               | +BBscan +tldEb +tldE34l +tldE3 -CTcov3re -tldE34r
+               | +ttarce +NM4be1 +NM4pe -ttpe
+               | +NM4ce1 +NM4pe -ttpe -NM4be1
+               | +NM4be1 +NM4pe +NM4be2 +tldE1r -ttarce -ttre -ttpe
+               | +ttle +NM4be1 +NM4pe +NM4be2 -ttarce -ttpe -tldE2l
+               | +ttle +NM4pe +NM4ce2 -ttpe -NM4be2
+               | +NM4pe +NM4ce2 -ttre -ttpe -NM4be2
+               | +ttre +NM4pe +NM4ce2 -ttdiagre -ttpe
+               | +ttdiagle +ttdiagre +NM4pe +NM4ce2 -ttle -ttpe
+               | +ttbe +ttdiagre +NM4pe -ttdiagle -ttpe
+               | +ttbe +NM4pe +NM4le2 +NM4re2 -ttpe -NM4te2 -covgde
+               | +ttpe +NM4be1 +NM4be2 +tldE1r -NM4ae -tldE2l
+               | +ttpe +NM4ce1 -NM4be1 -NM4ae
+               | +ttpe +NM4ce2 -NM4ae -NM4be2
+               | +ttpe +NM4le2 +NM4re2 -NM4ae -NM4be2 -NM4te2 -covgde
+               | +CTcov11i +CTcov12i +covg3i -NM2e -NM2pe
+               | +CTcov12i +CTcov13i +CTcov1d1 +covg3i +covgdli -NM2pe -NM0t -CTcov11i -CTcov1d2
+               -covgdri
+               | +ltgd1 +CTcov12i +covg3i -NM2pe -CTcov11i -CTcov1d1
+               | +CTcov13i +CTcov1d2 +covg3i +ext1 -NM2pe -CTcov11i
+               | +covg4ri +covg3i +covgdri -NM2pe -NM0t
+               | +NM0t +covg4ri +covg3i -floot -NM2pe -NM0re
+               | +NM5ae +NM0le +covgdi -floot -covg2li -covg3i
+               | +NM5ae +NM0re +covgdi -NM0t -NM0le -covg3i
+               | +NM5ae +NM0t +NM0ri -floot -NM0li -covg3i
+               | +NM5ae +covgdi +covg2re -floot -NM0re -covg3i
+               | +NM0t +NM0ri +covg3i -floot -NM2pe -NM0li
+               | +ttre +NM4be1 +NM5ae -ttarce -ttri -ttpe -ttbound
+               | +ttli +NM4be1 +NM5ae -ttarce -ttle -ttpe -ttbound
+               | +NM5p +NM5be1 -NM4pe -NM5re -NM5de1
+               | +NM2pe +NM1le +CTcov11i +CTcov12i -CTcov2ai
+               | +NM2pe +NM1le +CTcov12i +covgdli -CTcov11i -CTcov1d2 -covgt -CTcov2ai
+               | +NM2pe +NM0le +covgt -floot -covg4li -CTcov2ai
+               | +NM2pe +NM1le +covgt -NM0t -NM0le -CTcov2ai
+               | +NM1p2 +NM0t +NM0li -floot -NM0le -CTcov2ai
+               | +NM2pi +NM0li +covgt -NM1li -NM0t -CTcov2ai
+               | +NM1li +NM1p2 +covgt -NM1le -NM0t -CTcov2ai
+               | +NM2pi +NM0ri +covgt -floot -NM0li -CTcov2ai
+               | +NM2pi +NM1ri +covgt -NM0t -NM0ri -CTcov2ai
+               | +NM1re +NM1p2 +covgt -floot -NM1ri -CTcov2ai
+               | +NM1ri +NM1p2 +NM0t -floot -NM0ri -CTcov2ai
+               | +NM2pe +NM0re +covgt -NM1re -NM0t -CTcov2ai
+               | +NM2pe +covg4ri +covgt -floot -NM0re -CTcov2ai
+               | +NM2pe +CTcov11i -NM1re -CTcov2ai
+               | +NM2pe +CTcov13i +CTcov1d1 -NM1re -CTcov11i -covgt -covgdri -CTcov2ai
+               | +NM1p2 +NM0t +NM0re -floot -NM1re -CTcov2ai
+               | +BBscan +NM2pe +NM0t +NM0ri -floot -NM2pi -NM0li
+               | +covg3i -NM2pe -NM0t -covg4li -covgdli
+               | +NM0t +NM0le +covg3i -floot -NM2pe -covg4li
+               | +NM4ae +tldEt +tldE2r -tldEb -tldE2l -tldE
+               | +NM4ae +tldEt +tldE1r -tldEb -tldE1l -tldE
+               | +NM2pe +NM1re +CTcov11i -NM1te -NM1le -CTcov2ai
+               | +NM2pe +NM1te +NM1dtle -NM1le -CTcov2ai
+               | +NM2pe +NM1te +NM1dtre +NM1re -CTcov2ai
+               | +NM1dble +NM1p1 -NM1li -NM1be -CTcov2ai
+               | +NM1ri +NM1dbre +NM1p1 -NM1be -CTcov2ai
+               | +NM1li +NM1dbli +NM1p2 -NM1le -NM1be -CTcov2ai
+               | +NM1dbli +NM1p1 -NM1li -NM1dble -NM1be -CTcov2ai
+               | +NM1ri +NM1dbri +NM1p1 -NM1dbre -NM1be -CTcov2ai
+               | +NM1re +NM1dbri +NM1p2 -NM1ri -NM1be -CTcov2ai
+               | +NM2pi +NM1ri +NM1be -NM1li -NM1p2 -covgt
+               | +NM1re +NM1be +NM1p2 -NM1le -covgt -CTcov2ai
+               | +NM2pi +NM1ti +NM1ri -ganbori -NM1dtli -NM1dtri -NM1li -NM1dbli -NM1dbri
+               -NM1be -CTcov2ai
+               | +NM1te +NM1p1 -NM1ti -NM1dtle -NM1dtre -CTcov2ai
+               | +NM1ti +NM1dtri +NM1re +NM1pd -NM1dtre -CTcov2ai
+               | +NM1ti +NM1dtli +NM1pd -NM1dtle -NM1le -CTcov2ai
+               | +NM1li +NM1p2 -NM1dtli -NM1le -NM1dbli -CTcov2ai
+               | +NM1re +NM1p2 -NM1dtri -NM1ri -NM1dbri -CTcov2ai
+               | +NM5bi2 +NM2pi +NM1ri +NM1dbre -NM1p1
+               | +NM5bi2 +NM2pi +NM1dble -NM1li -NM1p1
+               | +NM1li +NM1pd -NM1dtli -NM1le -NM1p2
+               | +NM1re +NM1pd -NM1dtri -NM1ri -NM1p2
+               | +CTcov31i +CTcov2ai +CTcov3d1 -ganbori -XRTcyl1a -CTcov3d2 -CTcovc
+               | +CTcov2ai +CTcov33i +CTcov3d2 -ganbori -XRTcyl1a -CTcov3d4 -CTcovc
+               | +CTcov2ai +CTcov3d4 +CTcov35i -XRTcyl1a -CTcovc
+               | +CTcov2ai +CTcov32i +CTcov3d3 -ganbori -XRTcyl1a -CTcov3d1 -CTcovc
+               | +CTcov2ai +CTcov34i -XRTcyl1a -CTcov3d3 -CTcovc
+               | +CTcov2ai +CTcov3b -XRTcyl1a -CTcov3li -CTcov3d3 -CTcov34i -CTcovc
+               | +CTcov2ai +CTcov3ri +CTcov3b +CTcov3d4 -XRTcyl1a -CTcov35i -CTcovc
+               | +CTcov2ai +CTcov3ri +CTcovc -floot -ganbori -XRTcyl1a -CTcov3li
+               | +XRTcyl1a +XRTbox1r +CTcov31i +CTcov3d1 -XRTcyl1 -XRTbox1t -XRTcyl2 -XRTcyl3
+               -CTsuppa
+               | +XRTbox1t +XRTcyl2r +CTringp +CTcov3d1 -XRTcyl1 -XRTbox2t -CTsuppa
+               | +XRTcyl2r +XRTcyl3 +CTcov3d1 -XRTbox1t
+               | +XRTbox1r +XRTcyl3 -XRTcyl1 -XRTcyl2l
+               | +XRTbox1r +XRTbox1a +CTcov31i -XRTcyl1 -XRTbox2t -XRTcyl3 -CTsuppa -ext3
+               | +HEXb +CTringp +ext3 -XRTcyl1 -XRTbox2t -XRTcyl2r -CTsuppa
+               | +XRTbox1r +XRTbox1b +CTringp -XRTcyl1 -XRTbox2t -XRTbox1a -ext3
+               | +XRTbox1t +CTringp +ext3 -XRTcyl1p -XRTcyl1 -XRTcyl2r -XRTcyl3 -ext4
+               | +XRTcyl1p +XRTcyl1 -CTsuppa
+               | +XRTcyl1p +XRTbox1t +ext3 -XRTcyl1 -XRTcyl2r -CTsuppa -ext4
+               | +XRTbox1r +XRTcyl2 +CTcov3d1 -XRTcyl1 -XRTcyl2l
+               | +XRTcyl2 +XRTcyl2r +CTcov3d1 -XRTcyl1
+               | +XRTcyl1a +XRTbox1r +XRTbox1t +CTcov3d1 -XRTcyl1 -XRTbox2t -XRTbox1p -XRTcyl2
+               | +XRTbox1t +XRTbox1p +CTcov3d1 +ext3 -XRTcyl1 -XRTbox2t -CTringa
+               | +XRTbox1t +CTringa +CTcov3d1 +ext3 -XRTcyl1 -XRTbox2t -CTringp -CTringe
+               | +XRTbox1r +XRTbox1b +XRTbox1p -XRTcyl1 -XRTbox2t -CTringa -ext3
+               | +XRTcyl1a +EBDr +CTcov33i +CTcov3d2 -ganbori -XRTcyl4p -XRTbox1r
+               | +XRTcyl1a +CTcov31i -XRTcyl4p -XRTbox1r -CTcov3d2
+               | +XRTcyl4p +EBDr +CTcov33i +CTcov3d2 -ganbori -XRTcyl4 -XRTcyl5 -XRTbox1r -CTringa
+               | +XRTcyl4p +CTcov31i -XRTbox1r -XRTbox1a -CTcov3d2
+               | +EBDr +CTringa +CTcov33i +CTcov3d2 -XRTcyl4 -XRTcyl5 -XRTbox1r -XRTbox1a -CTringe
+               | +XRTcyl5 +XRTcyl4p -XRTcyl5p
+               | +XRTcyl5 +XRTcyl5a -XRTbox1a
+               | +XRTbox1a +EBDr +CTcov33i +CTcov3d2 -ganbori -XRTbox1r -CTsuppa
+               | +XRTbox1a +CTcov31i -XRTbox1r -CTsuppa -CTcov3d2
+               | +EBDr +CTringp +CTringe -ganbori -XRTcyl4 -XRTbox1r -XRTbox1a
+               | +XRTbox2t +XRTcyl1a +XRTbox1r +EBDr +CTcov3d1 -ganbori -XRTbox2a
+               | +XRTbox2b +XRTbox2a +XRTbox1r +EBDr +CTcov3d1 -ganbori -CTringa
+               | +XRTbox2b +XRTbox1r +EBDr +CTringp +CTcov3d1 -ganbori -XRTbox2p
+               | +XRTbox2b +EBDr +CTringp -ttle -ganbori -CTsuppa -CTcov3d1
+               | +HEXb +CTringp -ttle -XRTbox2t -CTsuppa -CTcov3d1
+               | +XRTbox2t +XRTbox2p +EBDr -ttle -XRTbox2b -CTsuppa -CTcov3d1
+               | +XRTbox2b +XRTcyl1a +EBDr -ttle -ganbori -CTringa -CTcov3d1
+               | +XRTcyl1a +HEXb -ttle -XRTbox2t -CTringa -CTcov3d1
+               | +XRTcyl1a +EBDr +CTcov32i -HEXl -CTringe -CTsuppa -CTcov3d1
+               | +XRTcyl1a +EBDr +CTcov32i -HEXl -CTringe -CTsuppa -CTcov3d1
+               | +XRTcyl1a +HEXl +CTcov32i +CTcov3d3 -HEXt -CTsuppa
+               | +XRTcyl1a +HEXr +HEXt +CTcov3d3 -HVG2t -CTringe -CTsuppa
+               | +ttle +XRTcyl1a +HEXb -XRTbox2b -HEXr -CTringe -CTsuppa
+               | +ttle +XRTcyl1a +CTringe -HVG2t -CTringa
+               | +XRTbox2t +XRTcyl1a -ttle -XRTbox2b -XRTbox2a -CTcov3d1
+               | +HEXl +HEXb +EBDr +CTringa -ttle -CTringp -CTringe
+               | +ttle +XRTcyl1a +HVG2t +CTringe +CTcov3d3 -ganbori -HVG2l -HVGb -CTringa
+               | +ttle +CTringp +CTringe +CTcov3d3 -ganbori -HVG2l -HVGb -CTsuppa
+               | +HVG2r +CTringa +CTcov34i -CTringp -CTcov3b -CTcov3d3
+               | +CTringa -HVG2r -HVG2t -CTringp -CTcov3d3
+               | +HVG2t +CTringa -HVG2l -CTringp -CTringe -CTcov3b
+               | +EBDr +HVG2r +CTringa +CTcov3b -CTringp -CTcov3li
+               | +EBDr +HVGb +CTringa -HVG2r -CTringp -CTringe -CTcov3d3
+               | +EBDl +CTringa +CTcov33i +CTcov35i -EBDr -EBDt -CTringp -CTcov3d4
+               | +CTringa +CTcov35i -EBDl -HVG1t -CTringp -CTringe
+               | +HVG1r +HVG1t +CTringa +CTcov3d3 -EBDr -HVGb -CTringp -CTringe
+               | +HVG1t +CTringa +CTcov3ri -HVG1l -HVGb -CTringp
+               | +CTringa +CTcov3ri +CTcov3b -HVG1l -HVG1t -CTringp -CTcov35i
+               | +HVGb +CTringa +CTcov3ri -floot -EBDr -CTringp -CTringe -CTcov3li
+               | +CTringa +CTringe -XRTbox1r -XRTbox1b -CTringp
+               | +EBDl +CTringa +CTcov3d4 +CTcov35i -EBDr -EBDt -CTringp
+               | +XRTcyl1a +CTcov3d4 +CTcov35i -XRTbox2a -EBDr -CTcov3b
+               | +XRTcyl1a +CTcov33i -XRTbox2a -EBDr -CTcov3b -CTcov3d4
+               | +XRTcyl1a +CTcov3ri +CTcov3b +CTcov3d3 -floot -ganbori -XRTbox2a -EBDr
+               | +XRTcyl1a +CTcov3b -floot -XRTbox2a -CTcov3li -CTcov3d3
+               | +XRTcyl1a +EBDr +HVGb +CTcov3d3 -ganbori -XRTbox2a
+               | +XRTcyl1a +EBDr +HVG2t +CTcov3d3 -XRTbox2a -CTringe
+               | +XRTcyl1a +CTcov34i -XRTbox2a -CTcov3b -CTcov3d3
+               | +XRTcyl1a +HVG2l +CTringe +CTcov3d3 -XRTbox2a
+               | +XRTbox2a +HVG2t -HVG2l -CTringa -CTringe -CTcov3b
+               | +XRTbox2a +HVG2r +CTcov34i -CTringa -CTcov3b -CTcov3d3
+               | +XRTbox2a -HVG2r -HVG2t -CTringa -CTcov3d3
+               | +XRTbox2a +HVG2r +CTcov3b -floot -CTringa -CTcov3li
+               | +XRTbox2a +EBDr +HVGb +DTSt -ganbori -HVG2r -CTringa
+               | +XRTbox2a -HVG2l -HVGb -CTringa -CTcov3d3
+               | +XRTbox2a +DTSt +DTSl -ganbori -EBDr -CTringa
+               | +XRTbox2a +HVGb +DTSc -DTSl -CTringa
+               | +XRTbox2a +EBDb +HVG1r -ganbori -EBDr -HVGb -DTSl -CTringa
+               | +XRTbox2a +EBDb -HVG1r -HVG1t -CTringa
+               | +XRTbox2a +CTcov3ri +CTcov3b -EBDb -HVG1t -CTringa
+               | +XRTbox2a +CTcov35i -EBDl -EBDb -CTringa -CTcov3b
+               | +XRTbox2a +EBDl +CTcov3d4 +CTcov35i -EBDr -EBDt -CTringa
+               | +XRTbox2a +CTcov33i -EBDr -EBDt -CTringa -CTcov3d4
+               | +XRTbox2a +HVG1t +CTcov3ri -floot -HVG1l -CTringa
+               | +XRTbox2a +HVG1l +HVGb -DTSc -DTSl -CTringa
+               | +XRTbox2a +HVGb +DTSr -HVG2r -DTSt -CTringa
+               | +XRTbox2a +DTSc +DTSl -XRTbox1p -DTSt -DTSr
+               | +XRTbox2a +HVG1l +DTSl -floot -HVG2r -DTSb -DTSr -CTringa
+               | +XRTbox2t +XRTbox2p +XRTbox1r +EBDr +CTcov3d1 -ganbori -CTsuppa
+               | +XRTbox2t +XRTbox2p +XRTbox1r +EBDr +CTcov3d1 -ganbori -CTsuppa
+               | +XRTbox2p +CTcov33i -EBDr -CTsuppa -CTcov3b -CTcov3d4
+               | +EBDb +CTringp -XRTbox2p -EBDr -CTcov3b
+               | +CTringp +CTcov35i -XRTbox2p -EBDl -CTcov3b
+               | +EBDl +CTringp +CTcov33i -XRTbox2p -EBDr -EBDt -CTcov3d4
+               | +CTringp +CTcov3ri +CTcov3b -ganbori -HVG1t -CTsuppa
+               | +HVG1t +CTringp +CTcov3ri -HVG1l -HVGb -CTsuppa
+               | +HVG1r +HVG1t +CTringp -ganbori -EBDr -HVGb -CTsuppa
+               | +HVG1l +HVG1t +HVGp -HVG1r -HVGb -CTsuppa
+               | +HVG2r +CTringp +CTcov34i -CTsuppa -CTcov3li -CTcov3b -CTcov3d3
+               | +CTringp -HVG2r -HVG2t -CTsuppa -CTcov3d3
+               | +EBDr +HVG2t +CTringp -HVG2l -HVGb -CTringe -CTsuppa
+               | +HVG2r +CTringp +CTcov3b -HVGb -CTsuppa -CTcov3li
+               | +CTringp -HVG2l -HVGb -CTsuppa -CTcov3d3
+               | +HVG2l +HVG2t +HVGp -HVG2r -HVGb -CTsuppa
+               | +HVGb +CTringp +CTcov3ri -floot -ganbori -CTsuppa -CTcov3li
+               | +CTsuppa +CTcov3d4 +CTcov35i -CTsuppp -CTsuppd2 -CTcov3b
+               | +CTsuppa +CTcov33i +CTcov3d3 -EBDr -CTsuppp -CTsuppt -CTsuppd2 -CTcov3d4
+               | +EBDr +CTsuppa +CTcov33i +CTcov3d2 -CTsuppp -CTsuppt
+               | +CTsuppa +CTcov31i +CTcov3d1 -CTsuppp -CTsuppt -CTcov3d2
+               | +EBDr +CTsuppa +CTsuppd1 +CTcov32i +CTcov3d3 -CTsuppp -CTsuppt -CTcov3d1
+               | +CTsuppa +CTsuppd2 -EBDr -CTsuppp -CTsuppt -ext5
+               | +CTsuppa -CTsuppp -CTsuppt -CTsuppd1 -CTcov3d1 -ext5
+               | +CTsuppa +CTsuppd1 +CTcov34i -CTsuppp -CTcov3b -CTcov3d3
+               | +CTsuppa +CTcov3ri +CTcov3b -CTsuppp -CTsuppd2
+               | +CTsuppa +CTsuppd2 +CTcov3ri -floot -CTsuppp -CTsuppl
+               | +CTsuppa +CTsuppd1 +CTcov3b -CTsuppp -CTcov3li
+               | +CTsuppa +CTsuppr -floot -CTsuppp -CTsuppd1 -CTcov3li
+               | +CTsuppa +CTsuppd3 -floot -CTsuppc -CTsuppb -CTsuppr
+               | +CTsuppa +CTsuppl -floot -CTsuppc -CTsuppb -CTsuppd3 -CTsuppd4
+               | +CTsuppa +CTsuppd4 +body50 -CTsuppc -CTsuppb -CTsuppd3
+               | +CTsuppp +CTcov3ri +body50 -floot -CTcov3li -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov3ri +CTcov3b -ganbori -CTcov3li -CTcov4pi -CTcovcne -body50
+               | +CTsuppp +CTcov34i -CTcov3b -CTcov3d3 -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov3d4 +CTcov35i -CTcov3b -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov32i +CTcov3d3 -ganbori -CTcov3d1 -CTcov3b -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov33i +CTcov3d2 -ganbori -CTcov3b -CTcov3d4 -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov31i +CTcov3d1 -ganbori -CTcov3d2 -CTcov4pi -CTcovcne
+               | +XRTcyl1p +HEXl +HEXt -HEXr -HEXb -CTsuppa
+               | +EBDl +CTringp +CTcov3d4 +CTcov35i -EBDt -CTsuppa
+               | +XRTbox2p +CTcov3d4 +CTcov35i -EBDl -CTsuppa -CTcov3b
+               | +XRTbox2p +EBDl +EBDt +CTcov3d4 -CTsuppa
+*Air - bottom (under floor)
+AIRb         5 +air +floob +P7t +P7r -W7re -P7b
+               | +air +floob +W5te +W7re -W8le -W11be
+               | +air +floob +P7r +P8t -W7re -P8b
+               | +air +floob +W8le +W9te -W10le -W11be
+               | +air +floob +P11r +W11be -P10b -P10l
+               | +air +floob +P11r +W11be -P10b -P11l
+*Exterior (to SPECT/CT room) - air
+EXTa         5 +ceilb +W4AG +W5ti -floot -W4GL -P5t
+               | +ceilb +W4GL +W5ti -floot -W5bi -D4ri
+               | +Dte +W5te +D4re -floot -W5be -D4le
+               | +ceilb +W5ti +D4ri -Dti -W5bi -D4li
+               | +ceilb +W5ti +D4li -floot -W5bi -W6li
+               | +ceilb +W5bi +P5r -floot -W6li -D3ti
+               | +ceilb +P5r +D3bi -floot -P5t -W6li
+               | +Dte +P1ri +D3te -floot -W6le -D3be
+               | +ceilb +P5r +D3ti -Dti -W6li -D3bi
+               | +ceilb +W5te +W7ri -floot -W7li -P7t
+               | +ceilb +W7ri +P7b -floot -W7li -D5ti
+               | +ceilb +W7ri +P8b -floot -W7li -W11be
+               | +ceilb +W7ri +D5ti -Dti -W7li -P8t
+               | +Dte +W7re +D5te -floot -W7le -P8t
+               | +ceilb +W8ri +W8ti -floot -D6ti -W8li
+               | +ceilb +W8ri +D6ti -Dti -D6bi -W8li
+               | +Dte +W8re +D6te -floot -W8le -D6be
+               | +ceilb +W8ri +D6bi -floot -W8li -W9ti
+               | +ceilb +W9ti +W9ri -floot -W9bi -P9r
+               | +ceilb +W9ti +P9l -floot -W10li -D8ti
+               | +ceilb +P9b +W10ri -floot -P9l -D8ti
+               | +ceilb +W10ri +D8ti -Dti -W10li -D8te
+               | +Dte +W10re +D8te -floot -W10le -D8be
+               | +ceilb +W10ri +D8te -Dti -W10li -D8bi
+               | +ceilb +W10ri +D8bi -floot -W10li -P10t
+               | +ceilb +P10t +P10l -floot -W10li -W11bi
+               | +ceilb +W3e +W4AG -floot -W4GL -W11ri
+               | +ceilb +W4AG +W11ri -floot -P11r -W11bi
+               | +ceilb +P11r +W11ri -floot -W10ri -P10t
+               | +P10t +P11l +ceilb -P10b -P10r -floot
+               | +ceilb +W2li1 +W9ti -Dti -W9bi -W9ri
+               | +Dte +W2le1 +W9te -floot -W9be -W9re
+               | +ceilb +W3e +W15ri -floot -W15li -D9ti
+               | +ceilb +W15ri +D9ti -Dti -W15li -D9bi
+               | +Dte +W15re +D9te -floot -W15le -D9be
+               | +ceilb +W4GL +W12ti -floot -W12bi -W15ri
+               | +ceilb +W12bi +W13ri -floot -W13li -D12ti
+               | +ceilb +W13li +W14ti -floot -W14bi -W15ri
+               | +Dte +W13re +D12te -floot -W13le -D12be
+               | +ceilb +W13ri +D12ti -Dti -W13li -D12bi
+               | +ceilb +W13ri +D12bi -floot -W11ri -W13li
+               | +ceilb +W15ri +D9bi -floot -W15li -D10ti
+               | +Dte +W15re +D10te -floot -W15le -D10be
+               | +ceilb +W15ri +D10ti -Dti -W15li -D10bi
+               | +ceilb +D12bi +W15ri -floot -W11ri -W15li
+               | +ceilb +D12ti +W15ri -Dti -D12bi -W15li
+               | +ceilb +W15ri +D10bi -floot -D12ti -W15li
+               | +Dte +D12te +W15re -floot -D12be -W15le
+               | +air +ceilb +W3e +W7le -floot -W4e -W11be
+               | +air +ceilb +W5te +W7le -floot -W3e -W4re
+               | +air +ceilb +W4re +W5te -floot -W4e -P5t
+               | +air +ceilb +W4re +P5b -floot -W4e -P1ti
+               | +air +ceilb +W4i +W5be -floot -P1ri -P5t
+               | +air +W4e1 +P5t +ceilb -P1ri -floot -D1jl7e
+               | +air +ceilb +W4i +P5b -floot -W1e -W4e1
+               | +air +P1ri +P5b +ceilb -W2i -floot -D1jl7e
+               | +air +W8te +ceilb +D2jl2e -W2i1 -W8re -floot
+               | +air +ceilb +W2i1 +W2le -floot -W8re -W9te
+               | +air +ceilb +W3e +W4i -floot -W12te -W15re +tldC2
+               | +air +ceilb +W12be +W13le -floot -W14te -W15re
+               | +air +ceilb +W4i +W12be -floot -W11te -W13re
+               | +air +ceilb +W13le +W14be -floot -W11te -W15re
+               | +air +ceilb +W3e +W15le -floot -W10re -W11te
+               | +air +ceilb +W2LP +P9b -floot -W3e -W10re
+               | +air +ceilb +W2LP +W9be -floot -P9r -P9b
+               | +air +ceilb +W5te +W6le -floot -P5t -W8le
+               | +air +ceilb +W2e +P5t -floot -W8te -W8le
+               | +air +W3e +ceilb +tldCl -W15re -floot -tldC2
+               | +air +W3e +W4i +ceilb -floot -tldC2 -tldCr
+               | +air +W3e +ceilb +tldCr -tldC2 -tldCl -tldtopC2
+               | +air +W3e +tldCr +tldbotC2 -floot -tldC2 -tldCl
+               | +W2e +ceilb +tldBDt -tldt -tldB2 -tldBDb
+               | +W2e +tldb +tldBDt -floot -tldB2 -tldBDb
+               | +ceilb +D1jl7e +D1jr1e -W1e -D1jl1e -D1jt1e
+               | +D1jl7e +D1jr3e +D1jt3e -W1e -floot -D1jl3e
+               | +ceilb +D1jl7e +Wjl1e -W1e -floot -D1jr1e
+               | +D1jl7e +Wjr3e +Wjt3e -Wjl3e -Wjb3e -tldA2
+               | +W4e1 +ceilb +D1jl7e -W1e -floot -Wjr1e
+               | +ceilb +D1jl7e +Wjr1e -W1e -Wjl1e -D1jt1e
+               | +D1jl7e +Wjr1e +Wjb1e -W1e -floot -Wjl1e
+               | +D2jl6e +D2jl5e +D2jt5l -floot -D2jl4e -D2jr5e
+               | +D2jl3e +D2jl4e +D2jt3l -floot -D2jl2e -D2jr3e
+               | +ceilb +tldB2 +D2jr1e -W2i1 -floot -D2jl2e
+               | +W2e +W8te +ceilb -floot -D2jl1e -D2jl2e
+               | +W2e +ceilb +D2jl1e -D2jl2e -D2jr1e -D1jt1e
+               | +W2e +ceilb +D2jr1e -floot -tldB2 -tldBDt
+               | +W2e +ceilb +tldBDb -W2i1 -floot -tldB2
+               | +Wjt3e +tldA2 +tldAl -WINDp -Wjl3e -Wjb3e
+               | +Wjr3e +Wjt3e +tldA2 -WINDp -Wjb3e -tldAr
+               | +tldb +tldA2 +tldAr -WINDp -Wjb3e -tldAl
+               | +jzlid +ttarce -jzext -jzbot2
+               | +jzext +ttarce -jztop1
+               | +tldt +tldA1 +tldAr -D1jl2e -tldb -tldAl
+               | +D1jl1e +D1jl7e +ceilb -W1e -W2i -floot
+*Wall 1 - air
+W1A          5 +W1AG +W4AG +ceilb -W1PA -WINDr -floot
+               | +W1AG +WINDl +ceilb -W1PA -D1re -floot
+               | +ceilb +W1AG +WINDr -W1PA -WINDl -Dte
+               | +W1AG +WINDr +WINDb -W1PA -WINDl -floot
+               | +W1AG +D1ri +ceilb -W1PA -Dte -D1le
+               | +ceilb +W2GL +P5b -floot -W1AG -W2AG
+               | +W1LP +D1re +ceilb -W1GL -W2LP -Dte
+               | +W1AG +D1le +ceilb -W1PA -W2AG -floot
+               | +ceilb +W4AG +P5b -floot -W1AG -W4GL
+               | +W1LP +WINDl +ceilb -W1GL -D1re -pbt
+               | +W1LP +WINDr +ceilb -W1GL -Dte -WINDl
+               | +W1LP +W4LP +ceilb -W1GL -WINDr -pbt
+               | +D1jl3l +D1jl7l +D1jt1i -W1e -floot -D1jl1i
+               | +D1jr1i +D1jl7l +D1jt1i -W1e -D1jl3l -D1jt3l
+               | +D1jr1i +D1jl7l +D1jt3l -W1e -floot -D1jr3l
+               | +W1e +Dte +D1jl3l -D1le -floot -D1jl2l
+               | +W1i +D1le +D1jt1i -floot -D1jl1i -D1jl2l
+               | +W1LP +Dte +D1le -W1GL -W2LP -pbt
+               | +W1e +D1re +D1jt3l -floot -D1jl2l -D1jr3l
+               | +D1jl5l +D1jl6l +D1jt3l -floot -D1jl3l -D1jl4l
+               | +D1re +D1jl6l +D1jt3l -D1jl4l -D1jl5l -D1jt5l
+               | +W1i +D1jr1i +D1jt1i -Dte -D1le -D1jl2l
+               | +D1jl6l +D1jr3l +D1jt5l -floot -D1jl4l -D1jr5l
+               | +W1e +Dte +D1re -D1jl2l -D1jl3l -D1jt3l
+               | +W1i +Dte +D1jr1i -D1re -floot -D1jl2l
+               | +D1jl7i +D1jt1i +WINDl -W1e -Wjl1i -Wjb1i
+               | +W1i +WINDl +D1jt1i -D1jl2l -Wjl1i -Wjb1i
+               | +Dte +WINDr +Wjl4l -D1jl2l -WINDl -Wjt3l
+               | +W1i +Wjr1i +D1jt1i -WINDr -D1jl2l -Wjb1i
+               | +W1i +WINDr +D1jt1i -Dte -WINDl -D1jl2l
+               | +D1jl7i +D1jt1i +Wjr1i -W1e -Dte -WINDl
+               | +Dte +D1jl7i +Wjr1i -W1e -Wjr5i -Wjb1i
+               | +D1jl7i +Wjr5i +Wjb5i -W1e -WINDl -Wjb1i
+               | +W1i +WINDr +WINDb -WINDl -D1jl2l -Wjb1i
+               | +WINDr +Wjl4l +Wjb3l -WINDb -D1jl2l -Wjl3l
+               | +WINDr +Wjl4l +Wjt3l -D1jl2l -Wjr3l -Wjb3l
+               | +Dte +D1jl7i +Wjl3i -WINDl -Wjl4li1 -Wjb3i
+               | +D1jl7i +Wjr5i +Wjt5 -Wjl4li1 -Wjr3i -Wjb5e
+               | +Wjl3l +Wjl4l +Wjt3l -D1jl2l -WINDl -WINDb
+               | +Dte +D1jl7i +WINDr -WINDb -Wjl4li1 -Wjr3i
+               | +Dte +D1jl7i +Wjr3i -Wjl3i -Wjl4li1 -Wjt3i
+               | +D1jl7i +Wjr3i +Wjb3i -WINDl -WINDb -Wjl4li1
+*Wall 2 - air
+W2A          5 +ceilb +W2GL1 +W2GL2 -pbt -W3GL -W2LP2
+               | +ceilb +W2PA1 +W2PA2 -floot -W3PA -P1re
+               | +ceilb +W2GL1 +W2LP2 -pbt -W2LP -W2LP1
+               | +ceilb +W2PA1 +P1re -floot -P1te -W2li
+               | +ceilb +W2PA +W2GL1 -floot -W2PA1 -W2li
+               | +ceilb +P1te +P1le -floot -W9bi -W2li
+               | +ceilb +W2li +W9ti -floot -W9bi -W2li1
+               | +ceilb +W2LP +P1be -floot -P1le -P2te
+               | +ceilb +P1re +P1be -floot -W2LP -P2te
+               | +ceilb +P1re +P2te -floot -W3PA -P2re
+               | +W2PA +D2be +ceilb -W2AG -W2GL1 -floot
+               | +W1PA +W2PA +ceilb -W2AG -D2te -floot
+               | +W1GL +W2GL +ceilb -W2LP -W2GL1 -Dte
+               | +ceilb +W2PA +P2te -floot -P1le -W9bi
+               | +W2PA +D2te +ceilb -W2AG -Dte -D2be
+               | +W1GL +W2GL +Dte -W2LP -D2te -pbt
+               | +W2GL +Dte +D2be -W2LP -W2GL1 -pbt
+               | +W2e +D2jl1l +D2jt1l -floot -D2jl3l -D2jl2l
+               | +W2e +D2be +D2jt1l -floot -D2jl2l -D2jr1l
+               | +W2i +Dte +D2te -W2e -floot -D2jl3l
+               | +Dte +D2jl3l +D2jl6l -floot -D2jl5l -D2jl4l
+               | +Dte +D2jl3l +D2jl4l -D2be -D2jl2l -D1jt3i
+               | +W2e +D2jl3l +D2jt1l -Dte -D2be -D2jl2l
+               | +D2jl1l +D2jl7l +D2jt1l -W2i -Dte -D2jr1l
+               | +Dte +D2jl7l +D2jl5l -D2be -D2jl4l -D1jt3i
+               | +D2jl5i +D2jl6l +D1jt3e -D2jl4l -D2jr5i -D1jt5i
+               | +D2jl5i +D2jl6l +D1jt3i -D2jl4l -D2jr5i -D1jt3e
+               | +Dte +D2jl1l +D2jl7l -W2i -floot -D2jl3l
+               | +W2i +D2gap1 +D2jt3l -D2gap2 -floot -D2jl6e
+               | +D2jl4l +D2jr3l +D1jt3i -D2be -floot -D2jl2l
+               | +D2jl6l +D2jr5l +D1jt3i -D2be -floot -D2jl4l
+               | +D2jl7l +D2jr3l +D1jt3i -D2be -floot -D2jl6l
+               | +Dte +D2be +D2jl7l -W2i -floot -D2jr1l
+               | +Dte +D2jl7l +D2jl3l -D2jl6l -D2jl5l -D1jt3i
+*Wall 3 - air
+W3A          5 +ceilb +W3GL +W4LP1 -pbt -W3LP -W2LP2
+               | +ceilb +W3PA +W4i -floot -W3li -W3AG
+               | +ceilb +W3i +W4ri -floot -W3AG -W4i
+               | +ceilb +W3i +W4i -floot -W3PA -P4le
+*Wall 4 - air
+W4A          5 +ceilb +W1GL +W4LP -pbt -W4GL -P1ti
+               | +ceilb +W1PA +W4AG -floot -W4PA -P1ti
+               | +ceilb +W4LP1 +P1bi -pbt -W3GL -W4GL1
+               | +ceilb +P1bi +P4le -floot -W3PA -W4PA1
+               | +ceilb +W4ri +P4be -floot -W3i -P4le
+               | +ceilb +P1bi +W4ri -floot -P4be -P4re
+               | +ceilb +P1bi +P4re -floot -P4te -P4le
+#if 0
+*Scanner bounding box
+BBSCAN       5 +BBscan -tblbe -ttbound
+               | +BBscan +ttbound -tblbe -tblarcr -tblcovre
+               | +BBscan +ttbound +tblcovle -tblbe -tblarcl
+               | +BBscan +ttarce +ttbound -tblbe
+               | +BBscan +ttle +ttbound +tblarcl -tblbe -tbldial1
+               | +BBscan +ttbound +tblarcr +tbldiar1 -ttre -tblbe
+               | +BBscan +ttle +tbldial1 +tbldial2 -tblbe -tbll
+               | +BBscan +ttdiagle +tbldial2 -ttle -tblbe -tbltp
+               | +BBscan +ttbe +ttdiagre -ttdiagle -tblbe -tbltp
+               | +BBscan +ttre -ttdiagre -tblbe -tbltp -tbldiar2
+               | +BBscan +tblr -ttre -tblbe -tbldiar1 -tbldiar2
+               | +BBscan +ttre +ttdiagre -ttarce -ttle -ttbe -ttdiagle -ttae
+               | +BBscan +tbltp +tblcovre -tblb -tblcovle
+               | +BBscan +suptt +tblb +tblcovre -tblcovle -tblcovbe
+               | +tblcovri +BBscan +suptt +tblcovbi -supfe -tblcovli
+               | +BBscan +tblarcr -tblb -tblcovre
+               | +BBscan +tblarcl +tbldial1 +tblcovli -tblb
+               | +BBscan +tbldial1 +tbll -tbltp -tblb -tblcovli
+               | +BBscan -tbll -tbltp -tblb -tbldial2
+               | +BBscan +tblr +tbldiar2 -tbltp -tblb
+               | +BBscan +tblcovre -tbldiar1 -tblr -tbltp -tblb
+               | +tblcovri +BBscan +suptb +supfe -supbt -supfi -tblcovli
+               | +BBscan +suptt +tblarcl +tblcovle -tblbe
+               | +BBscan +suptt +tblarcr -tblbe -tblcovre
+               | +BBscan +suptt +tblcovre +tblcovfe -tblbe -tblcovle
+               | +BBscan +ttle +suptt +supfe -tblcovli -tblcovfi
+               | +tblcovri +BBscan +suptt +supfe -ttre -tblcovfi
+               | +BBscan +ttre +suptt +supbe -ttle -tblcovfi
+               | +BBscan +supr +suptt +supci -floot -supl -supbi -supdiag3
+               | +BBscan +supr +suptt +supci +supdiag4 -floot -supl -supbi
+               | +BBscan +supre +supci +supdiag3 -floot -supri -supbi -supdiag4
+               | +BBscan +supl +suptb +supfi +supdiag2 -ttle -supbt
+               | +BBscan +supr +suptt +supfi -supl -supce
+               | +BBscan +ttre +suptb +supfi +supdiag2 -supr -supbt
+               | +BBscan +supr +suptb +supce +supdiag4 -supl -supci
+               | +BBscan +supre -supri -supbt -supci -supdiag4
+               | +BBscan +ttre +suptb -supr -supbi -supdiag1
+               | +BBscan +supl +suptb -ttle -supbi -supdiag1
+               | +BBscan +ttre +supbi -ttle -supbe -supdiag1 -supdiag3
+               | +BBscan +supre +suptb +supbi +supdiag3 -supri
+               | +BBscan +supl +suptb +supbi +supdiag3 -ttle
+               | +BBscan +ttre +suptb +supbi +supdiag3 -supr
+               | +BBscan +supr +suptb +supbi +supdiag1 -supl -supbt
+               | +cvdt1ri +cvdt1ai +cvdt1ti -alcs1 -cvdt1li -cvdt1pi -cvdt1eli
+               | +alcsl +alcs1 +cvdt1dli +cvdt1ai -cvdt1li -cvdt1pi
+               | +alcsr +alcs1 +cvdt1dli +cvdt1dri +cvdt1ai -alcsl -alcsa -cvdt1bi
+               | +alcs1 +cvdt1dri +cvdt1ri +cvdt1ai -alcsr -cvdt1pi
+               | +alcsr +alcsa +coll1b +cvdt1dri -tblcovre -cvdt1bi -cvdt1pi
+               | +tblcovle +alcsa +coll1b +cvdt1dli -alcsl -cvdt1bi -cvdt1pi
+               | +tblcovre +alcsa +coll1b -tblcovle -collf -cvdt1bi
+               | +tblcovre +collb +coll1b -tblcovle -cvdt1bi -cvdt1pi
+               | +BBscan +alcs2 +cvdt1ri +cvdt1ai +cvdt2ti -cvdt1li -cvdt1pi -cvdt2eli
+               | +alcsl +cvdt1ai +cvdt2dli -alcs2 -cvdt1li -cvdt1pi
+               | +cvdt1ri +cvdt1ai +cvdt2dri -alcsr -alcs2 -cvdt1pi
+               | +alcsr +alcsp +cvdt2dli +cvdt2dri -alcsl -alcs2 -cvdt1pi -cvdt2bi
+               | +alcsr +cvdt1ai +cvdt2dli +cvdt2dri -alcsl -alcsa -alcs2 -cvdt2bi
+               | +alcsr +collb +cvdt2dli +cvdt2dri -alcsl -alcsp -coll2b -cvdt2bi
+               | +alcsr +alcsa +cvdt2dli +cvdt2dri -alcsl -collf -coll2b -cvdt2bi
+               | +alcsr +collf +cvdt2dri -tblcovre -collb -coll2b -cvdt2bi
+               | +tblcovle +collf +cvdt2dli -alcsl -collb -coll2b -cvdt2bi
+               | +alcsr +alcsp +alcs1 -alcsl -coll1b -cvdt1pi
+               | +NM4pi +NM4ti2 +NM4li2 +NM4ri2 -NM4s -NM4bi2 -NM4ci2
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4pi -NM4bi1 -NM4ti1 -NM4s
+               | +NM3pi +NM3li +NM3ri +NM3i -NM3s -ganbori
+               | +NM3ae +NM2i -ganbori -NM2s
+               | +NM4ti2 +NM4ri2 +NM5ai -NM4bi2 -NM5ri -NM5s
+               | +NM5ri +NM5ai +NM5di2 -NM4bi2 -NM5s
+               | +NM4ti2 +NM5ci +NM5ai +NM5ti2 +NM5be2 -NM5li -NM5s -NM5bri2 -NM5ext2
+               | +NM5ai +NM5tri2 +NM5ext2 -NM5s
+               | +NM4ti1 +NM4ri1 +NM5ai -NM4bi1 -NM5ri -NM5s
+               | +NM5ri +NM5di1 +NM5ai -NM4bi1 -NM5s
+               | +NM4ti1 +NM5ti1 +NM5ci +NM5ai -NM5li -NM5bi1 -NM5bri1 -NM5s -NM5ext1
+               | +NM5tri1 +NM5ai +NM5ext1 -NM5s
+               | +BBscan +tblbe +cvdt2te +cvdt2ele
+               | +BBscan +ttarce +tblbe +cvdt1te -cvdt1ae -cvdt1ele
+               | +BBscan +tblbe +cvdt1te +cvdt2te -ttarce -cvdt1re -cvdt1ele -cvdt2ele -NM5ae
+               | +BBscan +ttbe +tblbe +cvdt1re +cvdt2te -cvdt1le -cvdt1ae -cvdt2ele
+               | +BBscan +tblbe +cvdt1re -ttarce -ttre -ttbe -cvdt1ae
+               | +BBscan +ttle +tblbe -ttarce -ttbe -cvdt1le -cvdt1ae
+               | +BBscan +ttdiagle +tblbe -ttle -ttbe -cvdt1ae
+               | +BBscan +ttre +tblbe -ttbe -ttdiagre -cvdt1ae
+               | +BBscan +ttarce +cvdt1ae -coll1t -cvdt1dre -cvdt1pe
+               | +BBscan +ttarce +cvdt1ae -coll1t -cvdt1dle -cvdt1pe
+               | +BBscan +ttarce +cvdt1dle +cvdt1le +cvdt1ae -cvdt1pe
+               | +BBscan +ttarce +cvdt1dre +cvdt1ae -cvdt1re -cvdt1pe
+               | +BBscan +ttarce +cvdt1pe +cvdt1te -NM5ae
+               | +BBscan +cvdt1re +cvdt1pe +cvdt1te -ttarce -cvdt1le -NM5bi1 -NM5ae
+               | +BBscan +ttle +cvdt1pe +cvdt2te -ttarce -cvdt1le -NM5ae
+               | +BBscan +cvdt1re +cvdt1pe +cvdt2te -ttarce -ttre -NM5ae
+               | +BBscan +ttre +ttbe +cvdt1pe +cvdt2te -ttle -NM5ae
+               | +BBscan +ttre +cvdt1pe -ttbe -ttdiagre -NM5ae
+               | +BBscan +ttdiagle +cvdt1pe -ttle -ttbe -NM5ae
+               | +BBscan +ttarce +coll1t +cvdt1ae -jzlid -cvdt1pe
+               | +BBscan +cvdt1ae +cvdt2dre -ttarce -ttre -coll2t -cvdt1pe
+               | +BBscan +ttre +cvdt1ae -ttdiagre -coll2t -cvdt1pe
+               | +BBscan +ttle +cvdt1ae +cvdt2dle -ttarce -coll2t -cvdt1pe
+               | +BBscan +ttdiagle +cvdt1ae -ttle -coll2t -cvdt1pe
+               | +BBscan +ttbe +ttdiagre +cvdt1ae -ttdiagle -coll2t -cvdt1pe
+               | +BBscan +cvdt1ae -cvdt1pe -cvdt1te
+               | +BBscan +tblbe -cvdt1re -cvdt1ae -cvdt1te
+               | +BBscan +tblbe +cvdt1le -cvdt1ae -cvdt1te
+               | +BBscan +ttre +tblbe -ttle -cvdt1ae -cvdt1te
+               | +BBscan +tblbe +cvdt1le +cvdt1te +cvdt1ele
+               | +BBscan +tblbe +cvdt1te +cvdt1ele -cvdt1re
+               | +BBscan +ttarce +tblbe +cvdt1ele -ttre -cvdt1ae
+               | +BBscan +ttarce +tblbe -ttre -cvdt1ae -cvdt1te -cvdt1ele
+               | +BBscan +ttarce +ttle +tblbe +cvdt1ele -cvdt1ae
+               | +BBscan +ttarce +ttle +tblbe -cvdt1ae -cvdt1te -cvdt1ele
+               | +BBscan +ttre +tblbe +cvdt1te +cvdt1ele -ttle
+               | +BBscan +cvdt1re +cvdt1ae +cvdt1te +cvdt1ele -ttre
+               | +BBscan +ttle +cvdt1ae +cvdt1te +cvdt1ele -cvdt1le
+               | +jzlid +jzbot1 +BBscan +coll1t
+               | +BBscan +coll1t +cvdt1re +cvdt1ae -ttarce -cvdt1pe -cvdt2dre
+               | +BBscan +coll1t +cvdt1ae -ttarce -cvdt1le -cvdt1pe -cvdt2dle
+               | +BBscan +cvdt1le +cvdt1pe -cvdt1te -NM5ae
+               | +BBscan +cvdt1pe -cvdt1re -cvdt1te -NM5ae
+               | +BBscan +ttre +cvdt1pe -ttle -cvdt1te -NM5ae
+               | +BBscan +ttarce +cvdt1pe -ttre -cvdt1te -NM5ae
+               | +BBscan +ttarce +ttle +cvdt1pe -cvdt1te -NM5ae
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4pi -NM4bi1 -NM4ci1 -NM4s
+               | +BBscan +tblbe +cvdt1le +cvdt1te +cvdt2te -ttarce -cvdt1ele -cvdt2ele -NM5ae
+               | +BBscan +tblbe +tblcovle -cvdt2te -NM5ae -covgte -covgde
+               | +BBscan +tblbe +covgte +covg1lle -floot -cvdt1pe
+               | +tblbe +covgte +covg1lre -floot -covglce -covg1lle -covg1b
+               | +tblbe +covgte +covg1rre -floot -covgrce -covg1rle -covg1b
+               | +tblbe +covgte +covg1rle -floot -cvdt1pe -covg1lre
+               | +BBscan +tblbe -floot -cvdt1pe -cvdt2te -covg1rre
+               | +BBscan +cvdt1pe -cvdt2te -NM5ae -covg1rre -covgde
+               | +covgti +covg1lri +covg1b -NM5ae -NM0t -covg1lli
+               | +covgti +covglci -NM0t -covg1b
+               | +NM0t +covglci -floot -NM0a
+               | +NM0t +NM0le +NM0a +covglci -floot -covg1b
+               | +NM0t +NM0a +covglci -floot -NM0li -covg1b
+               | +NM0t +NM0le +covg1b -floot -NM5ae -covg1lli
+               | +BBscan +NM0t +covg1lri +covg1b -NM5ae -NM0li
+               | +covgti +covg1rri +covg1b -NM5ae -NM0t -covg1rli
+               | +covgti +covgrci -NM0t -covg1b
+               | +NM0t +covgrci -floot -NM0a
+               | +NM0t +NM0ri +NM0a +covgrci -floot -covg1b
+               | +NM0t +NM0a +covgrci -floot -NM0re -covg1b
+               | +NM0t +NM0ri +covg1b -floot -NM5ae -covg1rli
+               | +NM0t +covg1rri +covg1b -floot -NM5ae -NM0re
+               | +BBscan +NM3pe +tldE4
+               | +BBscan +NM5ae -tldE3
+               | +BBscan +CTcov3re +stdpe -floot -CTcov3le
+               | +BBscan +CTcov4pe +CTcov3re -covgte -CTcov3le -stdpe
+               | +covgti +CTcov4pe +CTcov3ri -floot -CTcov3li -stdpi
+               | +CTcovcni -CTcov4pe
+               | +BBscan +CTcov2ae -CTcov4pe -CTcov3le -CTcov34e -CTcov3b -CTcov3d3
+               | +BBscan +CTcov2ae +CTcov3d3 -CTcov4pe -CTcov32e -CTcov3d1 -CTcov3b
+               | +BBscan +CTcov2ae +CTcov3d1 -CTcov31e -CTcov4pe -CTcov3d2
+               | +BBscan +CTcov2ae +CTcov3d2 -CTcov4pe -CTcov33e -CTcov3b -CTcov3d4
+               | +BBscan +CTcov2ae +CTcov3re +CTcov3d4 -CTcov4pe -CTcov3b -CTcov35e
+               | +ganbore +NM4ae -ganborp
+               | +NM3ae +CTcov1d1 +CTcov3re -CTcov13e -covgt -CTcov2ae
+               | +NM3ae +covgt +CTcov3re -floot -covg4re -CTcov2ae
+               | +NM3ae +CTcov13e +covgdre -covgt -CTcov2ae
+               | +NM3ae +covg4le +covgt -floot -CTcov2ae -CTcov3le
+               | +NM3ae +CTcov12e -covgt -covgdle -CTcov2ae
+               | +NM3ae -CTcov12e -CTcov1d2 -covgt -CTcov2ae -CTcov3le
+               | +BBscan +NM3ae +CTcov1d2 +CTcov3re -CTcov11e -CTcov1d1 -CTcov2ae -CTcov3le
+               | +BBscan +NM3pe +covg2le -NM3le -NM3ae -CTcov3le
+               | +BBscan +NM3pe +CTcov1d2 -NM3le -NM3ae -covg2le
+               | +BBscan +NM3le +NM3re +NM3pe +CTcov1d2 -NM3e -NM3ae
+               | +NM3pe +CTcov3re -floot -NM3re -NM3ae -CTcov1d2 -covg2ri
+               | +NM3pe +covg2ri -NM3e -NM3ae -CTcov1d2 -covgde -covg2le
+               | +NM3e +NM3pe -NM3le -NM3ae -covg2le
+               | +BBscan +NM5ae -NM3pe -NM4le1 -NM4be1 -covgde
+               | +BBscan +NM5ae -NM3pe -NM4le2 -NM4be2 -covgde
+               | +BBscan +cvdt1pe +covgde +covg2le -floot -NM3pe
+               | +BBscan +NM5ae +CTcov3re -NM3pe -NM4re1 -NM4be1
+               | +NM3e +NM3pe +covg2ri -NM3re -NM3ae
+               | +BBscan +NM3pe +CTcov1d2 +CTcov3re -NM3re -NM3ae -covg2ri
+               | +BBscan +NM3pe +CTcov1d2 +covg2ri -NM3re -NM3e -NM3ae
+               | +NM5ae +CTcov3re -W2i -NM3pe -NM4re2 -NM4be2 -covgde
+               | +cvdt1pe +covgde +CTcov3re -floot -NM3pe -covg2ri
+               | +BBscan +cvdt1pe +covgde -floot -NM5ae -CTcov3re
+               | +tblbe +covg1rre -tblcovle -cvdt2te -NM5ae -covgte -covgde
+               | +ttre +tblbe +coll1t -ttarce -ttle -ttbound -NM5ae
+               | +BBscan +NM4le1 +NM4re1 +NM5ae -NM3pe -NM4te1
+               | +NM4te1 +NM5ae -NM4pe -NM5te1
+               | +BBscan +NM4be1 +NM4be2 +NM5ae +tldE2l -NM3pe
+               | +NM4ae +NM4le2 +tldE2l -NM3pe -NM4be2
+               | +NM4le1 +NM4ae +tldE2l -NM3pe -NM4be1
+               | +NM4be1 +NM4be2 +NM5ae +CTcov3re -NM3pe -tldE1r
+               | +NM4ae +NM4le2 +NM4re2 +tldEb +tldE1r -ganbore -NM3pe -covgde -tldE2l
+               | +NM4ae +NM4re2 -NM3pe -NM4be2 -tldE1r
+               | +NM4ae +NM4be2 +tldEb +tldE1r -NM3pe -NM4le2 -tldE2l
+               | +NM4le1 +NM4re1 +NM4te1 +NM4ae +tldE1l -ganbore -NM3pe -tldEb -tldE2r
+               | +NM4le1 +NM4ae +tldE2r -tldEt -tldE2l -tldE
+               | +NM4le1 +tldE2r +tldE -NM3pe -tldEt -tldE2l
+               | +NM4re1 +NM4te1 +NM4ae -NM3pe -NM4be1 -tldE1l
+               | +NM4be1 +NM4ae +tldE1r -tldEt -tldE1l -tldE
+               | +NM4be1 +tldE1r +tldE -NM3pe -tldEt -tldE1l
+               | +NM4le2 +NM4re2 +NM5ae -NM4pe -NM4te2 -NM5bi2 -covgde
+               | +NM4te2 +NM5ae -NM4pe -NM5te2
+               | +NM5ae +NM5te2 +NM5ext2 -NM4pe -NM5le -NM5tre2
+               | +NM4le2 +NM4te2 +NM5ae +NM5le +NM5te2 -NM4pe -NM5bi2
+               | +ttle +NM4le2 +NM5ae +NM5bi2 -NM4pe -NM4be2
+               | +ttle +NM4le1 +NM4te1 +NM4be2 +NM5te1 +NM5ae -NM4pe -tldE2l
+               | +BBscan +NM4be1 +NM4be2 +NM5ae -NM4le1 -NM4pe -tldE2l
+               | +BBscan +NM4le1 +NM4be2 +NM5ae +tldE2l -NM4be1 -NM4pe
+               | +NM5te1 +NM5ae +NM5ext1 -ttle -NM4pe -NM5tre1
+               | +ttarce +NM5ae +NM5le -ttle -NM4pe -NM5ext1
+               | +ttarce +NM5ae +NM5re +NM5be1 -NM4pe -NM5le -NM5de1
+               | +NM5ae +NM5bre1 +NM5re -NM5p -NM5be1
+               | +NM4te1 +NM5ae +NM5re -NM5p -NM5bre1 -NM5ce -NM5be1
+               | +NM4be1 +NM4be2 +NM5ae +NM5de1 +tldE1r -NM4pe
+               | +NM4be1 +NM5ae +NM5bre2 -ttarce -ttre -NM5p -NM5de1
+               | +ttre +ttbe +NM5ae +NM5bi2 -ttle -NM4pe
+               | +ttre +NM5ae -ttbe -ttdiagre -NM5p
+               | +ttdiagle +NM5ae -ttle -ttbe -NM4pe
+               | +ttre +NM5ae +NM5bre2 -NM5p -NM5bi2
+               | +NM5ae +NM5re +NM5de1 +NM5bre2 -NM4be2 -NM5p -NM5de2
+               | +NM4te2 +NM5ae +NM5re -NM5p -NM5ce -NM5bre2
+               | +NM4re1 +NM4te1 +NM5te1 +NM5p -NM4pe -NM5le -NM5be1 -NM5ext1
+               | +NM5p +NM5tre1 +NM5ext1 -NM4pe
+               | +NM4re1 +NM5p +NM5de1 +NM5be1 -NM4be1 -NM4pe
+               | +NM4be1 +NM5p +NM5bi2 -ttarce -ttre -NM4pe -NM5de1
+               | +ttre +NM5p -ttbe -ttdiagre -NM4pe
+               | +NM4re2 +NM4te2 +NM5p +NM5de1 +NM5te2 -NM4pe -NM4be2
+               | +NM5p +NM5te2 -NM4pe -NM5le -NM5de1 -NM5bi2 -NM5ext2
+               | +NM5p +NM5tre2 +NM5ext2 -NM4pe
+               | +BBscan +NM3pe +CTcov3le -tldE34l -tldE4
+               | +BBscan +CTcov3le +tldE34r -tldE4
+               | +BBscan +CTcov3le +tldE34l -tldEt -tldE34r -tldE4
+               | +CTcov3le +tldEb +tldE34l -floot -tldE34r -tldE4
+               | +BBscan +tldE34r +tldE3 -CTcov3re
+               | +BBscan +NM5ae +tldE3 -CTcov3re -tldE34l
+               | +BBscan +tldE34l +tldE3 -CTcov3re -tldEt -tldE34r
+               | +BBscan +tldEb +tldE34l +tldE3 -CTcov3re -tldE34r
+               | +ttarce +NM4be1 +NM4pe -ttpe
+               | +NM4ce1 +NM4pe -ttpe -NM4be1
+               | +NM4be1 +NM4pe +NM4be2 +tldE1r -ttarce -ttre -ttpe
+               | +ttle +NM4be1 +NM4pe +NM4be2 -ttarce -ttpe -tldE2l
+               | +ttle +NM4pe +NM4ce2 -ttpe -NM4be2
+               | +NM4pe +NM4ce2 -ttre -ttpe -NM4be2
+               | +ttre +NM4pe +NM4ce2 -ttdiagre -ttpe
+               | +ttdiagle +ttdiagre +NM4pe +NM4ce2 -ttle -ttpe
+               | +ttbe +ttdiagre +NM4pe -ttdiagle -ttpe
+               | +ttbe +NM4pe +NM4le2 +NM4re2 -ttpe -NM4te2 -covgde
+               | +ttpe +NM4be1 +NM4be2 +tldE1r -NM4ae -tldE2l
+               | +ttpe +NM4ce1 -NM4be1 -NM4ae
+               | +ttpe +NM4ce2 -NM4ae -NM4be2
+               | +ttpe +NM4le2 +NM4re2 -NM4ae -NM4be2 -NM4te2 -covgde
+               | +CTcov11i +CTcov12i +covg3i -NM2e -NM2pe
+               | +CTcov12i +CTcov13i +CTcov1d1 +covg3i +covgdli -NM2pe -NM0t -CTcov11i -CTcov1d2
+               -covgdri
+               | +ltgd1 +CTcov12i +covg3i -NM2pe -CTcov11i -CTcov1d1
+               | +CTcov13i +CTcov1d2 +covg3i +ext1 -NM2pe -CTcov11i
+               | +covg4ri +covg3i +covgdri -NM2pe -NM0t
+               | +NM0t +covg4ri +covg3i -floot -NM2pe -NM0re
+               | +NM5ae +NM0le +covgdi -floot -covg2li -covg3i
+               | +NM5ae +NM0re +covgdi -NM0t -NM0le -covg3i
+               | +NM5ae +NM0t +NM0ri -floot -NM0li -covg3i
+               | +NM5ae +covgdi +covg2re -floot -NM0re -covg3i
+               | +NM0t +NM0ri +covg3i -floot -NM2pe -NM0li
+               | +ttre +NM4be1 +NM5ae -ttarce -ttri -ttpe -ttbound
+               | +ttli +NM4be1 +NM5ae -ttarce -ttle -ttpe -ttbound
+               | +NM5p +NM5be1 -NM4pe -NM5re -NM5de1
+               | +NM2pe +NM1le +CTcov11i +CTcov12i -CTcov2ai
+               | +NM2pe +NM1le +CTcov12i +covgdli -CTcov11i -CTcov1d2 -covgt -CTcov2ai
+               | +NM2pe +NM0le +covgt -floot -covg4li -CTcov2ai
+               | +NM2pe +NM1le +covgt -NM0t -NM0le -CTcov2ai
+               | +NM1p2 +NM0t +NM0li -floot -NM0le -CTcov2ai
+               | +NM2pi +NM0li +covgt -NM1li -NM0t -CTcov2ai
+               | +NM1li +NM1p2 +covgt -NM1le -NM0t -CTcov2ai
+               | +NM2pi +NM0ri +covgt -floot -NM0li -CTcov2ai
+               | +NM2pi +NM1ri +covgt -NM0t -NM0ri -CTcov2ai
+               | +NM1re +NM1p2 +covgt -floot -NM1ri -CTcov2ai
+               | +NM1ri +NM1p2 +NM0t -floot -NM0ri -CTcov2ai
+               | +NM2pe +NM0re +covgt -NM1re -NM0t -CTcov2ai
+               | +NM2pe +covg4ri +covgt -floot -NM0re -CTcov2ai
+               | +NM2pe +CTcov11i -NM1re -CTcov2ai
+               | +NM2pe +CTcov13i +CTcov1d1 -NM1re -CTcov11i -covgt -covgdri -CTcov2ai
+               | +NM1p2 +NM0t +NM0re -floot -NM1re -CTcov2ai
+               | +BBscan +NM2pe +NM0t +NM0ri -floot -NM2pi -NM0li
+               | +covg3i -NM2pe -NM0t -covg4li -covgdli
+               | +NM0t +NM0le +covg3i -floot -NM2pe -covg4li
+               | +NM4ae +tldEt +tldE2r -tldEb -tldE2l -tldE
+               | +NM4ae +tldEt +tldE1r -tldEb -tldE1l -tldE
+               | +NM2pe +NM1re +CTcov11i -NM1te -NM1le -CTcov2ai
+               | +NM2pe +NM1te +NM1dtle -NM1le -CTcov2ai
+               | +NM2pe +NM1te +NM1dtre +NM1re -CTcov2ai
+               | +NM1dble +NM1p1 -NM1li -NM1be -CTcov2ai
+               | +NM1ri +NM1dbre +NM1p1 -NM1be -CTcov2ai
+               | +NM1li +NM1dbli +NM1p2 -NM1le -NM1be -CTcov2ai
+               | +NM1dbli +NM1p1 -NM1li -NM1dble -NM1be -CTcov2ai
+               | +NM1ri +NM1dbri +NM1p1 -NM1dbre -NM1be -CTcov2ai
+               | +NM1re +NM1dbri +NM1p2 -NM1ri -NM1be -CTcov2ai
+               | +NM2pi +NM1ri +NM1be -NM1li -NM1p2 -covgt
+               | +NM1re +NM1be +NM1p2 -NM1le -covgt -CTcov2ai
+               | +NM2pi +NM1ti +NM1ri -ganbori -NM1dtli -NM1dtri -NM1li -NM1dbli -NM1dbri
+               -NM1be -CTcov2ai
+               | +NM1te +NM1p1 -NM1ti -NM1dtle -NM1dtre -CTcov2ai
+               | +NM1ti +NM1dtri +NM1re +NM1pd -NM1dtre -CTcov2ai
+               | +NM1ti +NM1dtli +NM1pd -NM1dtle -NM1le -CTcov2ai
+               | +NM1li +NM1p2 -NM1dtli -NM1le -NM1dbli -CTcov2ai
+               | +NM1re +NM1p2 -NM1dtri -NM1ri -NM1dbri -CTcov2ai
+               | +NM5bi2 +NM2pi +NM1ri +NM1dbre -NM1p1
+               | +NM5bi2 +NM2pi +NM1dble -NM1li -NM1p1
+               | +NM1li +NM1pd -NM1dtli -NM1le -NM1p2
+               | +NM1re +NM1pd -NM1dtri -NM1ri -NM1p2
+               | +CTcov31i +CTcov2ai +CTcov3d1 -ganbori -XRTcyl1a -CTcov3d2 -CTcovc
+               | +CTcov2ai +CTcov33i +CTcov3d2 -ganbori -XRTcyl1a -CTcov3d4 -CTcovc
+               | +CTcov2ai +CTcov3d4 +CTcov35i -XRTcyl1a -CTcovc
+               | +CTcov2ai +CTcov32i +CTcov3d3 -ganbori -XRTcyl1a -CTcov3d1 -CTcovc
+               | +CTcov2ai +CTcov34i -XRTcyl1a -CTcov3d3 -CTcovc
+               | +CTcov2ai +CTcov3b -XRTcyl1a -CTcov3li -CTcov3d3 -CTcov34i -CTcovc
+               | +CTcov2ai +CTcov3ri +CTcov3b +CTcov3d4 -XRTcyl1a -CTcov35i -CTcovc
+               | +CTcov2ai +CTcov3ri +CTcovc -floot -ganbori -XRTcyl1a -CTcov3li
+               | +XRTcyl1a +XRTbox1r +CTcov31i +CTcov3d1 -XRTcyl1 -XRTbox1t -XRTcyl2 -XRTcyl3
+               -CTsuppa
+               | +XRTbox1t +XRTcyl2r +CTringp +CTcov3d1 -XRTcyl1 -XRTbox2t -CTsuppa
+               | +XRTcyl2r +XRTcyl3 +CTcov3d1 -XRTbox1t
+               | +XRTbox1r +XRTcyl3 -XRTcyl1 -XRTcyl2l
+               | +XRTbox1r +XRTbox1a +CTcov31i -XRTcyl1 -XRTbox2t -XRTcyl3 -CTsuppa -ext3
+               | +HEXb +CTringp +ext3 -XRTcyl1 -XRTbox2t -XRTcyl2r -CTsuppa
+               | +XRTbox1r +XRTbox1b +CTringp -XRTcyl1 -XRTbox2t -XRTbox1a -ext3
+               | +XRTbox1t +CTringp +ext3 -XRTcyl1p -XRTcyl1 -XRTcyl2r -XRTcyl3 -ext4
+               | +XRTcyl1p +XRTcyl1 -CTsuppa
+               | +XRTcyl1p +XRTbox1t +ext3 -XRTcyl1 -XRTcyl2r -CTsuppa -ext4
+               | +XRTbox1r +XRTcyl2 +CTcov3d1 -XRTcyl1 -XRTcyl2l
+               | +XRTcyl2 +XRTcyl2r +CTcov3d1 -XRTcyl1
+               | +XRTcyl1a +XRTbox1r +XRTbox1t +CTcov3d1 -XRTcyl1 -XRTbox2t -XRTbox1p -XRTcyl2
+               | +XRTbox1t +XRTbox1p +CTcov3d1 +ext3 -XRTcyl1 -XRTbox2t -CTringa
+               | +XRTbox1t +CTringa +CTcov3d1 +ext3 -XRTcyl1 -XRTbox2t -CTringp -CTringe
+               | +XRTbox1r +XRTbox1b +XRTbox1p -XRTcyl1 -XRTbox2t -CTringa -ext3
+               | +XRTcyl1a +EBDr +CTcov33i +CTcov3d2 -ganbori -XRTcyl4p -XRTbox1r
+               | +XRTcyl1a +CTcov31i -XRTcyl4p -XRTbox1r -CTcov3d2
+               | +XRTcyl4p +EBDr +CTcov33i +CTcov3d2 -ganbori -XRTcyl4 -XRTcyl5 -XRTbox1r -CTringa
+               | +XRTcyl4p +CTcov31i -XRTbox1r -XRTbox1a -CTcov3d2
+               | +EBDr +CTringa +CTcov33i +CTcov3d2 -XRTcyl4 -XRTcyl5 -XRTbox1r -XRTbox1a -CTringe
+               | +XRTcyl5 +XRTcyl4p -XRTcyl5p
+               | +XRTcyl5 +XRTcyl5a -XRTbox1a
+               | +XRTbox1a +EBDr +CTcov33i +CTcov3d2 -ganbori -XRTbox1r -CTsuppa
+               | +XRTbox1a +CTcov31i -XRTbox1r -CTsuppa -CTcov3d2
+               | +EBDr +CTringp +CTringe -ganbori -XRTcyl4 -XRTbox1r -XRTbox1a
+               | +XRTbox2t +XRTcyl1a +XRTbox1r +EBDr +CTcov3d1 -ganbori -XRTbox2a
+               | +XRTbox2b +XRTbox2a +XRTbox1r +EBDr +CTcov3d1 -ganbori -CTringa
+               | +XRTbox2b +XRTbox1r +EBDr +CTringp +CTcov3d1 -ganbori -XRTbox2p
+               | +XRTbox2b +EBDr +CTringp -ttle -ganbori -CTsuppa -CTcov3d1
+               | +HEXb +CTringp -ttle -XRTbox2t -CTsuppa -CTcov3d1
+               | +XRTbox2t +XRTbox2p +EBDr -ttle -XRTbox2b -CTsuppa -CTcov3d1
+               | +XRTbox2b +XRTcyl1a +EBDr -ttle -ganbori -CTringa -CTcov3d1
+               | +XRTcyl1a +HEXb -ttle -XRTbox2t -CTringa -CTcov3d1
+               | +XRTcyl1a +EBDr +CTcov32i -HEXl -CTringe -CTsuppa -CTcov3d1
+               | +XRTcyl1a +EBDr +CTcov32i -HEXl -CTringe -CTsuppa -CTcov3d1
+               | +XRTcyl1a +HEXl +CTcov32i +CTcov3d3 -HEXt -CTsuppa
+               | +XRTcyl1a +HEXr +HEXt +CTcov3d3 -HVG2t -CTringe -CTsuppa
+               | +ttle +XRTcyl1a +HEXb -XRTbox2b -HEXr -CTringe -CTsuppa
+               | +ttle +XRTcyl1a +CTringe -HVG2t -CTringa
+               | +XRTbox2t +XRTcyl1a -ttle -XRTbox2b -XRTbox2a -CTcov3d1
+               | +HEXl +HEXb +EBDr +CTringa -ttle -CTringp -CTringe
+               | +ttle +XRTcyl1a +HVG2t +CTringe +CTcov3d3 -ganbori -HVG2l -HVGb -CTringa
+               | +ttle +CTringp +CTringe +CTcov3d3 -ganbori -HVG2l -HVGb -CTsuppa
+               | +HVG2r +CTringa +CTcov34i -CTringp -CTcov3b -CTcov3d3
+               | +CTringa -HVG2r -HVG2t -CTringp -CTcov3d3
+               | +HVG2t +CTringa -HVG2l -CTringp -CTringe -CTcov3b
+               | +EBDr +HVG2r +CTringa +CTcov3b -CTringp -CTcov3li
+               | +EBDr +HVGb +CTringa -HVG2r -CTringp -CTringe -CTcov3d3
+               | +EBDl +CTringa +CTcov33i +CTcov35i -EBDr -EBDt -CTringp -CTcov3d4
+               | +CTringa +CTcov35i -EBDl -HVG1t -CTringp -CTringe
+               | +HVG1r +HVG1t +CTringa +CTcov3d3 -EBDr -HVGb -CTringp -CTringe
+               | +HVG1t +CTringa +CTcov3ri -HVG1l -HVGb -CTringp
+               | +CTringa +CTcov3ri +CTcov3b -HVG1l -HVG1t -CTringp -CTcov35i
+               | +HVGb +CTringa +CTcov3ri -floot -EBDr -CTringp -CTringe -CTcov3li
+               | +CTringa +CTringe -XRTbox1r -XRTbox1b -CTringp
+               | +EBDl +CTringa +CTcov3d4 +CTcov35i -EBDr -EBDt -CTringp
+               | +XRTcyl1a +CTcov3d4 +CTcov35i -XRTbox2a -EBDr -CTcov3b
+               | +XRTcyl1a +CTcov33i -XRTbox2a -EBDr -CTcov3b -CTcov3d4
+               | +XRTcyl1a +CTcov3ri +CTcov3b +CTcov3d3 -floot -ganbori -XRTbox2a -EBDr
+               | +XRTcyl1a +CTcov3b -floot -XRTbox2a -CTcov3li -CTcov3d3
+               | +XRTcyl1a +EBDr +HVGb +CTcov3d3 -ganbori -XRTbox2a
+               | +XRTcyl1a +EBDr +HVG2t +CTcov3d3 -XRTbox2a -CTringe
+               | +XRTcyl1a +CTcov34i -XRTbox2a -CTcov3b -CTcov3d3
+               | +XRTcyl1a +HVG2l +CTringe +CTcov3d3 -XRTbox2a
+               | +XRTbox2a +HVG2t -HVG2l -CTringa -CTringe -CTcov3b
+               | +XRTbox2a +HVG2r +CTcov34i -CTringa -CTcov3b -CTcov3d3
+               | +XRTbox2a -HVG2r -HVG2t -CTringa -CTcov3d3
+               | +XRTbox2a +HVG2r +CTcov3b -floot -CTringa -CTcov3li
+               | +XRTbox2a +EBDr +HVGb +DTSt -ganbori -HVG2r -CTringa
+               | +XRTbox2a -HVG2l -HVGb -CTringa -CTcov3d3
+               | +XRTbox2a +DTSt +DTSl -ganbori -EBDr -CTringa
+               | +XRTbox2a +HVGb +DTSc -DTSl -CTringa
+               | +XRTbox2a +EBDb +HVG1r -ganbori -EBDr -HVGb -DTSl -CTringa
+               | +XRTbox2a +EBDb -HVG1r -HVG1t -CTringa
+               | +XRTbox2a +CTcov3ri +CTcov3b -EBDb -HVG1t -CTringa
+               | +XRTbox2a +CTcov35i -EBDl -EBDb -CTringa -CTcov3b
+               | +XRTbox2a +EBDl +CTcov3d4 +CTcov35i -EBDr -EBDt -CTringa
+               | +XRTbox2a +CTcov33i -EBDr -EBDt -CTringa -CTcov3d4
+               | +XRTbox2a +HVG1t +CTcov3ri -floot -HVG1l -CTringa
+               | +XRTbox2a +HVG1l +HVGb -DTSc -DTSl -CTringa
+               | +XRTbox2a +HVGb +DTSr -HVG2r -DTSt -CTringa
+               | +XRTbox2a +DTSc +DTSl -XRTbox1p -DTSt -DTSr
+               | +XRTbox2a +HVG1l +DTSl -floot -HVG2r -DTSb -DTSr -CTringa
+               | +XRTbox2t +XRTbox2p +XRTbox1r +EBDr +CTcov3d1 -ganbori -CTsuppa
+               | +XRTbox2t +XRTbox2p +XRTbox1r +EBDr +CTcov3d1 -ganbori -CTsuppa
+               | +XRTbox2p +CTcov33i -EBDr -CTsuppa -CTcov3b -CTcov3d4
+               | +EBDb +CTringp -XRTbox2p -EBDr -CTcov3b
+               | +CTringp +CTcov35i -XRTbox2p -EBDl -CTcov3b
+               | +EBDl +CTringp +CTcov33i -XRTbox2p -EBDr -EBDt -CTcov3d4
+               | +CTringp +CTcov3ri +CTcov3b -ganbori -HVG1t -CTsuppa
+               | +HVG1t +CTringp +CTcov3ri -HVG1l -HVGb -CTsuppa
+               | +HVG1r +HVG1t +CTringp -ganbori -EBDr -HVGb -CTsuppa
+               | +HVG1l +HVG1t +HVGp -HVG1r -HVGb -CTsuppa
+               | +HVG2r +CTringp +CTcov34i -CTsuppa -CTcov3li -CTcov3b -CTcov3d3
+               | +CTringp -HVG2r -HVG2t -CTsuppa -CTcov3d3
+               | +EBDr +HVG2t +CTringp -HVG2l -HVGb -CTringe -CTsuppa
+               | +HVG2r +CTringp +CTcov3b -HVGb -CTsuppa -CTcov3li
+               | +CTringp -HVG2l -HVGb -CTsuppa -CTcov3d3
+               | +HVG2l +HVG2t +HVGp -HVG2r -HVGb -CTsuppa
+               | +HVGb +CTringp +CTcov3ri -floot -ganbori -CTsuppa -CTcov3li
+               | +CTsuppa +CTcov3d4 +CTcov35i -CTsuppp -CTsuppd2 -CTcov3b
+               | +CTsuppa +CTcov33i +CTcov3d3 -EBDr -CTsuppp -CTsuppt -CTsuppd2 -CTcov3d4
+               | +EBDr +CTsuppa +CTcov33i +CTcov3d2 -CTsuppp -CTsuppt
+               | +CTsuppa +CTcov31i +CTcov3d1 -CTsuppp -CTsuppt -CTcov3d2
+               | +EBDr +CTsuppa +CTsuppd1 +CTcov32i +CTcov3d3 -CTsuppp -CTsuppt -CTcov3d1
+               | +CTsuppa +CTsuppd2 -EBDr -CTsuppp -CTsuppt -ext5
+               | +CTsuppa -CTsuppp -CTsuppt -CTsuppd1 -CTcov3d1 -ext5
+               | +CTsuppa +CTsuppd1 +CTcov34i -CTsuppp -CTcov3b -CTcov3d3
+               | +CTsuppa +CTcov3ri +CTcov3b -CTsuppp -CTsuppd2
+               | +CTsuppa +CTsuppd2 +CTcov3ri -floot -CTsuppp -CTsuppl
+               | +CTsuppa +CTsuppd1 +CTcov3b -CTsuppp -CTcov3li
+               | +CTsuppa +CTsuppr -floot -CTsuppp -CTsuppd1 -CTcov3li
+               | +CTsuppa +CTsuppd3 -floot -CTsuppc -CTsuppb -CTsuppr
+               | +CTsuppa +CTsuppl -floot -CTsuppc -CTsuppb -CTsuppd3 -CTsuppd4
+               | +CTsuppa +CTsuppd4 +body50 -CTsuppc -CTsuppb -CTsuppd3
+               | +CTsuppp +CTcov3ri +body50 -floot -CTcov3li -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov3ri +CTcov3b -ganbori -CTcov3li -CTcov4pi -CTcovcne -body50
+               | +CTsuppp +CTcov34i -CTcov3b -CTcov3d3 -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov3d4 +CTcov35i -CTcov3b -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov32i +CTcov3d3 -ganbori -CTcov3d1 -CTcov3b -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov33i +CTcov3d2 -ganbori -CTcov3b -CTcov3d4 -CTcov4pi -CTcovcne
+               | +CTsuppp +CTcov31i +CTcov3d1 -ganbori -CTcov3d2 -CTcov4pi -CTcovcne
+               | +XRTcyl1p +HEXl +HEXt -HEXr -HEXb -CTsuppa
+               | +EBDl +CTringp +CTcov3d4 +CTcov35i -EBDt -CTsuppa
+               | +XRTbox2p +CTcov3d4 +CTcov35i -EBDl -CTsuppa -CTcov3b
+               | +XRTbox2p +EBDl +EBDt +CTcov3d4 -CTsuppa
+#endif
+*Floor
+FLOOR        5 +floot +W5te +W7re -floob -W8le -W11be
+               | +floot +P7t +P7r -floob -W7re -P7b
+               | +floot +P7r +P8t -floob -W7re -P8b
+               | +floot +W8le +W9te -floob -W10le -W11be
+               | +floot +P10r +W11be -floob -P10b -P10l
+               | +floot +P11r +W11be -floob -P10b -P11l
+               | +W11be +P11l +floot -P10b -P10r -floob
+*Ceiling
+CEILING      5 +ceilt +W5te +W7re -ceilb -W8le -W11be
+               | +ceilt +P7t +P7r -ceilb -W7re -P7b
+               | +ceilt +P7r +P8t -ceilb -W7re -P8b
+               | +ceilt +W8le +W9te -ceilb -W10le -W11be
+               | +ceilt +P10r +W11be -ceilb -P10b -P10l
+               | +ceilt +P11r +W11be -ceilb -P10b -P11l
+               | +W11be +P11l +ceilt -P10b -P10r -ceilb
+*Pillar - concrete
+PILLC        5 +ceilb +P1ti +P1ri -floot -P1bi -P1li
+               | +ceilb +P2ti +P2ri -floot -W2LP -W3LP
+               | +ceilb +P4ti +P4ri -floot -P4bi -P4li
+               | +ceilb +P5t +P5r -floot -W2e -P5b
+               | +ceilb +W4re +P5t -floot -W4e1 -P5b
+               | +ceilb +P1ti +W4re -floot -P1bi -W4e1
+               | +ceilb +P7t +P7r -floot -W7le -P7b
+               | +ceilb +P7r +P8t -floot -W7le -P8b
+               | +ceilb +W9te +P9r -floot -P9l -P9b
+               | +ceilb +P10t +P10r -floot -P10b -P10l
+               | +ceilb +P10t +P11r -floot -P10b -P11l
+*Wall 1 - gypsum
+W1G          5 +W1GL +W4GL +ceilb -W1i -WINDr -floot
+               | +W1e +W4GL +ceilb -W1AG -WINDr -floot
+               | +W1GL +WINDl +ceilb -W1i -D1re -floot
+               | +W1e +WINDl +ceilb -W1AG -D1re -floot
+               | +ceilb +W1GL +WINDr -W1i -WINDl -Dte
+               | +ceilb +W1e +WINDr -W1AG -WINDl -Dte
+               | +W1e +WINDr +Dte -W1i -WINDl -Dte
+               | +W1GL +WINDr +WINDb -W1i -WINDl -floot
+               | +W1e +D1ri +Dte -floot -W1i -D1ri
+               | +W1e +D1ri +ceilb -W1AG -Dte -D1le
+               | +W1GL +D1ri +ceilb -W1i -Dte -D1le
+               | +W1e +D1le +ceilb -W1AG -W2GL -floot
+               | +W1GL +D1le +ceilb -W1i -W2GL -floot
+               | +ceilb +W2i +P5b -floot -W1e -W2GL
+               | +ceilb +W4GL +P5b -floot -W1e -W4i
+               | +W1e +WINDr +WINDb -W1AG -WINDl -floot
+*Wall 2 - gypsum
+W2G          5 +ceilb +W2i1 +W2i2 -floot -W3i -W2GL2
+               | +ceilb +W3li +W3LP -floot -W2LP -W3AG
+               | +ceilb +W2LP +W9bi -floot -W9be -W2le1
+               | +Dte +W2li1 +W9ti -floot -W2le1 -W9bi
+               | +ceilb +W2li +W9te -floot -W2le1 -W9ti
+               | +ceilb +W2i1 +W2li -floot -W2le -W9te
+               | +ceilb +W2e +W2i1 -floot -W2GL1 -W2li
+               | +ceilb +W2i1 +W2GL2 -floot -W2GL -W2GL1
+               | +W2i +D2be +ceilb -W2GL -W2i1 -floot
+               | +W2AG +D2be +ceilb -W2e -W2GL1 -floot
+               | +W1i +W2i +ceilb -W2GL -D2te -floot
+               | +W1i +W2i +Dti -W2GL -D2te -floot
+               | +W2AG +P5b +ceilb -W2e -D2te -floot
+               | +W1i +W2i +ceilb -W2GL -W2GL1 -Dte
+               | +W2AG +D2te +ceilb -W2e -Dte -D2be
+*Wall 3 - gypsum
+W3G          5 +ceilb +W3i +W4GL1 -floot -W3GL -W2GL2
+               | +ceilb +W3AG +W4re -floot -W2LP -W3e
+*Wall 4 - gypsum
+W4G          5 +ceilb +W1i +W4GL -floot -W4i -P1ti
+               | +ceilb +W1AG +W4e -floot -W4AG -P1ti
+               | +ceilb +W4GL1 +P1bi -floot -W3i -W4e1
+               | +ceilb +P1bi +W4re -floot -W3AG -W4ri
+               | +ceilb +W4e +P5b -floot -W4AG -P1ti
+*Exterior walls (to scanner room) - gypsum
+WEG          5 +ceilb +W4GL +W5bi -floot -W4i -P5t
+               | +ceilb +W4e +W5te -floot -W4AG -P5t
+               | +ceilb +W4i +W5bi -floot -W5be -D4re
+               | +ceilb +W4GL +W5te -floot -W5ti -D4re
+               | +ceilb +W4AG +W5te -floot -W5ti -D4re
+               | +Dte +W5ti +D4ri -floot -W5bi -D4re
+               | +Dti +W5ti +D4ri -Dte -W5bi -D4li
+               | +ceilb +W5te +D4re -Dte -W5ti -D4le
+               | +ceilb +W5bi +D4re -Dte -W5be -D4le
+               | +ceilb +W5te +D4le -floot -W5ti -W6le
+               | +Dte +W5ti +D4le -floot -W5bi -D4li
+               | +ceilb +W5bi +D4le -floot -W5be -P5r
+               | +ceilb +W5ti +W6li -floot -W6le -D3te
+               | +ceilb +P1ri +W5be -floot -P5r -D3te
+               | +Dte +P5r +D3ti -floot -W6li -D3te
+               | +Dti +P5r +D3ti -Dte -W6li -D3bi
+               | +Dte +P5r +D3be -floot -W6li -D3bi
+               | +ceilb +P1ri +D3be -floot -P5r -P5b
+               | +ceilb +W6li +D3be -floot -P5t -W6le
+               | +ceilb +P1ri +D3te -Dte -P5r -D3be
+               | +ceilb +W6li +D3te -Dte -W6le -D3be
+               | +ceilb +W5te +W7li -floot -W7le -P7t
+               | +ceilb +W5te +W7re -floot -W7ri -P7t
+               | +ceilb +W7li +P7b -floot -W7le -D5ti
+               | +ceilb +W7re +P7b -floot -W7ri -D5ti
+               | +ceilb +W7li +P8b -floot -W7le -W11be
+               | +ceilb +W7re +P8b -floot -W7ri -W11be
+               | +Dte +W7re +D5ti -floot -W7le -D5te
+               | +Dti +W7re +D5ti -Dte -W7le -P8t
+               | +ceilb +W7re +D5ti -Dti -W7ri -P8t
+               | +ceilb +W7li +D5ti -Dti -W7le -P8t
+               | +ceilb +W8re +W8ti -floot -W8ri -D6ti
+               | +ceilb +W8ti +W8li -floot -W8le -D6ti
+               | +ceilb +W8re +W8te -floot -W8ti -W8le
+               | +Dte +W8re +D6ti -floot -W8le -D6te
+               | +Dti +W8re +D6ti -Dte -W8le -D6bi
+               | +Dte +W8re +D6be -floot -W8le -D6bi
+               | +ceilb +W8re +D6ti -Dti -W8ri -D6bi
+               | +ceilb +D6ti +W8li -Dti -W8le -D6bi
+               | +ceilb +D6bi +W8li -floot -W8le -W9te
+               | +ceilb +W8re +D6bi -floot -W8ri -W9te
+               | +air +ceilb +W9te +W9re -floot -W8ri -W9ti
+               | +Dte +W9ti +W9re -floot -W9bi -W9ri
+               | +air +ceilb +W9bi +W9re -floot -W9be -P9r
+               | +ceilb +W8li +W9te -floot -W9ti -P9r
+               | +ceilb +W9te +P9l -floot -W9ti -W10le
+               | +ceilb +W9te +W10li -floot -W10le -D8te
+               | +ceilb +P9b +W10re -floot -W10ri -D8te
+               | +Dte +W10ri +D8ti -floot -W10li -D8te
+               | +Dti +W10ri +D8ti -Dte -W10li -D8bi
+               | +Dte +W10ri +D8be -floot -W10li -D8bi
+               | +ceilb +W10li +D8be -floot -W10le -W11be
+               | +ceilb +W10re +D8be -floot -W10ri -W11ri
+               | +ceilb +W10re +D8te -Dte -W10ri -D8be
+               | +ceilb +W10li +D8te -Dte -W10le -D8be
+               | +ceilb +P10l +W11bi -floot -W10li -W11be
+               | +ceilb +W11te +W15li -floot -W10re -W11ri
+               | +ceilb +W4e +W11bi -floot -P11r -W11be
+               | +ceilb +W3e +W4GL -floot -W4i -W12ti
+               | +ceilb +W3e +W4e -floot -W4AG -W11bi
+               | +Dti +W2li1 +W9ti -Dte -W9bi -W9ri
+               | +ceilb +W2le1 +W9te -Dti -W9ti -W9re
+               | +ceilb +W2le1 +W9bi -Dti -W9be -W9re
+               | +ceilb +W3e +W15li -floot -W15le -D9ti
+               | +ceilb +W3e +W15re -floot -W15ri -D9ti
+               | +Dte +W15re +D9ti -floot -W15le -D9te
+               | +Dti +W15re +D9ti -Dte -W15le -D9bi
+               | +Dte +W15re +D9be -floot -W15le -D9bi
+               | +ceilb +W15li +D9bi -floot -W15le -D10ti
+               | +ceilb +W15re +D9bi -floot -W12ti -W15ri
+               | +ceilb +W15re +D9ti -Dti -W15ri -D9bi
+               | +ceilb +W15li +D9ti -Dti -W15le -D9bi
+               | +ceilb +W4i +W12te -floot -W12ti -W15re
+               | +ceilb +W12bi +W13li -floot -W12be -W15ri
+               | +ceilb +W12be +W15re -floot -W15ri -D10ti
+               | +ceilb +W4i +W12bi -floot -W12be -W13ri
+               | +ceilb +W3e +W4GL +W12bi -floot -W4i -W11te
+               | +ceilb +W12be +W13li -floot -W13le -W14ti
+               | +ceilb +W12be +W13re -floot -W13ri -D12ti
+               | +Dte +W13re +D12ti -floot -W13le -D12te
+               | +ceilb +W13li +W14bi -floot -W13le -D12ti
+               | +ceilb +W13le +W14bi -floot -W14be -W15re
+               | +ceilb +W13le +W14te -floot -W14ti -W15re
+               | +ceilb +W13li +D12bi -floot -W11te -W13le
+               | +ceilb +W13re +D12bi -floot -W11te -W13ri
+               | +Dte +W13re +D12be -floot -W13le -D12bi
+               | +Dti +W13re +D12ti -Dte -W13le -D12bi
+               | +ceilb +W13re +D12ti -Dti -W13ri -D12bi
+               | +ceilb +W13li +D12ti -Dti -W13le -D12bi
+               | +ceilb +W4GL +W11te -floot -W11ri -W13ri
+               | +Dte +W15re +D10ti -floot -W15le -D10te
+               | +Dti +W15re +D10ti -Dte -W15le -D10bi
+               | +Dte +W15re +D10be -floot -W15le -D10bi
+               | +ceilb +W15li +D10bi -floot -D12ti -W15le
+               | +ceilb +W15li +D10ti -Dti -W15le -D10bi
+               | +ceilb +W15re +D10ti -Dti -W15ri -D10bi
+               | +ceilb +W14bi +W15re -floot -D12ti -W15ri
+               | +Dte +D12ti +W15re -floot -D12te -W15le
+               | +Dti +D12ti +W15re -Dte -D12bi -W15le
+               | +Dte +D12be +W15re -floot -D12bi -W15le
+               | +ceilb +D12bi +W15li -floot -W11te -W15le
+               | +ceilb +D12bi +W15re -floot -W11te -W15ri
+               | +ceilb +W11te +W13li -floot -W11ri -W15ri
+               | +ceilb +D12ti +W15li -Dti -D12bi -W15le
+               | +ceilb +D12ti +W15re -Dti -D12bi -W15ri
+               | +ceilb +W15re +D10bi -floot -W14ti -W15ri
+               | +air +Dti +W2le1 +W9te -Dte -W9ti -W9re
+               | +air +Dti +W2le1 +W9bi -Dte -W9be -W9re
+*Wall 1 - lead
+W1L          5 +W1LP +W4LP +pbt -W1GL -WINDr -floot
+               | +W1LP +WINDl +pbt -W1GL -D1re -floot
+               | +W1LP +D1le +pbt -W1GL -W2LP -floot
+               | +W1LP +WINDr +WINDb -W1GL -WINDl -floot
+*Wall 2 - lead
+W2L          5 +pbt +W2GL1 +W2GL2 -floot -W3GL -W2LP2
+               | +pbt +W2GL1 +W2LP2 -floot -W2LP -W2LP1
+               | +W2GL +D2be +pbt -W2LP -W2GL1 -floot
+               | +W1GL +W2GL +pbt -W2LP -D2te -floot
+*Wall 3 - lead
+W3L          5 +pbt +W3GL +W4LP1 -floot -W3LP -W2LP2
+*Wall 4 - lead
+W4L          5 +pbt +W1GL +W4LP -floot -W4GL -P1ti
+               | +W4LP1 +P1bi +pbt -W3GL -W4GL1 -floot
+*Door 1 - lead
+D1L          5 +D1Lt +D1jr3e +D1jt3e -D1Lb -floot -D1jl3e
+               | +D1jl3i +D1jl2l +D1jt1i -floot -D1jl1i -D1jl2i
+               | +D1jl3i +D1jl7i +D1jt1i -floot -D1jl1i -D1jl7l
+               | +D1jl3i +D1jl7l +D1jt3l -floot -D1jl3l -D1jl6l
+               | +D1jl3i +D1jl4l +D1jt3l -floot -D1jl2l -D1jl3l
+               | +D1jr1i +D1jl2l +D1jt1i -floot -D1jl2i -D1jr3i
+               | +D1jl7i +D1jr1i +D1jt1i -floot -D1jr3i -D1jl7l
+               | +D1jl7l +D1jr3l +D1jt3l -floot -D1jr3i -D1jl6l
+               | +D1jl4l +D1jr3l +D1jt3l -floot -D1jr3i -D1jl2l
+               | +D1jl6i +D1jr3i +D1jt5l -floot -D1jr5i -D1jl6l
+               | +D1jl6l +D1jr5l +D1jt5l -floot -D1jl4i -D1jr5i
+               | +D1jr3i +D1jl4l +D1jt5l -floot -D1jl4i -D1jr5l
+               | +D1jl5i +D1jl6i +D1jt5l -floot -D1jl3i -D1jl6l
+               | +D1jl5i +D1jl6l +D1jt5l -floot -D1jl4i -D1jl5l
+               | +D1jl4l +D1jl5l +D1jt5l -floot -D1jl3i -D1jl4i
+               | +D1jr3i +D1jl2l +D1jt1i -D1jl2i -D1jl3i -D1jt3i
+               | +D1jr3i +D1jl4l +D1jt3l -D1jl3i -D1jl2l -D1jt3i
+               | +D1jr3i +D1jl4l +D1jt3i -D1jl3i -D1jl4i -D1jt5l
+               | +D1jl6i +D1jr5i +D1jt5l -D1jl4i -D1jl5i -D1jt5i
+               | +D1jl6i +D1jr3i +D1jt3i -D1jl3i -D1jl6l -D1jt5l
+               | +D1jl7i +D1jr3i +D1jt3l -D1jl3i -D1jl6l -D1jt3i
+               | +D1jl7i +D1jr3i +D1jt1i -D1jl3i -D1jl7l -D1jt3l
+*Door 2 - lead
+D2L          5 +D2gap2 +D2Lr +D2jt3l -D2Ll -floot -D2jr3e
+               | +D2Lr +D2jl3e +D2jt3l -D2gap1 -D2Ll -floot
+               | +D2astt +D2astl1 +D2jt3l -floot -D2astb -D2astl2
+               | +D2jl1i +D2jl7i +D1jt1i -W2i -floot -D2jl1l
+               | +D2jl7i +D2jl1l +D1jt1i -floot -D2jl3i -D2jl7l
+               | +D2jl7l +D2jl3l +D1jt3i -floot -D2jl3i -D2jl6l
+               | +D2jl3i +D2jl6i +D1jt3i -D2jl5i -D2jl6l -D1jt5e
+               | +D2jl3i +D2jl6i +D1jt5e -floot -D2jl5i -D2jl6l
+               | +D2jl6l +D2jl5l +D1jt3i -floot -D2jl5i -D2jl4l
+               | +D2jl3l +D2jl4l +D1jt3i -floot -D2jl5i -D2jl4i
+               | +D2jl4i +D2jl3l +D1jt3i -floot -D2jl3i -D2jl2i
+               | +D2jl1i +D2jl2l +D1jt1i -floot -D2jl2i -D2jl3l
+               | +W2e +D2jl1i +D1jt1i -floot -D2jl1l -D2jl2l
+               | +D2jl7i +D2jr1l +D1jt1i -W2i -floot -D2jr1i
+               | +D2jl7i +D2jr3i +D1jt1i -floot -D2jl7l -D2jr1l
+               | +D2jl7l +D2jr3i +D1jt3i -floot -D2jl6l -D2jr3l
+               | +D2jl6i +D2jr5i +D1jt3i -floot -D2jl6l -D2jr3i
+               | +D2jl6l +D2jr5i +D1jt3i -floot -D2jl4l -D2jr5l
+               | +D2jl4l +D2jr5i +D1jt3i -floot -D2jl4i -D2jr3l
+               | +D2jl4i +D2jr3i +D1jt3i -floot -D2jl2l -D2jr3l
+               | +D2jl2l +D2jr3i +D1jt1i -floot -D2jl2i -D2jr1i
+               | +W2e +D2jr1l +D1jt1i -floot -D2jl2l -D2jr1i
+               | +D2jl7i +D2jl3i +D1jt1i -D2jl7l -D2jr3i -D1jt3e
+               | +D2jl7i +D2jl1l +D1jt1i -W2i -D2jr1l -D2jt1l
+               | +W2e +D2jl1l +D1jt1i -D2jl2l -D2jr1l -D2jt1l
+               | +D2jl3l +D2jl2l +D1jt1i -D2jl2i -D2jr3i -D1jt3e
+               | +D2jl3i +D2jl4i +D1jt3i -D2jl2l -D2jr3i -D1jt3e
+               | +D2jl5i +D2jl4l +D1jt3i -D2jl4i -D2jr5i -D1jt5e
+               | +D2jl3i +D2jl7l +D1jt3i -D2jl6i -D2jr3i -D1jt3e
+               | +D2jl6i +D2jl5i +D1jt5i -D2jl4l -D2jr5i -D1jt5e
+               | +D2jl6i +D2jl5i +D1jt3i -D2jl6l -D2jr5i -D1jt5i
+*Window - lead
+WINDL        5 +D1jl2l +Wjl3i +D1jt1i -D1jl2i -Wjl1i -Wjb1i
+               | +Wjl3i +Wjl4li +Wjt3l -D1jl2l -Wjl3l -Wjb3l
+               | +Wjl4li +Wjl3l +Wjt3l -WINDl -WINDb -Wjl4l
+               | +D1jl2l +Wjr1i +D1jt1i -D1jl2i -Wjr3i -Wjb3l
+               | +Wjl4li +Wjr3l +Wjt3l -D1jl2l -Wjr3i -Wjb3l
+               | +WINDr +Wjl4li +Wjt3l -Wjl4l -Wjr3l -Wjb3l
+               | +D1jl2l +Wjr3i +D1jt1i -D1jl2i -Wjl3i -Wjt3i
+               | +Wjl4li +Wjr3i +Wjt3l -D1jl2l -Wjl3i -Wjt3i
+               | +Dte +WINDr +Wjl4li -WINDl -Wjl4l -Wjt3l
+               | +Wjl4li +Wjr3i +Wjb3i -D1jl2i -Wjl3i -Wjb3l
+               | +WINDr +Wjl4li +Wjb3l -WINDb -Wjl3l -Wjl4l
+               | +D1jl2l +Wjr1i +Wjb3l -D1jl2i -Wjl3i -Wjb1i
+*Wall 1 - plywood
+W1P          5 +W1PA +W4PA +ceilb -W1LP -WINDr -floot
+               | +W1PA +WINDl +ceilb -W1LP -D1re -floot
+               | +ceilb +W1PA +WINDr -W1LP -WINDl -Dte
+               | +W1PA +D1ri +ceilb -W1LP -Dte -D1le
+               | +W1PA +D1le +ceilb -W1LP -W2PA -floot
+               | +W1PA +WINDr +WINDb -W1LP -WINDl -floot
+*Wall 2 - plywood
+W2P          5 +ceilb +W2LP1 +W2LP2 -floot -W3LP -W2PA2
+               | +ceilb +W2LP1 +W2PA2 -floot -W2PA -W2PA1
+               | +W2LP +D2be +ceilb -W2PA -W2LP1 -floot
+               | +W1LP +W2LP +ceilb -W2PA -D2te -floot
+               | +W1LP +W2LP +Dti -W2PA -D2te -floot
+               | +W2LP +D2te +ceilb -W2PA -Dte -D2be
+*Wall 3 - plywood
+W3P          5 +ceilb +W3LP +W4PA1 -floot -W3PA -W2PA2
+*Wall 4 - plywood
+W4P          5 +ceilb +W1LP +W4PA -floot -W4LP -P1ti
+               | +ceilb +W4PA1 +P1bi -floot -W3LP -W4LP1
+*Pillar - plywood
+PILL_P       5 +ceilb +P4te +P4re -floot -P4ti -P4le
+               | +ceilb +P4ti +P4li -floot -P4bi -P4le
+               | +ceilb +P4bi +P4re -floot -P4be -P4le
+               | +ceilb +P4ti +P4re -floot -P4bi -P4ri
+               | +ceilb +P2te +P2re -floot -W2PA -P2ti
+               | +ceilb +P2ti +P2re -floot -W3LP -P2ri
+               | +ceilb +P1te +P1re -floot -P1ti -P1le
+               | +ceilb +P1ti +P1li -floot -P1bi -P1le
+               | +ceilb +P1re +P1bi -floot -P1be -P1le
+               | +ceilb +P1ti +P1re -floot -P1ri -P1bi
+               | +ceilb +W3LP +P2re -floot -W3li -W3PA
+               | +ceilb +W2LP +P2ti -floot -W2PA -W9bi
+*Door 1 - plywood
+D1P          5 +D1Lb +D1jr3e +D1jt3e -floot -D1jl3e -D1jl6e
+               | +W1e +D1jr3e +D1jt3e -D1Lt -floot -D1jl3e
+*Door 2 - plywood
+D2P          5 +W2i +D2jl3e +D2jt3l -D2gap1 -D2Lr -floot
+               | +D2Ll +D2jl3e +D2jt3l -D2gap1 -floot -D2jl6e
+               | +W2i +D2gap2 +D2jt3l -D2Lr -floot -D2jr3e
+               | +D2gap2 +D2Ll +D2jt3l -floot -D2jl6e -D2jr3e
+               | +D2astt +D2astf +D2jt3l -floot -D2astb -D2astl1
+               | +D2astt +D2astl2 +D2jt3l -W2i -floot -D2astb
+*Lead-glass window
+WINDOW       5 +WINDp +Wjr5e +Wjt5 -WINDa -Wjl5 -Wjb5i
+*Door 1 -jamb
+D1J          5 +W1i +D1jl1i +D1jt1e -floot -D1jl1e -D1jl2e
+               | +D1jl2i +D1jl3e +D1jt1e -floot -D1jl1i -D1jl2e
+               | +D1jl3e +D1jl7e +D1jt1e -floot -D1jl1e -D1jl7i
+               | +D1jl1i +D1jl7i +D1jt1e -W1e -floot -D1jl1e
+               | +D1jl3e +D1jl4i +D1jt3i -floot -D1jl2i -D1jl3i
+               | +D1jl4i +D1jl5e +D1jt5i -floot -D1jl3e -D1jl4e
+               | +D1jl5e +D1jl6e +D1jt5i -floot -D1jl4i -D1jl5i
+               | +D1jl5i +D1jl6e +D1jt5i -floot -D1jl3i -D1jl6i
+               | +D1jl3e +D1jl7i +D1jt3e -floot -D1jl3i -D1jl6e
+               | +W1i +D1jr1e +D1jt1e -floot -D1jl2e -D1jr1i
+               | +D1jl2i +D1jr1i +D1jt1e -floot -D1jl2e -D1jr3e
+               | +D1jl7e +D1jr1e +D1jt1e -W1e -floot -D1jr1i
+               | +D1jl7e +D1jr1i +D1jt1e -floot -D1jl7i -D1jr3e
+               | +D1jl7i +D1jr3i +D1jt3e -floot -D1jl6i -D1jr3e
+               | +D1jl4i +D1jr3i +D1jt3i -floot -D1jl2i -D1jr3e
+               | +W1i +D1jr1i +D1jt1e -D1jl1i -D1jl2i -D1jt1i
+               | +D1jl4i +D1jr3e +D1jt5i -floot -D1jl4e -D1jr5e
+               | +D1jl6e +D1jr5i +D1jt5i -floot -D1jl4i -D1jr5e
+               | +D1jl6e +D1jr3e +D1jt5i -floot -D1jl6i -D1jr5i
+               | +D1jl2i +D1jr3e +D1jt1e -D1jl2e -D1jl3e -D1jt3e
+               | +D1jl4i +D1jr3e +D1jt3i -D1jl2i -D1jl3e -D1jt3e
+               | +D1jl4i +D1jr3e +D1jt3e -D1jl3e -D1jl4e -D1jt5i
+               | +D1jl6e +D1jr5e +D1jt5i -D1jl4e -D1jl5e -D1jt5e
+               | +D1jl6e +D1jr3e +D1jt3e -D1jl3i -D1jl6i -D1jt5i
+               | +D1jl7i +D1jr3i +D1jt3i -D1jl3i -D1jl6i -D1jt3e
+               | +D1jl7e +D1jr3e +D1jt1e -D1jl3e -D1jl7i -D1jt3e
+               | +D1jl7i +D1jr1i +D1jt1e -W1e -D1jl1i -D1jt1i
+*Door 2 - jamb
+D2J          5 +D2jl1e +D2jl7e +D1jt1e -W2i -floot -D2jl1i
+               | +D2jl1i +D2jl7e +D1jt1e -floot -D2jl7i -D2jl3e
+               | +D2jl7i +D2jl3i +D1jt3e -floot -D2jl3e -D2jl6i
+               | +D2jl3e +D2jl6e +D1jt3e -floot -D2jl6i -D2jl5e
+               | +D2jl6i +D2jl5i +D1jt5e -floot -D2jl5e -D2jl4i
+               | +D2jl3i +D2jl4i +D1jt3e -floot -D2jl5e -D2jl4e
+               | +D2jl3i +D2jl4e +D1jt3e -floot -D2jl3e -D2jl2i
+               | +D2jl1e +D2jl2i +D1jt1e -floot -D2jl3e -D2jl2e
+               | +W2e +D2jl1e +D1jt1e -floot -D2jl1i -D2jl2i
+               | +W2e +D2jr1i +D1jt1e -floot -D2jl2e -D2jr1e
+               | +D2jl2i +D2jr3e +D1jt1e -floot -D2jl2e -D2jr1i
+               | +D2jl4i +D2jr3e +D1jt3e -floot -D2jl2i -D2jr3i
+               | +D2jl4i +D2jr5e +D1jt3e -floot -D2jl4e -D2jr3e
+               | +D2jl6i +D2jr5e +D1jt5e -floot -D2jl4i -D2jr5i
+               | +D2jl6e +D2jr5e +D1jt3e -floot -D2jl6i -D2jr3i
+               | +D2jl7e +D2jr3e +D1jt3e -floot -D2jl6e -D2jr3i
+               | +D2jl7e +D2jr3i +D1jt1e -floot -D2jl7i -D2jr1e
+               | +D2jl7i +D2jr1i +D1jt1e -W2i -floot -D2jr1e
+               | +D2jl1i +D2jl7e +D1jt1e -W2i -D2jr1i -D1jt1i
+               | +D2jl7e +D2jl3e +D1jt1i -D2jl7i -D2jr3i -D2jt3l
+               | +D2jl7i +D2jl3e +D1jt3e -D2jl6e -D2jr3e -D2jt3l
+               | +D2jl6e +D2jl5e +D1jt3e -D2jl6i -D2jr5e -D2jt5l
+               | +D2jl6i +D2jl5e +D1jt5e -D2jl4i -D2jr5e -D2jt5l
+               | +D2jl5e +D2jl4i +D1jt3e -D2jl4e -D2jr5e -D2jt5l
+               | +D2jl3e +D2jl4e +D1jt3e -D2jl2i -D2jr3e -D2jt3l
+               | +D2jl3e +D2jl2i +D1jt1e -D2jl2e -D2jr3e -D2jt3l
+               | +W2e +D2jl1i +D1jt1e -D2jl2i -D2jr1i -D1jt1i
+*Window - jamb
+WINDJ        5 +W1i +Wjl1i +D1jt1e -D1jl2e -Wjl1e -Wjb1e
+               | +D1jl2i +Wjl3e +D1jt1e -D1jl2e -Wjl1i -Wjb1e
+               | +D1jl7e +Wjl1i +D1jt1e -W1e -Wjl1e -Wjb1e
+               | +D1jl7e +D1jt1e +Wjl3i -D1jl7i -Wjl1i -Wjb1e
+               | +WINDa +Wjl3e +Wjt3i -D1jl2i -Wjl3i -Wjb3i
+               | +WINDa +Wjl3i +Wjt3i -WINDl -Wjl4li -Wjb3i
+               | +W1i +Wjr1e +D1jt1e -D1jl2e -Wjr1i -Wjb1e
+               | +D1jl2i +Wjr1i +D1jt1e -D1jl2e -Wjr3e -Wjb1e
+               | +WINDa +Wjr3i +Wjt3i -D1jl2i -Wjr3e -Wjb3i
+               | +WINDr +WINDa +Wjt3i -Wjl4li -Wjr3i -Wjb3i
+               | +D1jl7e +D1jt1e +Wjr1e -D1jl7i -Wjr3i -Wjb1e
+               | +D1jl7i +D1jt1e +Wjr1e -W1e -Wjr1i -Wjb1e
+               | +D1jl2i +Wjr3e +D1jt1e -D1jl2e -Wjl3e -Wjt3e
+               | +W1i +Wjr1i +D1jt1e -D1jl2i -Wjl1i -D1jt1i
+               | +WINDa +Wjr3e +Wjt3i -D1jl2i -Wjl3e -Wjt3e
+               | +Dte +WINDr +WINDa -WINDl -Wjl4li -Wjt3i
+               | +D1jl7e +D1jt1e +Wjr3i -D1jl7i -Wjl3i -Wjt5
+               | +D1jl7i +Wjr1i +D1jt1e -W1e -Wjl1i -D1jt1i
+               | +W1i +Wjr1i +Wjb1i -D1jl2i -Wjl1i -Wjb1e
+               | +D1jl2i +Wjr3e +Wjb3e -D1jl2e -Wjl3e -Wjb1e
+               | +WINDa +Wjr3e +Wjb3e -D1jl2i -Wjl3e -Wjb3i
+               | +WINDr +WINDa +Wjb3i -WINDl -WINDb -Wjl4li
+               | +D1jl7e +Wjr3i +Wjb5e -D1jl7i -Wjl3i -Wjb1e
+               | +D1jl7i +Wjr1i +Wjb1i -W1e -Wjl1i -Wjb1e
+               | +Wjl3e +Wjl4li1 +Wjt5 -WINDp -Wjl5 -Wjb5i
+               | +D1jl7e +Wjl3e +Wjt3i -Wjl3i -Wjl4li1 -Wjb3i
+               | +Wjl4li1 +Wjr3e +Wjb3e -WINDp -Wjl3e -Wjb5i
+               | +D1jl7e +Wjr3i +Wjt3i -Wjl4li1 -Wjr3e -Wjb3i
+               | +Wjl4li1 +Wjr3e +Wjt5 -WINDp -Wjl3e -Wjt3e
+               | +Wjl4li1 +Wjr5e +Wjt5 -WINDp -Wjr3e -Wjb5i
+               | +Dte +Wjl5 +Wjl4li1 -WINDl -WINDb -WINDa
+               | +WINDr +Wjl4li1 +Wjt5 -WINDa -Wjr5e -Wjb5i
+               | +WINDr +Wjl4li1 +Wjb5i -WINDb -WINDa -Wjl5
+               | +D1jl7e +Wjr3e +Wjt3i -Wjl3e -Wjl4li1 -Wjt3e
+               | +D1jl7e +Wjr3e +Wjb3e -Wjl3e -Wjl4li1 -Wjb3i
+               | +Dte +WINDr +Wjl4li1 -WINDa -Wjl5 -Wjt5
+               | +D1jl7e +Wjr3i +Wjb3i -D1jl7i -Wjl3i -Wjb5e
+               | +D1jl7e +Wjr3i +Wjt5 -D1jl7i -Wjl3i -Wjt3i
+*-- Phantom --
+*Phantom body
+PHANTOM      5 +jzext +jztop1 -jzint -jzbot1
+               | +jzext +jztop1 -jztop2
+               | +jzbot2 +jzlid -jzbot1
+*Water in phantom
+WATER        5 +jzint +jztop2 -jzbot2
+*-- TLDs --
+TLDA1        5 +WINDa +tldt +tldAr -tldb -tldA1 -tldAl
+TLDA2        5 +tldt +tldA2 +tldAr -WINDp -tldb -tldAl
+TLDB1        5 +tldB1 +tldt +tldBDt -W2i -tldb -tldBDb
+TLDB2        5 +W2e +tldt +tldBDt -tldB2 -tldb -tldBDb
+TLDC1        5 +tldC1 +tldCr +tldt -W3i -tldCl -tldb
+TLDC2        5 +W3e +tldCr +tldtopC2 -tldC2 -tldCl -tldbotC2
+TLDD         5 +W4i +tldt +tldBDt -tldb -tldBDb -tldD
+TLDE1        5 +tldEt +tldE1r +tldE -NM3pe -tldEb -tldE1l
+TLDE2        5 +tldEt +tldE2r +tldE -NM3pe -tldEb -tldE2l
+TLDE3        5 +tldEt +tldE34l +tldE3 -CTcov3re -tldEb -tldE34r
+TLDE4        5 +CTcov3le +tldEt +tldE34l -tldEb -tldE34r -tldE4
+*-- Patient Couch (PC) --
+*Table Top (TT)
+PCTT         5 +ttre +ttdiagre +ttae -ttarce -ttle -ttbe -ttdiagle -ttai +ttbound
+               | +ttre +ttdiagre +ttpi +ttbound -ttarce -ttle -ttbe -ttdiagle -ttpe
+               | +ttli +ttai +ttbound -ttarce -ttle -ttdiagle -ttpi
+               | +ttre +ttdiagre +ttai +ttbound -ttarce -ttri -ttpi
+               | +ttarci +ttri +ttai +ttbound -ttarce -ttli -ttpi
+               | +ttdiagli +ttai +ttbound -ttli -ttbe -ttdiagle -ttpi
+               | +ttri +ttdiagre +ttai +ttbound -ttbe -ttdiagri -ttpi
+               | +ttbi +ttdiagri +ttai -ttbe -ttdiagli -ttpi
+*Table Top foam (f)
+PCTTf        5 +ttri +ttdiagri +ttai +ttbound -ttarci -ttli -ttbi -ttdiagli -ttpi
+*Support (SUPP)
+PCSUPP       5 +supl +supbt +supfe -floot -ttle -supbe
+               | +ttre +supbt +supfe -floot -supr -supbe
+               | +supr +supbt +supfe -floot -supl -supfi
+               | +supr +supbt +supbi -floot -supl -supbe
+               | +ttre +suptb +supdiag1 -supr -supbt -supdiag2
+               | +supl +suptb +supdiag1 -ttle -supbt -supdiag2
+               | +supr +supbt +supce -floot -supl -supci
+               | +supr +suptb +supdiag3 -supbt -supdiag4 -supre
+               | +suptb +supdiag3 +supri -supl -supbt -supdiag4
+               | +ttre +supfe +suptt -ttle -supfi -suptb
+               | +ttre +supbi +suptt -ttle -supbe -suptb
+               | +supl +supfi +suptt -ttle -supbi -suptb
+               | +ttre +supfi +suptt -supr -supbi -suptb
+               | +supr +suptt +supce -supl -suptb -supci
+*Table (TBL)
+PCTBL        5 +tblarcr +tblb -tblbe -suptt -tbldiar1 -tblr
+               | +tblr +tbltp +tblb -tblbe -suptt -tbll
+               | +tblarcl +tbldial1 +tbll +tblb -tblbe -suptt
+               | +tblb -tblbe -tbll -tbltp -tbldial2
+               | +tblr +tblb +tbldiar2 -tblbe -tbltp
+*Cover (COV)
+PCCOV        5 +suptt +tblcovre +tblcovbe -floot -tblcovle -tblcovbi
+               | +BBscan +suptt +tblcovli +tblcovbi -tblcovle -tblcovfi
+               | +suptt +tblcovre +tblcovbi -floot -tblcovri -tblcovfi
+               | +suptt +tblcovre +tblcovfi -floot -tblcovle -tblcovfe
+*-- SPECT scanner --
+*- Detector heads-
+*Collimator
+COLL         5 +tblcovre +collf +coll1b -tblcovle -collb -coll1t
+               | +tblcovre +collf +coll2t -tblcovle -collb -coll2b
+*ALuminium cover
+ALCV         5 +foaml +collf +crys1 -tblcovle -collb -coll1b
+               | +foamr +collf +crys1 -foaml -foama -coll1b
+               | +tblcovre +collf +crys1 -foamr -collb -coll1b
+               | +foamr +foamp +crys1 -foaml -collb -coll1b
+               | +foamr +foama +alcv1 -foaml -foamp -coll1b
+               | +foaml +collf +coll2b -tblcovle -collb -crys2
+               | +foamr +collf +coll2b -foaml -foama -crys2
+               | +tblcovre +collf +coll2b -foamr -collb -crys2
+               | +foamr +foamp +coll2b -foaml -collb -crys2
+               | +foamr +foama +coll2b -foaml -foamp -alcv2
+*Foam
+FOAM         5 +foamr +foama +crys1 -tblcovri -foamp -alcv1
+               | +tblcovri +crysp +crys1 -tblcovli -foamp -alcv1
+               | +tblcovli +foama +crys1 -foaml -foamp -alcv1
+               | +tblcovri +foama +crys1 -tblcovli -crysa -alcv1
+               | +tblcovri +crysa +foam1 -tblcovli -crysp -alcv1
+               | +foamr +foama +alcv2 -tblcovri -foamp -crys2
+               | +tblcovli +foama +alcv2 -foaml -foamp -crys2
+               | +tblcovri +crysp +alcv2 -tblcovli -foamp -crys2
+               | +tblcovri +foama +alcv2 -tblcovli -crysa -crys2
+               | +tblcovri +crysa +alcv2 -tblcovli -crysp -foam2
+*Collimator crystal
+CRYS         5 +tblcovri +crysa +crys1 -tblcovli -crysp -foam1
+               | +tblcovri +crysa +foam2 -tblcovli -crysp -crys2
+*Light guide
+LTGD         5 +ltgdr +ltgda +ltgd1 -ltgdl -ltgdp -crys1
+               | +ltgdr +ltgda +crys2 -ltgdl -ltgdp -ltgd2
+*Optical coupling
+OPTI         5 +ltgdr +ltgda +opti1 -ltgdl -ltgdp -ltgd1
+               | +ltgdr +ltgda +ltgd2 -ltgdl -ltgdp -opti2
+*PMTs
+PMTS         5 +ltgdr +ltgda +opti2 -ltgdl -ltgdp -pmts2
+               | +ltgdr +ltgda +pmts1 -ltgdl -ltgdp -opti1
+*Electronics
+ELEC         5 +ltgdr +ltgda +elec2t -ltgdl -ltgdp -elec2b
+               | +ltgdr +ltgda +elec1b -ltgdl -ltgdp -elec1t
+*Vacuum
+VACU         5 +ltgdr +ltgda +elec1t -ltgdl -ltgdp -pmts1
+               | +ltgdr +ltgda +pmts2 -ltgdl -ltgdp -elec2t
+               | +vacur +vacua +elec2b -vacul -vacup -pbcs2t
+               | +vacur +vacua +crys2 -ltgdr -vacup -elec2b
+               | +ltgdl +vacua +crys2 -vacul -vacup -elec2b
+               | +ltgdr +vacua +crys2 -ltgdl -ltgda -elec2b
+               | +ltgdr +ltgdp +crys2 -ltgdl -vacup -elec2b
+               | +vacur +vacua +pbcs1t -vacul -vacup -elec1b
+               | +vacur +vacua +elec1b -ltgdr -vacup -crys1
+               | +ltgdl +vacua +elec1b -vacul -vacup -crys1
+               | +ltgdr +vacua +elec1b -ltgdl -ltgda -crys1
+               | +ltgdr +ltgdp +elec1b -ltgdl -vacup -crys1
+*Lead casing
+PBCS         5 +vacul +pbcsa +pbcs1b -pbcsl -pbcsp -coll1b
+               | +pbcsr +pbcsa +pbcs1b -vacur -pbcsp -coll1b
+               | +vacur +pbcsa +pbcs1b -vacul -vacua -coll1b
+               | +vacur +vacup +pbcs1b -vacul -pbcsp -coll1b
+               | +vacur +vacua +pbcs1b -vacul -vacup -pbcs1t
+               | +tblcovle +vacua +crys1 -vacul -vacup -coll1b
+               | +vacur +vacua +crys1 -tblcovre -vacup -coll1b
+               | +tblcovre +collb +crys1 -tblcovle -vacup -coll1b
+               | +tblcovre +vacua +crys1 -tblcovle -collf -coll1b
+               | +vacul +pbcsa +coll2b -pbcsl -pbcsp -pbcs2b
+               | +pbcsr +pbcsa +coll2b -vacur -pbcsp -pbcs2b
+               | +vacur +pbcsa +coll2b -vacul -vacua -pbcs2b
+               | +vacur +vacup +coll2b -vacul -pbcsp -pbcs2b
+               | +vacur +vacua +pbcs2t -vacul -vacup -pbcs2b
+               | +vacur +vacua +coll2b -tblcovre -vacup -crys2
+               | +tblcovle +vacua +coll2b -vacul -vacup -crys2
+               | +tblcovre +collb +coll2b -tblcovle -vacup -crys2
+               | +tblcovre +vacua +coll2b -tblcovle -collf -crys2
+*Aluminium casing
+ALCS         5 +pbcsl +alcsa +coll2b -alcsl -alcsp -alcs2
+               | +alcsr +alcsa +coll2b -pbcsr -alcsp -alcs2
+               | +pbcsr +alcsa +coll2b -pbcsl -pbcsa -alcs2
+               | +pbcsr +pbcsp +coll2b -pbcsl -alcsp -alcs2
+               | +pbcsr +pbcsa +pbcs2b -pbcsl -pbcsp -alcs2
+               | +alcsr +alcsa +alcs1 -pbcsr -alcsp -coll1b
+               | +pbcsl +alcsa +alcs1 -alcsl -alcsp -coll1b
+               | +pbcsr +alcsa +alcs1 -pbcsl -pbcsa -coll1b
+               | +pbcsr +pbcsp +alcs1 -pbcsl -alcsp -coll1b
+               | +pbcsr +pbcsa +alcs1 -pbcsl -pbcsp -pbcs1b
+*Support - Steel
+SUPPORTS     5 +NM3s +NM3li +NM3ri +NM3i -NM3ai -ganbori
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4s -NM4bi1 -NM4ti1 -NM4ai
+               | +NM4s +NM4ti2 +NM4li2 +NM4ri2 -NM4ai -NM4bi2 -NM4ci2
+               | +NM4ti1 +NM4ri1 +NM5s -NM4bi1 -NM5ri -NM5p
+               | +NM5ri +NM5di1 +NM5s -NM4bi1 -NM5p
+               | +NM4ti1 +NM5ti1 +NM5ci +NM5s -NM5li -NM5bi1 -NM5bri1 -NM5p -NM5ext1
+               | +NM5tri1 +NM5s +NM5ext1 -NM5p
+               | +NM4ti2 +NM4ri2 +NM5s -NM4bi2 -NM5ri -NM5p
+               | +NM5ri +NM5s +NM5di2 -NM4bi2 -NM5p
+               | +NM4ti2 +NM5ci +NM5s +NM5ti2 +NM5be2 -NM5li -NM5p -NM5bri2 -NM5ext2
+               | +NM5s +NM5tri2 +NM5ext2 -NM5p
+               | +NM2pi +NM1te -NM1ti -NM1dtle -NM1dtre -NM1p1
+               | +NM2pi +NM1ti +NM1dtri +NM1re -NM1dtre -NM1pd
+               | +NM2pi +NM1ti +NM1dtli -NM1dtle -NM1le -NM1pd
+               | +NM2pi +NM1re -NM1dtri -NM1ri -NM1p2 -NM1pd -NM0t
+               | +NM2pi +NM1li -NM1dtli -NM1le -NM1p2 -NM1pd -NM0t
+               | +NM5bi2 +NM2pi +NM1dbli -NM1li -NM1dble -NM1p1
+               | +NM5bi2 +NM2pi +NM1ri +NM1dbri -NM1dbre -NM1p1
+               | +NM2pi +NM1ri +NM1dbri -NM5bi2 -NM1be -NM1p1
+               | +NM2pi +NM1dbli -NM5bi2 -NM1li -NM1be -NM1p1
+               | +NM2pe +NM1te +NM1re -ganbori -NM1dtle -NM1dtre -NM1le -NM0t -NM2pi
+               | +NM0t +NM0li +NM0a -floot -NM1p2 -NM0le
+               | +NM0t +NM0re +NM0a -floot -NM1p2 -NM0ri
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4s -NM4bi1 -NM4ci1 -NM4ai
+               | +coll1t +DTSl +CTringa +CTringe -ganbori -DTSr -CTringp
+               | +HVGb +CTringa +CTringe -DTSl -CTringp
+               | +HVG1r +CTringa +CTringe -ganbori -EBDl -HVGb -DTSl -CTringp
+               | +EBDl +EBDb +CTringa -ganbori -XRTbox1r -CTringp
+               | +XRTbox1b +EBDr +CTringa +CTringe -XRTcyl4 -EBDb -CTringp
+               | +XRTbox1b +EBDb +CTringa +CTringe -XRTcyl1 -XRTbox2t -CTringp
+               | +ext7 +CTringa +CTringe -XRTcyl1 -XRTbox1b -CTringp
+               | +XRTbox2b +XRTbox1r +CTringa -ttle -ganbori -HVGb -CTringp
+               | +ttle +XRTbox2t +DTSr +CTringa +CTringe -ganbori -HVG2l -CTringp
+               | +HVG2l +HVGb +CTringa +CTringe -CTringp
+               | +CTsuppa +CTsuppt +CTsuppb -ganbori -CTsuppc
+               | +CTsuppa +CTsuppd2 +CTsuppd4 +CTsuppl -CTsuppc -CTsuppt -CTsupex1
+               | +CTsuppa +CTsuppd2 +CTsuppd4 +CTsuppl -CTsuppc -CTsuppb -CTsupex1
+               | +CTsuppa +CTsupex2 -CTsuppc -CTsuppt -CTsuppd1 -CTsuppd3 -CTsuppr
+               | +CTsuppa +CTsupex2 -CTsuppc -CTsuppb -CTsuppd1 -CTsuppd3 -CTsuppr
+               | +CTsuppc +CTsuppt +CTsuppl -floot -ganbori -CTsuppp -CTsuppr
+               | +CTsuppc +CTsuppd3 +CTsuppl -floot -CTsuppp -CTsuppt -CTsuppr
+               | +CTsuppc +CTsuppl -floot -CTsuppp -CTsuppt -CTsuppd4 -CTsuppr
+               | +CTsuppc +CTsupex2 -CTsuppp -CTsuppt -CTsuppd1 -CTsuppd3 -CTsuppr
+               | +CTsuppc +CTsuppd2 +CTsuppd4 +CTsuppl -CTsuppp -CTsuppt -CTsupex1
+*-- CT components --
+*X-ray tube
+XRT          5 +XRTcyl1 +XRTcyl1a -XRTcyl1p
+               | +XRTcyl4 +XRTcyl4p -XRTbox1a
+               | +XRTcyl2l +XRTcyl3 -XRTcyl1 -XRTcyl2r
+               | +XRTcyl2 +XRTcyl2l -XRTcyl1 -XRTcyl2r
+               | +XRTcyl5 +XRTcyl5p -XRTcyl5a
+               | +XRTbox1r +XRTbox1t +XRTbox1p -ext3 -XRTcyl1 -XRTbox1b -XRTbox1a
+               | +XRTbox2t +XRTbox2a +XRTbox1r -ttle -XRTbox2b -XRTbox2p
+*Heat exchanger
+HEX          5 +XRTcyl1a +HEXl +HEXt -XRTcyl1p -HEXr -HEXb
+*Electronic board
+EBD          5 +EBDl +EBDt +XRTbox2a -EBDr -EBDb -XRTbox2p
+*Hig voltage generators
+HVG          5 +XRTbox2a +HVG1l +HVG1t -HVG1r -HVGb -HVGp
+               | +XRTbox2a +HVG2l +HVG2t -HVG2r -HVGb -HVGp
+*Detector system, CT
+DTS          5 +XRTbox2a +DTSb +DTSl -DTSr -CTringa -DTSc
+               | +XRTbox1p +DTSl +DTSc -DTSt -DTSr -CTringa
+*Scanner cover (white, platic)
+COVER        5 +cvdt1dre +cvdt1bi +cvdt1ae -tblcovre -coll1t -cvdt1pi
+               | +cvdt1dre +cvdt1ae +cvdt1re -cvdt1dri -cvdt1bi -cvdt1pe
+               | +cvdt1dri +cvdt1ae +cvdt1te +cvdt1re -cvdt1pe -cvdt1ele -cvdt1ri
+               | +tblcovle +cvdt1dle +cvdt1bi +cvdt1ae -coll1t -cvdt1pe
+               | +cvdt1dle +cvdt1ae -cvdt1dli -cvdt1bi -cvdt1pe -cvdt1le
+               | +cvdt1dli +cvdt1ae +cvdt1te +cvdt1li -cvdt1pe -cvdt1ele -cvdt1le
+               | +cvdt1dle +cvdt1dre +cvdt1pi +cvdt1te +cvdt1ri -coll1t -cvdt1pe -cvdt1li
+               | +tblcovre +collb +cvdt1bi -tblcovle -coll1t -cvdt1pi
+               | +tblcovre +cvdt1bi +cvdt1ae -tblcovle -collf -coll1t
+               | +cvdt1ai +cvdt1te +cvdt1eli +cvdt1ri -cvdt1ele -cvdt1li
+               | +cvdt1te +cvdt1ri -cvdt1pi -cvdt1ti -cvdt1eli -cvdt1li -cvdt2pi
+               | +cvdt1dli +cvdt1dri +cvdt1ae +cvdt1ti +cvdt1ri -cvdt1bi -cvdt1ai -cvdt1ele
+               -cvdt1li
+               | +tblcovle +coll2t +cvdt1ae +cvdt2dle +cvdt2bi -cvdt1pe
+               | +coll2t +cvdt1ae +cvdt2dre +cvdt2bi -tblcovre -cvdt1pe
+               | +tblcovre +collb +coll2t +cvdt2bi -tblcovle -cvdt1pe
+               | +tblcovre +coll2t +cvdt1ae +cvdt2bi -tblcovle -collf
+               | +cvdt1ae +cvdt2dle -cvdt1pe -cvdt2dli -cvdt2bi -cvdt1le
+               | +cvdt1ae +cvdt2dre +cvdt1re -cvdt1pe -cvdt2dri -cvdt2bi
+               | +cvdt1pi +cvdt2dli +cvdt2dri +cvdt1re +cvdt2te -cvdt1pe -cvdt2bi -cvdt1le
+               | +cvdt1re +cvdt2te -cvdt1pi -cvdt1le -cvdt2pi -cvdt2ti -cvdt2eli
+               | +cvdt1ae +cvdt2dli +cvdt2dri +cvdt1ri +cvdt2ti -cvdt1ai -cvdt2bi -cvdt1li
+               -cvdt2eli
+               | +cvdt1ae +cvdt2dli +cvdt1li +cvdt2ti -cvdt1pi -cvdt1le -cvdt2eli
+               | +cvdt1ae +cvdt2dli +cvdt2dri +cvdt1re +cvdt2ti -cvdt1pi -cvdt1ri -cvdt2eli
+               | +cvdt1ae +cvdt1re +cvdt2te +cvdt2eli -cvdt1le -cvdt2ele
+               | +NM3le +NM3re +NM3e +NM3ai -NM3ae -ganbori
+               | +NM3re +NM3e +NM3pe -NM3ae -NM3ri
+               | +NM3le +NM3e +NM3pe -NM3ae -NM3li
+               | +NM3e +NM3pe +NM3li +NM3ri -NM3ai -NM3i
+               | +ganbori +NM3pe -ganbore -ganborp
+               | +NM4le1 +NM4re1 +NM4te1 +NM4ai -NM4be1 -NM4ce1 -NM4ae
+               | +NM4le1 +NM4te1 +NM4pe -NM4bi1 -NM4li1 -NM4ai
+               | +NM4re1 +NM4te1 +NM4pe -NM4be1 -NM4ri1 -NM4ai
+               | +NM4te1 +NM4li1 +NM4ri1 +NM4pe +NM4be2 -NM4ti1 -NM4ai
+               | +NM4le1 +NM4bi1 +NM4ri1 +NM4pe -NM4be1 -NM4ce1 -NM4ai
+               | +NM4ai +NM4le2 +NM4re2 +NM4te2 -NM4ae -NM4be2 -NM4ce2
+               | +NM4pe +NM4le2 +NM4te2 -NM4ai -NM4be2 -NM4li2
+               | +NM4pe +NM4re2 +NM4te2 -NM4ai -NM4be2 -NM4ri2
+               | +NM4pe +NM4te2 +NM4li2 +NM4ri2 -NM4ai -NM4bi2 -NM4ti2
+               | +NM4pe +NM4bi2 +NM4li2 +NM4ri2 -NM4ai -NM4be2 -NM4ce2
+               | +NM4pe +NM4ci2 -NM4ai -NM4ce2 -NM4bi2
+               | +NM4re1 +NM4te1 +NM5ae -NM4be1 -NM4ri1 -NM5p
+               | +NM4bi1 +NM4ri1 +NM5de1 +NM5ae -NM4be1 -NM5p
+               | +NM5de1 +NM5ri +NM5ae -NM5di1 -NM4bi1 -NM5p
+               | +NM4te1 +NM5ri +NM5ae -NM5re -NM5de1 -NM5p
+               | +NM4te1 +NM4ri1 +NM5ae -NM4ti1 -NM5ri -NM5p
+               | +NM4te1 +NM5ce +NM5ae -pbcs1t -NM5bre1 -NM5ci -NM5p
+               | +NM4te1 +NM5te1 +NM5ae -NM5ti1 -NM5p -NM5ext1
+               | +NM5tre1 +NM5ae +NM5ext1 -NM5tri1 -NM5p
+               | +NM5li +NM5ae -NM5le -NM5be1 -NM5p -NM5ext1
+               | +NM5bi1 +NM5ci +NM5ae -NM5bre1 -NM5be1 -NM5li -NM5p
+               | +NM4ti1 +NM4ri1 +NM5ae -NM4bi1 -NM5ri -NM5ai
+               | +NM5ri +NM5di1 +NM5ae -NM4bi1 -NM5ai
+               | +NM4ti1 +NM5ti1 +NM5ci +NM5ae -NM5li -NM5bi1 -NM5bri1 -NM5ai -NM5ext1
+               | +NM5tri1 +NM5ae +NM5ext1 -NM5ai
+               | +NM4te1 +NM5ti1 +NM5ci +NM5ae -floot -pbcsr -NM4ti1 -NM5p
+               | +NM5bri1 +NM5ci +NM5ae -NM5bre1 -NM5bi1 -NM5p
+               | +NM4re2 +NM4bi2 +NM5ae +NM5de2 -NM4be2 -NM5p
+               | +NM5ri +NM5ae +NM5de2 -NM4bi2 -NM5p -NM5di2
+               | +NM4te2 +NM5ri +NM5ae -NM5re -NM5p -NM5de2
+               | +NM4re2 +NM4te2 +NM5ae -NM4ti2 -NM5ri -NM5p
+               | +NM4re2 +NM4ti2 +NM5ae -NM4bi2 -NM4ri2 -NM5p
+               | +NM5ci +NM5ae +NM5bri2 -NM5p -NM5bre2 -NM5bi2
+               | +NM5ci +NM5ae +NM5bi2 -NM5le -NM5p -NM5bre2 -NM5bi2
+               | +NM5li +NM5ae +NM5tre2 -NM5le -NM5p
+               | +NM5ae +NM5tre2 +NM5ext2 -NM5li -NM5p -NM5tri2
+               | +NM4te2 +NM5ci +NM5ae +NM5te2 -NM5p -NM5ti2 -NM5ext2
+               | +NM4te2 +NM5ce +NM5ae +NM5ti2 -cvdt2te -NM4ti2 -NM5p -NM5ext2
+               | +NM4ti2 +NM5ce +NM5ae -NM5ci -NM5p -NM5bre2 -NM5bi2
+               | +NM4ti2 +NM4ri2 +NM5ae -NM4bi2 -NM5ri -NM5ai
+               | +NM5ri +NM5ae +NM5di2 -NM4bi2 -NM5ai
+               | +NM4ti2 +NM5ci +NM5ae +NM5ti2 +NM5be2 -NM5li -NM5ai -NM5bri2 -NM5ext2
+               | +NM5ae +NM5tri2 +NM5ext2 -NM5ai
+               | +NM5li +NM5ae -NM5le -NM5p -NM5tre2 -NM5bi2 -NM5ext2
+               | +NM3ae +NM2e -NM2i -NM2pe
+               | +NM5re +NM5ae -NM5li -NM5p -NM5bi2 -NM5bri2 -NM5be2
+               | +NM4ci1 +NM4pe -NM4ce1 -NM4bi1 -NM4ai
+               | +NM3ae +CTcov11e +CTcov1d2 -CTcov11i -CTcov1d1 -CTcov2ai
+               | +CTcov12e +covgdli +CTcov2ae -CTcov12i -CTcov1d2 -CTcov2ai -CTcov3d3
+               | +CTcov13e +CTcov1d1 +CTcov2ae +CTcov3d1 -CTcov11i -CTcov13i -covgdri -CTcov2ai
+               | +NM3ae +CTcov12e +covgdle -covgt -covgdli -CTcov2ai
+               | +NM3ae +CTcov13e +covgdri -covgt -covgdre -CTcov2ai
+               | +CTcov2ae +CTcov31e +CTcov3d1 -CTcov31i -CTcov4pe -CTcov3d2
+               | +CTcov2ae +CTcov32e +CTcov3d3 -CTcov4pe -CTcov32i -CTcov3d1
+               | +CTcov2ae +CTcov34e -CTcov4pe -CTcov3b -CTcov3d3 -CTcov34i
+               | +CTcov2ae +CTcov3li +CTcov3b -covgt -CTcov4pe -CTcov3le
+               | +CTcov2ae +CTcov33e +CTcov3d2 -CTcov4pe -CTcov33i -CTcov3d4
+               | +CTcov2ae +CTcov35e +CTcov3d4 -CTcov4pe -CTcov3b -CTcov35i
+               | +CTcov2ae +CTcov3re +CTcov3b -covgt -CTcov4pe -CTcov3ri
+               | +CTcov2ae +CTcov31i +CTcov3d1 -CTcov11e -CTcov2ai -CTcov3d2
+               | +CTcov2ae +CTcov32i +CTcov3d3 -CTcov11e -CTcov1d1 -CTcov2ai -CTcov3d1
+               | +CTcov1d2 +CTcov2ae +CTcov33i +CTcov3d2 -CTcov11e -CTcov2ai -CTcov3d4
+               | +CTcov2ae +CTcov34i -CTcov11e -CTcov2ai -CTcov3b -CTcov3d3
+               | +CTcov1d2 +CTcov2ae +CTcov3b -CTcov11e -CTcov2ai -CTcov3li -CTcov3d4
+               | +CTcov2ae -CTcov12e -CTcov1d2 -covgt -CTcov2ai -CTcov3li
+               | +CTcov12e +CTcov2ae -covgt -covgdle -CTcov2ai
+               | +CTcov2ae +CTcov3d4 +CTcov35i -CTcov11e -CTcov2ai -CTcov3b
+               | +CTcov2ae +CTcov3ri +CTcov3b +CTcov3d3 -CTcov11e -CTcov1d1 -CTcov2ai
+               | +CTcov1d1 +CTcov1d2 +CTcov2ae +CTcov3ri -CTcov13e -CTcov2ai
+               | +CTcov2ae +CTcov3ri +CTcov3d4 -CTcov13e -CTcov1d2 -covgt -CTcov2ai
+               | +CTcov13e +covgdre +CTcov2ae -covgt -CTcov2ai
+               | +NM3ae +CTcov13e +CTcov1d1 -NM1dbli -CTcov11i -CTcov13i -covgdri -CTcov2ae
+               | +NM3ae +CTcov12e +covgdli -NM1dbri -CTcov11i -CTcov12i -CTcov1d2 -CTcov2ae
+               | +CTcovcne -CTcovcni
+               | +CTcov31i +CTcov3d1 +CTcov4pi -CTcov4pe -CTcov3d2 -CTcovcne
+               | +CTcov3d1 +CTcov33i +CTcov3d2 +CTcov4pi -CTcov4pe -CTcov3d4 -CTcovcne
+               | +CTcov32i +CTcov3d3 +CTcov4pi -CTcov4pe -CTcov3d1 -CTcov3d2 -CTcovcne
+               | +CTcov34i +CTcov4pi -CTcov4pe -CTcov3d2 -CTcov3b -CTcov3d3 -CTcovcne
+               | +CTcov3d1 +CTcov3d4 +CTcov35i +CTcov4pi -CTcov4pe -CTcov3b -CTcovcne
+               | +CTcov3ri +CTcov3b +CTcov4pi -covgt -CTcov4pe -CTcov3li -CTcovcne
+               | +CTcov11i +CTcov1d2 +covg3i -NM2pe -CTcov12i
+               | +NM3ae +CTcov11i -CTcov12i -CTcov1d2 -CTcov2ae -ext1
+               | +NM2pe +CTcov11i +CTcov1d2 +ext2 -CTcov12i -CTcov2ai
+*Scanner cover, grey (bottom part, plastic)
+COVERG       5 +covgte +covgrce -floot -covgrci -covg1b
+               | +covgte +covg1rre +covg1b -floot -NM5ae -covg1rri
+               | +covgte +covg1rli +covg1b -floot -NM5ae -covg1rle
+               | +covgte +covg1rri +covg1b -NM5ae -covgti -covg1rli
+               | +covgte +covgrci -covgti -covg1b
+               | +covgte +covglce -floot -covglci -covg1b
+               | +covgte +covg1lre +covg1b -floot -NM5ae -covg1lri
+               | +covgte +covg1lli +covg1b -floot -NM5ae -covg1lle
+               | +covgte +covg1lri +covg1b -NM5ae -covgti -covg1lli
+               | +covgte +covglci -covgti -covg1b
+               | +covgte +covg1rle +cvdt1pe -floot -NM5ae -covg1lre
+               | +cvdt1pe +covgte +covg1lle -floot -NM5ae -covg2le
+               | +cvdt1pe +covgte +covg2ri -floot -NM5ae -covg1rre
+               | +covgde +covg2ri +covgt -covgte -covg2le -covgdi
+               | +NM5ae +covg2ri +covgdi -floot -covg2re -covg3i
+               | +NM5ae +covgdi +covg2li -floot -covg2le -covg3i
+               | +NM3ae +covg2le +covgt -floot -covg4le -covg3i
+               | +covg4li +covgt +covg3i -floot -covg4le -CTcov2ai
+               | +NM3ae +covg4re +covgt -floot -covg2ri -covg3i
+               | +covg4re +covgt +covg3i -floot -covg4ri -CTcov2ai
+               | +NM3ae +CTcov11i +CTcov1d2 -NM2e -CTcov1d1 -covg3i
+               | +NM3ae +CTcov13i +CTcov1d1 +CTcov1d2 -NM2e -covg3i
+               | +NM3ae +CTcov12i -NM2e -CTcov1d1 -CTcov1d2 -covg3i
+               | +NM3ae +CTcov12i +CTcov13i +CTcov1d1 +covgdli -NM2e -CTcov1d2 -covgt -covg3i
+               -covgdri
+               | +covg4le +covgt +CTcov2ae -floot -CTcov2ai -CTcov3le
+               | +covgt +CTcov2ae +CTcov3re -floot -covg4re -CTcov2ai
+               | +covgt +CTcov2ai +CTcov3li -floot -CTcov4pe -CTcov3le
+               | +covgt +CTcov2ai +CTcov3re -floot -CTcov4pe -CTcov3ri
+               | +covgt +CTcov3ri +CTcov4pi -floot -CTcov4pe -CTcov3li
+               | +NM3ae +CTcov11i +CTcov1d1 -CTcov13i -covg3i
+*Cover - aluminium
+COVERA       5 +NM3pe +NM3li +NM3ri +NM3i -NM3pi -ganbori
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4pe -NM4bi1 -NM4ti1 -NM4pi
+               | +NM4pe +NM4ti2 +NM4li2 +NM4ri2 -NM4pi -NM4bi2 -NM4ci2
+               | +NM2i +NM2s -ganbori -NM2pe
+               | +NM4ti1 +NM4li1 +NM4ri1 +NM4pe -NM4bi1 -NM4ci1 -NM4pi
+               | +covgte +CTcov4pe +CTcov3re -covgti -CTcov3le -stdpe
+               | +covgti +CTcov3re +stdpi -floot -CTcov3le -stdpe
+               | +covgti +CTcov4pe +CTcov3li -floot -CTcov3le -stdpi
+               | +covgti +CTcov4pe +CTcov3re -floot -CTcov3ri -stdpi
+END
+GEOEND
+*- 12 deg rotation around Y-axis to align scanner with technical drawing markings
+ROT-DEFI         200                 -12                              rot_scan
+*
+*
+******   MEDIA   *****
+MATERIAL          19               0.862                              POTASSIU
+*Concrete portland
+MATERIAL                             2.3                              CONCRETE
+COMPOUND       -0.01  HYDROGEN    -0.001    CARBON -0.529107    OXYGENCONCRETE
+COMPOUND      -0.016    SODIUM    -0.002  MAGNESIU -0.033872  ALUMINUMCONCRETE
+COMPOUND   -0.337021   SILICON    -0.013  POTASSIU    -0.044   CALCIUMCONCRETE
+COMPOUND      -0.014      IRON                                        CONCRETE
+MATERIAL          16                2.07                              SULFUR
+*Wood (general)
+*Detwiler et al. (2021) - Compendium of Material Composition Data for Radiation Transport Modeling
+*p. 268
+*Density = 0.64 g/cm3 is average for SOUTHERN PINE
+MATERIAL                            0.64                              WOOD
+COMPOUND   -0.497018    CARBON -0.427435    OXYGEN -0.059642  HYDROGENWOOD
+COMPOUND    -0.00497  NITROGEN  -0.00497    SULFUR -0.001988  MAGNESIUWOOD
+COMPOUND   -0.001988  POTASSIU -0.001988   CALCIUM                    WOOD
+*Wood - door (same material, but for applying different colour)
+MATERIAL                            0.64                              WOODd
+COMPOUND   -0.497018    CARBON -0.427435    OXYGEN -0.059642  HYDROGENWOODd
+COMPOUND    -0.00497  NITROGEN  -0.00497    SULFUR -0.001988  MAGNESIUWOODd
+COMPOUND   -0.001988  POTASSIU -0.001988   CALCIUM                    WOODd
+*Gypsum plaster of paris Ca_S_O4.2H2_O
+MATERIAL                           1.428                              GYPSUM
+COMPOUND   -0.023416  HYDROGEN -0.557572    OXYGEN -0.186215    SULFURGYPSUM
+COMPOUND   -0.232797   CALCIUM                                        GYPSUM
+MATERIAL          33                5.73                              ARSENIC
+*Lead glass
+MATERIAL                            6.22                              LEAD-GLA
+COMPOUND   -0.156453    OXYGEN -0.080866   SILICON -0.008092  TITANIUMLEAD-GLA
+COMPOUND   -0.002651   ARSENIC -0.751938      LEAD                    LEAD-GLA
+MATERIAL           3               0.534                              LITHIUM
+MATERIAL           9            0.001696                              FLUORINE
+MATERIAL          15                1.82                              PHOSPHO
+*LiF:Mg,Cu,P
+*Bilski (2002) and Sadek et al. (2016)
+*Percentages of Li and F for MTS were taken from Sadek but adjusted for MCP dopants
+MATERIAL                             2.5                              MCP
+COMPOUND    -26.2995   LITHIUM  -72.1808  FLUORINE      -0.2  MAGNESIUMCP
+COMPOUND       -1.25   PHOSPHO     -0.05    COPPER                    MCP
+*Carbon Fiber
+*Composition: https://toray-cfe.com/en/what-is-carbon-fiber/
+*Density: https://texonic.net/en/tableau/technical/
+MATERIAL                             1.8                              CARBFIB
+COMPOUND       -0.95    CARBON     -0.05  NITROGEN                    CARBFIB
+*Aluminium with reduced density (determined empirically) - for patient couch table
+MATERIAL          13              0.3769                              ALUPCTBL
+*Polyurethene (C17H16N2O4)n
+*  density taken from:
+*    http://www.efunda.com/materials/polymers/properties/polymer_datasheet.cfm?MajorID=PU&MinorID=3
+*  they give 1.12 - 1.24    -> average taken: 1.18
+MATERIAL                            1.18                              Polyuret
+COMPOUND        16.0  HYDROGEN      17.0    CARBON       2.0   SILICONPolyuret
+COMPOUND         4.0    SULFUR                                        Polyuret
+MATERIAL                           11.35                              LEADcoll
+COMPOUND      -0.015      LEAD    -0.985       AIR                    LEADcoll
+*Visilox
+*Sources:
+*- Composition: https://s3-us-west-1.amazonaws.com/foscoshopify/pdf/F1-0001V.pdf
+*- Use of PDMS as polysiloxane: https://www.sciencedirect.com/topics/medicine-and-dentistry/polysiloxane
+*- Structure & density of PDMS: https://ceimusb.wordpress.com/wp-content/uploads/2015/04/mark-polymer-data-handbook.pdf
+*- Density of silica: https://search.worldcat.org/title/CRC-Handbook-of-Chemistry-and-Physics-92nd-Edition/oclc/908079500
+MATERIAL                          1.0313                              Visilox
+COMPOUND        38.3   SILICON      23.2    OXYGEN      30.8    CARBONVisilox
+COMPOUND        7.74  HYDROGEN                                        Visilox
+MATERIAL          53                4.93                              IODINE
+*Sodium iodide NaI (scintillator crystal); Tl dopant ignored due to trivial percentage
+MATERIAL                           3.667                              NaI
+COMPOUND   -0.153373    SODIUM -0.846627    IODINE                    NaI
+*Glass (Soda-Lime)
+*Soda Lime glass density may vary from 2.4 - 2.8 g/cm3. All
+*calculations based on target depth will scale directly with density.
+MATERIAL                            2.33                              Glass_So
+COMPOUND        60.0    OXYGEN      25.0   SILICON      10.0    SODIUMGlass_So
+COMPOUND         3.0   CALCIUM       1.0  MAGNESIU       1.0  ALUMINUMGlass_So
+MATERIAL          24                7.18                              CHROMIUM
+*514 Mu metal
+*Shepard and Porter, PRB 12 (1975) 1649
+MATERIAL                             1.0                              Mu-metal
+COMPOUND        -2.0  CHROMIUM      -5.0    COPPER     -18.0      IRONMu-metal
+COMPOUND       -75.0    NICKEL                                        Mu-metal
+MATERIAL                          0.3410                              PMTs
+*f3 set to OXYGEN instead of VACUUM as VACUUM returns error
+COMPOUND        -3.4  Mu-metal     -15.3  Glass_So     -51.2    OXYGENPMTs
+COMPOUND       -21.9       AIR      -7.2      PMMA     -0.33    COPPERPMTs
+COMPOUND       -0.67      IRON                                        PMTs
+MATERIAL                           1.188                              ELCTRNCS
+COMPOUND       -75.0      PMMA      -5.0    COPPER     -20.0      IRONELCTRNCS
+*ABS
+*Acrylonitrile-Butadiene Styrene
+*Rosato et al. (2004) - Plastic Product Material and Process Selection Handbook
+*20% rubber (butadiene C4H6); 25% acrylonitrile C3H3N; 55% styrene C8H8
+*Density - https://www.specialchem.com/plastics/guide/density (mean of min. and max. of ABS)
+MATERIAL                           1.115                              ABS
+COMPOUND       -7.92  HYDROGEN    -85.48    CARBON      -6.6  NITROGENABS
+MATERIAL          25                7.21                              MANGANES
+*Steel316LN
+*Stainless steel AISI316LN
+MATERIAL                             7.8                              SS316LN
+COMPOUND    -0.67145      IRON    -0.185  CHROMIUM   -0.1125    NICKELSS316LN
+COMPOUND       -0.02  MANGANES     -0.01   SILICON  -0.00045   PHOSPHOSS316LN
+COMPOUND     -0.0003    SULFUR   -0.0003    CARBON                    SS316LN
+*Aluminium (same as normal Al, but for applying different colour)
+MATERIAL          13              2.6989                              ALUGANT
+*Polyurethane Foam
+*Detwiler et al. (2021)
+MATERIAL                           0.021                              PUR
+COMPOUND   -0.041001  HYDROGEN -0.543998    CARBON -0.121001  NITROGENPUR
+COMPOUND      -0.294    OXYGEN                                        PUR
+MATERIAL          75               21.02                              RHENIUM
+MATERIAL          42               10.22                              MOLYBDEN
+*X-ray tube (compound)
+MATERIAL                           11.27                              XRT
+COMPOUND       -17.5  TUNGSTEN     -0.25   RHENIUM     -0.15  MOLYBDENXRT
+COMPOUND       -2.65    CARBON     -3.22    OXYGEN      -0.7    SODIUMXRT
+COMPOUND       -2.38   SILICON      -0.7   CALCIUM     -52.0      LEADXRT
+COMPOUND       -0.45  HYDROGEN     -20.0    COPPER                    XRT
+*High voltage generator (compound)
+MATERIAL                            3.91                              HVG
+COMPOUND        -1.7  HYDROGEN     -15.7    CARBON      -0.6  NITROGENHVG
+COMPOUND        -1.5    OXYGEN     -50.0  ALUMINUM     -12.0      IRONHVG
+COMPOUND       -12.5    COPPER      -6.0   SILICON                    HVG
+*Heat exchanger (compound)
+MATERIAL                            3.83                              HEX
+COMPOUND        -2.2  HYDROGEN     -10.5    CARBON     -11.7    OXYGENHEX
+COMPOUND        -0.6  NITROGEN     -50.0  ALUMINUM     -25.0    COPPERHEX
+*Electronic board (compound)
+MATERIAL                            5.58                              EBD
+COMPOUND       -20.0    CARBON     -10.0  HYDROGEN     -10.0   SILICONEBD
+COMPOUND       -30.0    COPPER     -30.0       TIN                    EBD
+MATERIAL          64              7.9004                              GADOLINI
+MATERIAL          39               4.469                              YTTRIUM
+*Detector system, CT (compound)
+MATERIAL                            9.97                              DTS
+COMPOUND       -40.0  TUNGSTEN      -3.0    OXYGEN      -6.0  GADOLINIDTS
+COMPOUND        -6.0   YTTRIUM      -2.0    CARBON      -1.0  HYDROGENDTS
+COMPOUND        -1.0   SILICON      -3.0    COPPER      -3.0       TINDTS
+COMPOUND       -35.0  ALUMINUM                                        DTS
+*..+....1....+....2....+....3....+....4....+....5....+....6....+....7..
+ASSIGNMA    BLCKHOLE   BLKBODY
+ASSIGNMA         AIR      AIRt       W4A
+ASSIGNMA    CONCRETE     FLOOR     PILLC
+ASSIGNMA      GYPSUM       W1G       WEG
+ASSIGNMA        LEAD       W1L     WINDL
+ASSIGNMA        WOOD       W1P    PILL_P
+ASSIGNMA       WOODd       D1P       D2P
+ASSIGNMA    LEAD-GLA    WINDOW
+ASSIGNMA    ALUMINUM       D1J     WINDJ
+ASSIGNMA        PMMA   PHANTOM
+ASSIGNMA       WATER     WATER
+ASSIGNMA         MCP     TLDA1     TLDE4
+ASSIGNMA     CARBFIB      PCTT
+ASSIGNMA         PUR     PCTTf
+ASSIGNMA    ALUMINUM    PCSUPP
+ASSIGNMA    ALUPCTBL     PCTBL
+ASSIGNMA    Polyuret     PCCOV
+ASSIGNMA    LEADcoll      COLL
+ASSIGNMA    ALUMINUM      ALCV
+ASSIGNMA         AIR      FOAM
+ASSIGNMA         NaI      CRYS
+ASSIGNMA    Glass_So      LTGD
+ASSIGNMA     Visilox      OPTI
+ASSIGNMA        PMTs      PMTS
+ASSIGNMA    ELCTRNCS      ELEC
+ASSIGNMA      VACUUM      VACU
+ASSIGNMA        LEAD      PBCS
+ASSIGNMA    ALUMINUM      ALCS
+ASSIGNMA     SS316LN  SUPPORTS
+ASSIGNMA         XRT       XRT
+ASSIGNMA         HEX       HEX
+ASSIGNMA         EBD       EBD
+ASSIGNMA         HVG       HVG
+ASSIGNMA         DTS       DTS
+ASSIGNMA         ABS     COVER
+ASSIGNMA     ALUGANT    COVERG
+ASSIGNMA     ALUGANT    COVERA
+*
+*
+******   TRANSPORT   *****
+*
+*Trasport thresholds:
+*  Electrons: 100 keV
+*  Photons: 1 keV
+EMFCUT       -0.0001      1E-6                AIRt  @LASTREG
+*Simulation of radiation decay
+RADDECAY           2
+*
+*
+******   SCORING   *****
+*
+*Photon fluence in entire volume (3D cartesian mesh)
+USRBIN            10    PHOTON       -21       734       400       574fluP
+USRBIN          -866      -100      -890       400       125       366 &
+*Elecrton fluence in entire volume (3D cartesian mesh)
+USRBIN            10  ELECTRON       -22       734       400       574fluE
+USRBIN          -866      -100      -890       400       125       366 &
+*Ambient dose equivalent H*(10) distribution in entire model (3D cartesian mesh)
+USRBIN            10   DOSE-EQ       -23       734       400       574dosDisH
+USRBIN          -866      -100      -890       400       125       366 &
+*Effective dose E distribution in entire model (3D cartesian mesh)
+USRBIN            10   DOSE-EQ       -24       734       400       574dosDisE
+USRBIN          -866      -100      -890       400       125       366 &
+*Ambient dose equivalent deposited in each TLD
+USRBIN            12   DOSE-EQ       -25     TLDE4                    tldDosH
+USRBIN         TLDA1                             1                     &
+*Effective dose deposited in each TLD
+USRBIN            12   DOSE-EQ       -26     TLDE4                    tldDosE
+USRBIN         TLDA1                             1                     &
+*Conversion coefficients for effective dose (EWT74 - Effective dose from ICRP74 & Pelliconi (2000) data)
+AUXSCORE      USRBIN                       dosDisE   tldDosE         2EWT74
+DCYSCORE          -1                          fluP   tldDosE          USRBIN
+*Notation for particles followed: A - all particles; P - photons; E - electrons
+*Fluence-energy spectra for air volume within scanner room (airR)
+USRTRACK              ALL-PART       -27      AIRr  1.1169E8      1000airRfluA
+USRTRACK      0.0005         0                                         &
+USRTRACK                PHOTON       -27      AIRr  1.1169E8      1000airRfluP
+USRTRACK      0.0005         0                                         &
+USRTRACK              ELECTRON       -27      AIRr  1.1169E8      1000airRfluE
+USRTRACK      0.0005         0                                         &
+*Fluence-energy spectra for phantom volume, regions: PHANTOM (ptmB, B-body) + WATER (ptmW)
+USRTRACK              ALL-PART       -28   PHANTOM    3157.3      1000ptmBfluA
+USRTRACK      0.0005         0                                         &
+USRTRACK                PHOTON       -28   PHANTOM    3157.3      1000ptmBfluP
+USRTRACK      0.0005         0                                         &
+USRTRACK              ELECTRON       -28   PHANTOM    3157.3      1000ptmBfluE
+USRTRACK      0.0005         0                                         &
+USRTRACK              ALL-PART       -29     WATER    5843.7      1000ptmWfluA
+USRTRACK      0.0005         0                                         &
+USRTRACK                PHOTON       -29     WATER    5843.7      1000ptmWfluP
+USRTRACK      0.0005         0                                         &
+USRTRACK              ELECTRON       -29     WATER    5843.7      1000ptmWfluE
+USRTRACK      0.0005         0                                         &
+DCYSCORE          -1                      airRfluA  ptmWfluE          USRTRACK
+*Set the random number seed
+RANDOMIZ         1.0        10
+*Set the number of primary histories to be simulated in the run
+START           3.E9
+STOP

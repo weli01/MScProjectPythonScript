@@ -1,0 +1,631 @@
+******   GENERAL   *****
+*
+*Variables to choose which simulation to run (based on collimator definition)
+*  holes -> real, parallel-hole collimator
+*  solidX -> approximated collimator (solid) (X -> number, represents ratio of air to lead)
+!#define holes
+#define solid
+!#define solid98
+#define solid99
+!#define solid999
+!#define sol99999
+!#define solidair
+TITLE
+Collimators - HEGP (Lu-177)
+DEFAULTS                                                              PRECISIO
+*
+*
+******   PRIMARY   *****
+*
+*Beam (source) characteristics
+*   ISOTOPE = Radioisotope source
+BEAM               0                   0                              ISOTOPE
+*Lu-177 source (radioisotope) centred at origin (0,0,0)
+HI-PROPE          71       177
+BEAMPOS            0         0
+BEAMPOS           0.      10.8        0.      18.6                    CYLI-VOL
+BEAMAXES          0.        0.        1.        0.        1.        0.
+*
+*
+******   GEOMETRY   *****
+GEOBEGIN                                                              COMBNAME
+    0    0          
+*Black body container
+*  Main surrounding body
+RPP blkbody    -50 100 -50 50 -50 50
+*  Other components
+YZP blkbd1     50.0
+XYP blkbd2     -2.0
+XYP blkbd3     2
+XZP blkbd4     -2
+XZP blkbd5     2
+#if holes
+YZP blkbd6     56.6
+*Air container
+RPP air        -13 57.6 -10.52 11.748 -13 13
+#elif solid
+YZP blkbd6     53.2
+RPP air        -13 54.2 -10.52 11.748 -13 13
+#endif
+*Phantom (Jaszczak)
+*  Phantom bounding box
+RPP BBphtm     -13.0 13.0 -10.52 11.748 -13.0 13.0
+*  Internal cylidner
+YCC jzint      0 0 10
+*  External cylinder
+YCC jzext      0 0 11.12
+*  Phantom lid
+YCC jzlid      0 0 13
+*  Top plane, external
+PLA jztop1     0 -1.0 0 0 -10.52 0
+*  Top plane, internal
+PLA jztop2     0 -1.0 0 0 -9.3 0
+*  Bottom plane, internal
+PLA jzbot1     0 -1.0 0 0 11.748 0
+*  Bottom plane, external
+PLA jzbot2     0 -1.0 0 0 9.3 0
+*Detector, front (anterior)
+RPP deta       49 50 -2 2 -2 2
+#if holes
+*Collimator
+*  Bounding box
+RPP BBcollim   50.0 56.6 -2.0 2.0 -2.0 2.0
+#elif solid
+*Collimator
+*  Bounding box
+RPP BBcollim   50.0 53.2 -2.0 2.0 -2.0 2.0
+#endif
+*  Horizontal septa
+XZP sep1       0.2
+XZP sep2       0.38
+XZP sep3       0.78
+XZP sep4       0.96
+XZP sep5       1.36
+XZP sep6       1.54
+XZP sep7       1.94
+XZP sep8       -0.2
+XZP sep9       -0.38
+XZP sep10      -0.78
+XZP sep11      -0.96
+XZP sep12      -1.36
+XZP sep13      -1.54
+XZP sep14      -1.94
+XZP sep15      0.49
+XZP sep16      0.67
+XZP sep17      1.07
+XZP sep18      1.25
+XZP sep19      1.65
+XZP sep20      1.83
+XZP sep21      0.09
+XZP sep22      -0.09
+XZP sep23      -0.49
+XZP sep24      -0.67
+XZP sep25      -1.07
+XZP sep26      -1.25
+XZP sep27      -1.65
+XZP sep28      -1.83
+PLA sep29      0 0.5 -0.86602540378444 0 0.10 -0.17320508075689
+PLA sep30      0 0.5 -0.86602540378444 0 0.19 -0.32908965343809
+PLA sep31      0 0.5 -0.86602540378444 0 0.39 -0.67549981495186
+PLA sep32      0 0.5 -0.86602540378444 0 0.48 -0.83138438763306
+PLA sep33      0 0.5 -0.86602540378444 0 0.68 -1.17779454914684
+PLA sep34      0 0.5 -0.86602540378444 0 0.77 -1.33367912182804
+PLA sep35      0 0.5 -0.86602540378444 0 0.97 -1.68008928334181
+PLA sep36      0 0.5 -0.86602540378444 0 -0.10 0.173205080756888
+PLA sep37      0 0.5 -0.86602540378444 0 -0.19 0.329089653438087
+PLA sep38      0 0.5 -0.86602540378444 0 -0.39 0.675499814951862
+PLA sep39      0 0.5 -0.86602540378444 0 -0.48 0.831384387633061
+PLA sep40      0 0.5 -0.86602540378444 0 -0.68 1.177794549146837
+PLA sep41      0 0.5 -0.86602540378444 0 -0.77 1.333679121828036
+PLA sep42      0 0.5 -0.86602540378444 0 -0.97 1.680089283341811
+PLA sep43      0 0.5 -0.86602540378444 0 0.245 -0.42435244785438
+PLA sep44      0 0.5 -0.86602540378444 0 0.335 -0.58023702053557
+PLA sep45      0 0.5 -0.86602540378444 0 0.535 -0.92664718204935
+PLA sep46      0 0.5 -0.86602540378444 0 0.625 -1.08253175473055
+PLA sep47      0 0.5 -0.86602540378444 0 0.825 -1.42894191624432
+PLA sep48      0 0.5 -0.86602540378444 0 0.915 -1.58482648892552
+PLA sep49      0 0.5 -0.86602540378444 0 0.045 -0.0779422863406
+PLA sep50      0 0.5 -0.86602540378444 0 -0.045 0.0779422863406
+PLA sep51      0 0.5 -0.86602540378444 0 -0.245 0.424352447854375
+PLA sep52      0 0.5 -0.86602540378444 0 -0.335 0.580237020535574
+PLA sep53      0 0.5 -0.86602540378444 0 -0.535 0.92664718204935
+PLA sep54      0 0.5 -0.86602540378444 0 -0.625 1.082531754730548
+PLA sep55      0 0.5 -0.86602540378444 0 -0.825 1.428941916244324
+PLA sep56      0 0.5 -0.86602540378444 0 -0.915 1.584826488925523
+PLA sep57      0 0.5 -0.86602540378444 0 1.115 -1.9312366504393
+PLA sep58      0 0.5 -0.86602540378444 0 1.205 -2.0871212231205
+PLA sep60      0 0.5 -0.86602540378444 0 1.06 -1.83597385602301
+PLA sep61      0 0.5 -0.86602540378444 0 1.26 -2.18238401753679
+PLA sep62      0 0.5 -0.86602540378444 0 1.35 -2.33826859021799
+PLA sep59      0 0.5 -0.86602540378444 0 -1.115 1.931236650439298
+PLA sep63      0 0.5 -0.86602540378444 0 -1.205 2.087121223120497
+PLA sep64      0 -0.5 -0.86602540378444 0 -0.1 -0.17320508075689
+PLA sep65      0 -0.5 -0.86602540378444 0 -0.19 -0.32908965343809
+PLA sep66      0 -0.5 -0.86602540378444 0 -0.39 -0.67549981495186
+PLA sep67      0 -0.5 -0.86602540378444 0 -0.48 -0.83138438763306
+PLA sep68      0 -0.5 -0.86602540378444 0 -0.68 -1.17779454914684
+PLA sep69      0 -0.5 -0.86602540378444 0 -0.77 -1.33367912182804
+PLA sep70      0 -0.5 -0.86602540378444 0 -0.97 -1.68008928334181
+PLA sep71      0 -0.5 -0.86602540378444 0 0.1 0.173205080756888
+PLA sep72      0 -0.5 -0.86602540378444 0 0.19 0.329089653438087
+PLA sep73      0 -0.5 -0.86602540378444 0 0.39 0.675499814951862
+PLA sep74      0 -0.5 -0.86602540378444 0 0.48 0.831384387633061
+PLA sep75      0 -0.5 -0.86602540378444 0 0.68 1.177794549146837
+PLA sep76      0 -0.5 -0.86602540378444 0 0.77 1.333679121828036
+PLA sep77      0 -0.5 -0.86602540378444 0 0.97 1.680089283341811
+PLA sep78      0 -0.5 -0.86602540378444 0 -0.245 -0.42435244785438
+PLA sep79      0 -0.5 -0.86602540378444 0 -0.335 -0.58023702053557
+PLA sep80      0 -0.5 -0.86602540378444 0 -0.535 -0.92664718204935
+PLA sep81      0 -0.5 -0.86602540378444 0 -0.625 -1.08253175473055
+PLA sep82      0 -0.5 -0.86602540378444 0 -0.825 -1.42894191624432
+PLA sep83      0 -0.5 -0.86602540378444 0 -0.915 -1.58482648892552
+PLA sep84      0 -0.5 -0.86602540378444 0 -0.045 -0.0779422863406
+PLA sep85      0 -0.5 -0.86602540378444 0 0.045 0.0779422863406
+PLA sep86      0 -0.5 -0.86602540378444 0 0.245 0.424352447854375
+PLA sep87      0 -0.5 -0.86602540378444 0 0.335 0.580237020535574
+PLA sep88      0 -0.5 -0.86602540378444 0 0.535 0.92664718204935
+PLA sep89      0 -0.5 -0.86602540378444 0 0.625 1.082531754730548
+PLA sep90      0 -0.5 -0.86602540378444 0 0.825 1.428941916244324
+PLA sep91      0 -0.5 -0.86602540378444 0 0.915 1.584826488925523
+PLA sep92      0 -0.5 -0.86602540378444 0 -1.115 -1.9312366504393
+PLA sep93      0 -0.5 -0.86602540378444 0 -1.205 -2.0871212231205
+PLA sep94      0 -0.5 -0.86602540378444 0 -1.06 -1.83597385602301
+PLA sep95      0 -0.5 -0.86602540378444 0 -1.26 -2.18238401753679
+PLA sep96      0 -0.5 -0.86602540378444 0 -1.35 -2.33826859021799
+PLA sep97      0 -0.5 -0.86602540378444 0 1.115 1.931236650439299
+PLA sep98      0 -0.5 -0.86602540378444 0 1.205 2.087121223120497
+PLA sep99      0 -0.5 -0.8660254037844 0 1.06 1.8365703230276
+PLA sep102     0 0.5 0.866025403784439 0 1.26 2.182384017536786
+PLA sep103     0 0.5 0.866025403784439 0 1.35 2.338268590217985
+PLA sep104     0 0.5 -0.8660254037844 0 -1.06 1.8365703230276
+PLA sep105     0 -0.5 0.866025403784439 0 -1.26 2.182384017536786
+PLA sep106     0 -0.5 0.866025403784439 0 -1.35 2.338268590217985
+END
+*
+****   REGIONS   ***
+*
+*Black hole
+BLKBODY      5 +blkbody -air
+               | +blkbody +blkbd2 -blkbd1
+               | +blkbody -blkbd1 -blkbd3
+               | +blkbody -blkbd1 -blkbd5
+               | +blkbody +blkbd4 -blkbd1
+*Phantom
+* Main body
+PHANTOM      5 +jzext +jztop1 -jzint-jzbot1
+               | +jzext +jztop1 -jztop2
+               | +jzbot2 +jzlid-jzbot1
+*  Bounding box
+bbPHTM       5 +jzbot1 +BBphtm
+               | +BBphtm -jztop1
+               | +BBphtm -jzext -jzbot2
+               | +jzbot2 +BBphtm -jzlid -jzbot1
+*  Water inside
+WATER        5 +jzint +jztop2 -jzbot2
+*Air and collimator regions definition depending on whether holes or solid is selected
+#if holes
+AIR          5 +blkbd1 +air -BBphtm -deta -BBcollim
+               | +blkbd6 +sep7 -blkbd1 -blkbd2 -sep6 -sep58 -sep79
+               | +blkbd5 +blkbd6 +BBcollim +sep78 -blkbd1 -sep20 -sep60
+               | +blkbd5 +blkbd6 +BBcollim +sep72 -blkbd1 -sep20 -sep46
+               | +blkbd5 +blkbd6 +BBcollim +sep89 -blkbd1 -sep20 -sep30
+               | +blkbd5 +blkbd6 +BBcollim +sep99 -blkbd1 -sep20 -sep51
+               | +blkbd6 +sep7 +sep35 +sep64 -blkbd1 -sep6 -sep34 -sep71
+               | +blkbd6 +sep7 +sep45 +sep87 -blkbd1 -sep6 -sep44 -sep88
+               | +blkbd6 +sep7 +sep29 +sep76 -blkbd1 -sep6 -sep36 -sep77
+               | +blkbd3 +blkbd6 +BBcollim +sep7 +sep52 +sep98 -blkbd1 -sep6
+               | +blkbd6 +sep19 +sep57 +sep66 -blkbd1 -sep18 -sep48 -sep65
+               | +blkbd6 +sep19 +sep33 +sep85 -blkbd1 -sep18 -sep32 -sep86
+               | +blkbd6 +sep19 +sep43 +sep74 -blkbd1 -sep18 -sep49 -sep75
+               | +blkbd6 +sep19 +sep37 +sep91 -blkbd1 -sep18 -sep38 -sep97
+               | +blkbd3 +blkbd6 +BBcollim +sep5 +sep39 +sep99 -blkbd1 -sep4
+               | +blkbd6 +sep5 +sep50 +sep89 -blkbd1 -sep4 -sep51 -sep90
+               | +blkbd6 +sep5 +sep31 +sep72 -blkbd1 -sep4 -sep30 -sep73
+               | +blkbd6 +sep5 +sep47 +sep78 -blkbd1 -sep4 -sep46 -sep84
+               | +blkbd6 +BBcollim +sep5 -blkbd1 -blkbd2 -sep4 -sep60 -sep67
+               | +blkbd6 +sep17 +sep35 +sep80 -blkbd1 -sep16 -sep34 -sep79
+               | +blkbd6 +sep17 +sep45 +sep64 -blkbd1 -sep16 -sep44 -sep71
+               | +blkbd6 +sep17 +sep29 +sep87 -blkbd1 -sep16 -sep36 -sep88
+               | +blkbd6 +sep17 +sep52 +sep76 -blkbd1 -sep16 -sep53 -sep77
+               | +blkbd3 +blkbd6 +BBcollim +sep3 +sep54 +sep91 -blkbd1 -sep2
+               | +blkbd6 +sep3 +sep37 +sep74 -blkbd1 -sep2 -sep38 -sep75
+               | +blkbd6 +sep3 +sep43 +sep85 -blkbd1 -sep2 -sep49 -sep86
+               | +blkbd6 +sep3 +sep33 +sep66 -blkbd1 -sep2 -sep32 -sep65
+               | +blkbd6 +sep3 -blkbd1 -blkbd2 -sep2 -sep48 -sep81
+               | +blkbd6 +sep15 +sep47 +sep68 -blkbd1 -sep21 -sep46 -sep67
+               | +blkbd6 +sep15 +sep31 +sep78 -blkbd1 -sep21 -sep30 -sep84
+               | +blkbd6 +sep15 +sep50 +sep72 -blkbd1 -sep21 -sep51 -sep73
+               | +blkbd6 +sep15 +sep39 +sep89 -blkbd1 -sep21 -sep40 -sep90
+               | +blkbd3 +blkbd6 +BBcollim +sep1 +sep41 +sep76 -blkbd1 -sep8
+               | +blkbd6 +sep1 +sep52 +sep87 -blkbd1 -sep8 -sep53 -sep88
+               | +blkbd6 +sep1 +sep29 +sep64 -blkbd1 -sep8 -sep36 -sep71
+               | +blkbd6 +sep1 +sep45 +sep80 -blkbd1 -sep8 -sep44 -sep79
+               | +blkbd6 +BBcollim +sep1 -blkbd1 -blkbd2 -sep8 -sep34 -sep69
+               | +blkbd6 +sep22 +sep33 +sep82 -blkbd1 -sep23 -sep32 -sep81
+               | +blkbd6 +sep22 +sep43 +sep66 -blkbd1 -sep23 -sep49 -sep65
+               | +blkbd6 +sep22 +sep37 +sep85 -blkbd1 -sep23 -sep38 -sep86
+               | +blkbd6 +sep22 +sep54 +sep74 -blkbd1 -sep23 -sep55 -sep75
+               | +blkbd3 +blkbd6 +BBcollim +sep9 +sep56 +sep89 -blkbd1 -sep10
+               | +blkbd6 +sep9 +sep39 +sep72 -blkbd1 -sep10 -sep40 -sep73
+               | +blkbd6 +sep9 +sep50 +sep78 -blkbd1 -sep10 -sep51 -sep84
+               | +blkbd6 +sep9 +sep31 +sep68 -blkbd1 -sep10 -sep30 -sep67
+               | +blkbd6 +BBcollim +sep9 -blkbd1 -blkbd2 -sep10 -sep46 -sep83
+               | +blkbd6 +sep24 +sep45 +sep70 -blkbd1 -sep25 -sep44 -sep69
+               | +blkbd6 +sep24 +sep29 +sep80 -blkbd1 -sep25 -sep36 -sep79
+               | +blkbd6 +sep24 +sep52 +sep64 -blkbd1 -sep25 -sep53 -sep71
+               | +blkbd6 +sep24 +sep41 +sep87 -blkbd1 -sep25 -sep42 -sep88
+               | +blkbd3 +blkbd6 +BBcollim +sep11 +sep74 +sep104 -blkbd1 -sep12
+               | +blkbd6 +sep11 +sep54 +sep85 -blkbd1 -sep12 -sep55 -sep86
+               | +blkbd6 +sep11 +sep37 +sep66 -blkbd1 -sep12 -sep38 -sep65
+               | +blkbd6 +sep11 +sep43 +sep82 -blkbd1 -sep12 -sep49 -sep81
+               | +blkbd6 +BBcollim +sep11 -blkbd1 -blkbd2 -sep12 -sep32 -sep94
+               | +blkbd6 +sep26 +sep31 +sep92 -blkbd1 -sep27 -sep30 -sep83
+               | +blkbd6 +sep26 +sep50 +sep68 -blkbd1 -sep27 -sep51 -sep67
+               | +blkbd6 +sep26 +sep39 +sep78 -blkbd1 -sep27 -sep40 -sep84
+               | +blkbd6 +sep26 +sep56 +sep72 -blkbd1 -sep27 -sep59 -sep73
+               | +blkbd3 +blkbd6 +BBcollim +sep13 +sep63 +sep87 -blkbd1 -sep14
+               | +blkbd6 +sep13 +sep41 +sep64 -blkbd1 -sep14 -sep42 -sep71
+               | +blkbd6 +sep13 +sep52 +sep80 -blkbd1 -sep14 -sep53 -sep79
+               | +blkbd6 +sep13 +sep29 +sep70 -blkbd1 -sep14 -sep36 -sep69
+               | +blkbd6 +BBcollim +sep13 -blkbd1 -blkbd2 -sep14 -sep44 -sep93
+               | +blkbd6 +BBcollim +sep28 +sep43 -blkbd1 -blkbd4 -sep94
+               | +blkbd6 +BBcollim +sep28 +sep37 -blkbd1 -blkbd4 -sep81
+               | +blkbd6 +BBcollim +sep28 +sep54 -blkbd1 -blkbd4 -sep65
+               | +blkbd6 +BBcollim +sep28 +sep104 -blkbd1 -blkbd4 -sep86
+COLLIM       5 +blkbd6 +sep2 +sep30 -blkbd1 -sep1 -sep50
+               | +blkbd6 +sep2 +sep51 -blkbd1 -sep1 -sep39
+               | +blkbd3 +blkbd6 +sep2 +sep40 -blkbd1 -sep1
+               | +blkbd6 +sep2 +sep46 -blkbd1 -sep1 -sep31
+               | +blkbd6 +sep2 -blkbd1 -blkbd2 -sep1 -sep47
+               | +blkbd6 +sep8 +sep49 -blkbd1 -sep9 -sep37
+               | +blkbd6 +sep8 +sep38 -blkbd1 -sep9 -sep54
+               | +blkbd3 +blkbd6 +sep8 +sep55 -blkbd1 -sep9
+               | +blkbd6 +sep8 +sep32 -blkbd1 -sep9 -sep43
+               | +blkbd6 +sep8 -blkbd1 -blkbd2 -sep9 -sep33
+               | +blkbd3 +blkbd6 +sep10 +sep42 -blkbd1 -sep11
+               | +blkbd6 +sep10 +sep53 -blkbd1 -sep11 -sep41
+               | +blkbd6 +sep10 +sep36 -blkbd1 -sep11 -sep52
+               | +blkbd6 +sep10 +sep44 -blkbd1 -sep11 -sep29
+               | +blkbd6 +sep10 -blkbd1 -blkbd2 -sep11 -sep45
+               | +blkbd6 +sep12 -blkbd1 -blkbd2 -sep13 -sep31
+               | +blkbd6 +sep12 +sep30 -blkbd1 -sep13 -sep50
+               | +blkbd6 +sep12 +sep51 -blkbd1 -sep13 -sep39
+               | +blkbd6 +sep12 +sep40 -blkbd1 -sep13 -sep56
+               | +blkbd3 +blkbd6 +sep12 +sep59 -blkbd1 -sep13
+               | +blkbd6 +sep14 -blkbd1 -blkbd2 -blkbd4 -sep43
+               | +blkbd6 +sep14 +sep49 -blkbd1 -blkbd4 -sep37
+               | +blkbd6 +sep14 +sep38 -blkbd1 -blkbd4 -sep54
+               | +blkbd6 +sep14 +sep55 -blkbd1 -blkbd4 -sep104
+               | +blkbd3 +blkbd6 +sep14 -blkbd1 -blkbd4 -sep105
+               | +blkbd3 +blkbd6 +sep4 +sep53 -blkbd1 -sep3
+               | +blkbd6 +sep4 +sep36 -blkbd1 -sep3 -sep52
+               | +blkbd6 +sep4 +sep44 -blkbd1 -sep3 -sep29
+               | +blkbd6 +sep4 +sep34 -blkbd1 -sep3 -sep45
+               | +blkbd6 +sep4 -blkbd1 -blkbd2 -sep3 -sep35
+               | +blkbd6 +sep6 -blkbd1 -blkbd2 -sep5 -sep57
+               | +blkbd6 +sep6 +sep48 -blkbd1 -sep5 -sep33
+               | +blkbd6 +sep6 +sep32 -blkbd1 -sep5 -sep43
+               | +blkbd6 +sep6 +sep49 -blkbd1 -sep5 -sep37
+               | +blkbd3 +blkbd6 +sep6 +sep38 -blkbd1 -sep5
+               | +blkbd3 +blkbd5 +blkbd6 +sep51 -blkbd1 -sep7
+               | +blkbd5 +blkbd6 +sep30 -blkbd1 -sep7 -sep50
+               | +blkbd5 +blkbd6 +sep46 -blkbd1 -sep7 -sep31
+               | +blkbd5 +blkbd6 +sep60 -blkbd1 -sep7 -sep47
+               | +blkbd5 +blkbd6 -blkbd1 -blkbd2 -sep7 -sep61
+               | +blkbd6 +sep1 +sep30 +sep65 -blkbd1 -sep29
+               | +blkbd6 +sep9 +sep49 +sep79 -blkbd1 -sep50
+               | +blkbd6 +sep11 +sep36 +sep67 -blkbd1 -sep37
+               | +blkbd6 +sep13 +sep51 +sep81 -blkbd1 -sep52
+               | +blkbd6 +sep3 +sep44 +sep84 -blkbd1 -sep43
+               | +blkbd6 +sep5 +sep32 +sep71 -blkbd1 -sep31
+               | +blkbd6 +sep7 +sep46 +sep86 -blkbd1 -sep45
+               | +blkbd6 +sep7 +sep60 +sep65 -blkbd1 -sep35
+               | +blkbd6 +sep5 +sep48 +sep79 -blkbd1 -sep47
+               | +blkbd6 +sep3 +sep34 +sep67 -blkbd1 -sep33
+               | +blkbd6 +sep1 +sep46 +sep81 -blkbd1 -sep45
+               | +blkbd6 +sep9 +sep32 +sep69 -blkbd1 -sep31
+               | +blkbd6 +sep11 +sep44 +sep83 -blkbd1 -sep43
+               | +blkbd6 +sep13 +sep30 +sep94 -blkbd1 -sep29
+               | +blkbd6 +sep7 +sep30 +sep75 -blkbd1 -sep29
+               | +blkbd6 +sep5 +sep49 +sep88 -blkbd1 -sep50
+               | +blkbd6 +sep3 +sep36 +sep73 -blkbd1 -sep37
+               | +blkbd6 +sep1 +sep51 +sep86 -blkbd1 -sep52
+               | +blkbd6 +sep9 +sep38 +sep71 -blkbd1 -sep39
+               | +blkbd6 +sep11 +sep53 +sep84 -blkbd1 -sep54
+               | +blkbd6 +sep13 +sep40 +sep65 -blkbd1 -sep41
+               | +blkbd6 +sep13 +sep59 +sep86 -blkbd1 -sep63
+               | +blkbd6 +sep11 +sep42 +sep73 -blkbd1 -sep104
+               | +blkbd6 +sep9 +sep55 +sep88 -blkbd1 -sep56
+               | +blkbd6 +sep1 +sep40 +sep75 -blkbd1 -sep41
+               | +blkbd6 +sep3 +sep53 +sep90 -blkbd1 -sep54
+               | +blkbd6 +sep5 +sep38 +sep77 -blkbd1 -sep39
+               | +blkbd6 +sep7 +sep51 +sep97 -blkbd1 -sep52
+               | +blkbd6 +sep52 +sep97 -blkbd1 -sep6 -sep98
+               | +blkbd6 +sep6 +sep97 -blkbd1 -sep38
+               | +blkbd6 +sep39 +sep77 -blkbd1 -sep4 -sep99
+               | +blkbd6 +sep4 +sep77 -blkbd1 -sep53
+               | +blkbd6 +sep54 +sep90 -blkbd1 -sep2 -sep91
+               | +blkbd6 +sep2 +sep90 -blkbd1 -sep40
+               | +blkbd6 +sep41 +sep75 -blkbd1 -sep8 -sep76
+               | +blkbd6 +sep8 +sep75 -blkbd1 -sep55
+               | +blkbd6 +sep56 +sep88 -blkbd1 -sep10 -sep89
+               | +blkbd6 +sep10 +sep88 -blkbd1 -sep42
+               | +blkbd6 +sep73 +sep104 -blkbd1 -sep12 -sep74
+               | +blkbd6 +sep12 +sep73 -blkbd1 -sep59
+               | +blkbd6 +sep63 +sep86 -blkbd1 -sep14 -sep87
+               | +blkbd6 +sep14 +sep86 +sep105 -blkbd1 -blkbd4
+               | +blkbd6 +sep29 +sep75 -blkbd1 -sep6 -sep76
+               | +blkbd6 +sep6 +sep75 -blkbd1 -sep49
+               | +blkbd6 +sep50 +sep88 -blkbd1 -sep4 -sep89
+               | +blkbd6 +sep4 +sep88 -blkbd1 -sep36
+               | +blkbd6 +sep37 +sep73 -blkbd1 -sep2 -sep74
+               | +blkbd6 +sep2 +sep73 -blkbd1 -sep51
+               | +blkbd6 +sep52 +sep86 -blkbd1 -sep8 -sep87
+               | +blkbd6 +sep8 +sep86 -blkbd1 -sep38
+               | +blkbd6 +sep39 +sep71 -blkbd1 -sep10 -sep72
+               | +blkbd6 +sep10 +sep71 -blkbd1 -sep53
+               | +blkbd6 +sep54 +sep84 -blkbd1 -sep12 -sep85
+               | +blkbd6 +sep12 +sep84 -blkbd1 -sep40
+               | +blkbd6 +sep41 +sep65 -blkbd1 -sep14 -sep64
+               | +blkbd6 +sep14 +sep65 -blkbd1 -blkbd4 -sep55
+               | +blkbd6 +sep45 +sep86 -blkbd1 -sep6 -sep87
+               | +blkbd6 +sep6 +sep86 -blkbd1 -sep32
+               | +blkbd6 +sep31 +sep71 -blkbd1 -sep4 -sep72
+               | +blkbd6 +sep4 +sep71 -blkbd1 -sep44
+               | +blkbd6 +sep43 +sep84 -blkbd1 -sep2 -sep85
+               | +blkbd6 +sep2 +sep84 -blkbd1 -sep30
+               | +blkbd6 +sep29 +sep65 -blkbd1 -sep8 -sep64
+               | +blkbd6 +sep8 +sep65 -blkbd1 -sep49
+               | +blkbd6 +sep50 +sep79 -blkbd1 -sep10 -sep78
+               | +blkbd6 +sep10 +sep79 -blkbd1 -sep36
+               | +blkbd6 +sep37 +sep67 -blkbd1 -sep12 -sep66
+               | +blkbd6 +sep12 +sep67 -blkbd1 -sep51
+               | +blkbd6 +sep52 +sep81 -blkbd1 -sep14 -sep80
+               | +blkbd6 +BBcollim +sep14 +sep81 -blkbd1 -sep38
+               | +blkbd6 +sep35 +sep65 -blkbd1 -sep6 -sep64
+               | +blkbd6 +sep6 +sep65 -blkbd1 -sep48
+               | +blkbd6 +sep47 +sep79 -blkbd1 -sep4 -sep78
+               | +blkbd6 +sep4 +sep79 -blkbd1 -sep34
+               | +blkbd6 +sep33 +sep67 -blkbd1 -sep2 -sep66
+               | +blkbd6 +sep2 +sep67 -blkbd1 -sep46
+               | +blkbd6 +sep45 +sep81 -blkbd1 -sep8 -sep80
+               | +blkbd6 +sep8 +sep81 -blkbd1 -sep32
+               | +blkbd6 +sep31 +sep69 -blkbd1 -sep10 -sep68
+               | +blkbd6 +sep10 +sep69 -blkbd1 -sep44
+               | +blkbd6 +sep43 +sep83 -blkbd1 -sep12 -sep82
+               | +blkbd6 +sep12 +sep83 -blkbd1 -sep30
+               | +blkbd6 +sep29 +sep94 -blkbd1 -sep14 -sep70
+               | +blkbd6 +BBcollim +sep14 +sep94 -blkbd1 -sep49
+               | +blkbd6 +sep21 +sep36 -blkbd1 -sep8 -sep37
+               | +blkbd6 +sep16 +sep49 -blkbd1 -sep2 -sep50
+               | +blkbd6 +sep18 +sep30 -blkbd1 -sep4 -sep29
+               | +blkbd6 +sep20 +sep44 -blkbd1 -sep6 -sep43
+               | +blkbd6 +sep23 +sep51 -blkbd1 -sep10 -sep52
+               | +blkbd6 +sep25 +sep38 -blkbd1 -sep12 -sep39
+               | +blkbd6 +sep27 +sep53 -blkbd1 -sep14 -sep54
+               | +blkbd6 +sep27 +sep42 -blkbd1 -sep14 -sep104
+               | +blkbd6 +sep25 +sep55 -blkbd1 -sep12 -sep56
+               | +blkbd6 +sep23 +sep40 -blkbd1 -sep10 -sep41
+               | +blkbd6 +sep21 +sep53 -blkbd1 -sep8 -sep54
+               | +blkbd6 +sep16 +sep38 -blkbd1 -sep2 -sep39
+               | +blkbd6 +sep18 +sep51 -blkbd1 -sep4 -sep52
+               | +blkbd6 +sep20 +sep36 -blkbd1 -sep6 -sep37
+               | +blkbd6 +sep20 +sep34 -blkbd1 -sep6 -sep33
+               | +blkbd6 +sep18 +sep46 -blkbd1 -sep4 -sep45
+               | +blkbd6 +sep16 +sep32 -blkbd1 -sep2 -sep31
+               | +blkbd6 +sep21 +sep44 -blkbd1 -sep8 -sep43
+               | +blkbd6 +sep23 +sep30 -blkbd1 -sep10 -sep29
+               | +blkbd6 +sep25 +sep49 -blkbd1 -sep12 -sep50
+               | +blkbd6 +sep27 +sep36 -blkbd1 -sep14 -sep37
+               | +blkbd6 +sep27 +sep44 -blkbd1 -sep14 -sep43
+               | +blkbd6 +sep25 +sep32 -blkbd1 -sep12 -sep31
+               | +blkbd6 +sep23 +sep46 -blkbd1 -sep10 -sep45
+               | +blkbd6 +sep21 +sep34 -blkbd1 -sep8 -sep33
+               | +blkbd6 +sep16 +sep48 -blkbd1 -sep2 -sep47
+               | +blkbd6 +sep18 +sep60 -blkbd1 -sep4 -sep35
+               | +blkbd6 +sep20 +sep58 -blkbd1 -sep6 -sep57
+               | +blkbd6 +sep50 +sep71 -blkbd1 -sep21 -sep72
+               | +blkbd6 +sep21 +sep71 -blkbd1 -sep36
+               | +blkbd6 +sep1 +sep71 -blkbd1 -sep50
+               | +blkbd6 +sep29 +sep86 -blkbd1 -sep16 -sep87
+               | +blkbd6 +sep16 +sep86 -blkbd1 -sep49
+               | +blkbd6 +sep3 +sep86 -blkbd1 -sep29
+               | +blkbd6 +sep43 +sep73 -blkbd1 -sep18 -sep74
+               | +blkbd6 +sep5 +sep73 -blkbd1 -sep43
+               | +blkbd6 +sep18 +sep73 -blkbd1 -sep30
+               | +blkbd5 +blkbd6 +sep31 +sep88 -blkbd1 -sep20 -sep89
+               | +blkbd6 +sep7 +sep88 -blkbd1 -sep31
+               | +blkbd6 +sep20 +sep88 -blkbd1 -sep44
+               | +blkbd6 +sep37 +sep84 -blkbd1 -sep23 -sep85
+               | +blkbd6 +sep9 +sep84 -blkbd1 -sep37
+               | +blkbd6 +sep23 +sep84 -blkbd1 -sep51
+               | +blkbd6 +sep52 +sep65 -blkbd1 -sep25 -sep64
+               | +blkbd6 +sep11 +sep65 -blkbd1 -sep52
+               | +blkbd6 +sep25 +sep65 -blkbd1 -sep38
+               | +blkbd6 +sep39 +sep79 -blkbd1 -sep27 -sep78
+               | +blkbd6 +sep13 +sep79 -blkbd1 -sep39
+               | +blkbd6 +sep27 +sep79 -blkbd1 -sep53
+               | +blkbd5 +blkbd6 +sep50 +sep77 -blkbd1 -sep20 -sep99
+               | +blkbd6 +sep7 +sep77 -blkbd1 -sep50
+               | +blkbd6 +sep20 +sep77 -blkbd1 -sep36
+               | +blkbd6 +sep37 +sep90 -blkbd1 -sep18 -sep91
+               | +blkbd6 +sep5 +sep90 -blkbd1 -sep37
+               | +blkbd6 +sep18 +sep90 -blkbd1 -sep51
+               | +blkbd6 +sep52 +sep75 -blkbd1 -sep16 -sep76
+               | +blkbd6 +sep3 +sep75 -blkbd1 -sep52
+               | +blkbd6 +sep16 +sep75 -blkbd1 -sep38
+               | +blkbd6 +sep39 +sep88 -blkbd1 -sep21 -sep89
+               | +blkbd6 +sep1 +sep88 -blkbd1 -sep39
+               | +blkbd6 +sep21 +sep88 -blkbd1 -sep53
+               | +blkbd6 +sep54 +sep73 -blkbd1 -sep23 -sep74
+               | +blkbd6 +sep9 +sep73 -blkbd1 -sep54
+               | +blkbd6 +sep23 +sep73 -blkbd1 -sep40
+               | +blkbd6 +sep41 +sep86 -blkbd1 -sep25 -sep87
+               | +blkbd6 +sep11 +sep86 -blkbd1 -sep41
+               | +blkbd6 +sep25 +sep86 -blkbd1 -sep55
+               | +blkbd6 +sep56 +sep71 -blkbd1 -sep27 -sep72
+               | +blkbd6 +sep13 +sep71 -blkbd1 -sep56
+               | +blkbd6 +sep27 +sep71 -blkbd1 -sep42
+               | +blkbd5 +blkbd6 +sep47 +sep71 -blkbd1 -sep20 -sep72
+               | +blkbd6 +sep7 +sep71 -blkbd1 -sep47
+               | +blkbd6 +sep20 +sep71 -blkbd1 -sep34
+               | +blkbd6 +sep33 +sep84 -blkbd1 -sep18 -sep85
+               | +blkbd6 +sep5 +sep84 -blkbd1 -sep33
+               | +blkbd6 +sep18 +sep84 -blkbd1 -sep46
+               | +blkbd6 +sep45 +sep65 -blkbd1 -sep16 -sep64
+               | +blkbd6 +sep3 +sep65 -blkbd1 -sep45
+               | +blkbd6 +sep16 +sep65 -blkbd1 -sep32
+               | +blkbd6 +sep31 +sep79 -blkbd1 -sep21 -sep78
+               | +blkbd6 +sep1 +sep79 -blkbd1 -sep31
+               | +blkbd6 +sep21 +sep79 -blkbd1 -sep44
+               | +blkbd6 +sep43 +sep67 -blkbd1 -sep23 -sep66
+               | +blkbd6 +sep9 +sep67 -blkbd1 -sep43
+               | +blkbd6 +sep23 +sep67 -blkbd1 -sep30
+               | +blkbd6 +sep29 +sep81 -blkbd1 -sep25 -sep80
+               | +blkbd6 +sep11 +sep81 -blkbd1 -sep29
+               | +blkbd6 +sep25 +sep81 -blkbd1 -sep49
+               | +blkbd6 +sep50 +sep69 -blkbd1 -sep27 -sep68
+               | +blkbd6 +sep13 +sep69 -blkbd1 -sep50
+               | +blkbd6 +sep27 +sep69 -blkbd1 -sep36
+               | +blkbd6 +sep31 +sep93 -blkbd1 -sep27 -sep92
+               | +blkbd6 +sep13 +sep93 -blkbd1 -sep31
+               | +blkbd6 +sep27 +sep93 -blkbd1 -sep44
+               | +blkbd6 +sep45 +sep94 -blkbd1 -sep25 -sep70
+               | +blkbd6 +sep11 +sep94 -blkbd1 -sep45
+               | +blkbd6 +sep25 +sep94 -blkbd1 -sep32
+               | +blkbd6 +sep33 +sep83 -blkbd1 -sep23 -sep82
+               | +blkbd6 +sep9 +sep83 -blkbd1 -sep33
+               | +blkbd6 +sep23 +sep83 -blkbd1 -sep46
+               | +blkbd6 +sep47 +sep69 -blkbd1 -sep21 -sep68
+               | +blkbd6 +sep1 +sep69 -blkbd1 -sep47
+               | +blkbd6 +sep21 +sep47 +sep69 -blkbd1 -sep34
+               | +blkbd6 +sep35 +sep81 -blkbd1 -sep16 -sep80
+               | +blkbd6 +sep3 +sep81 -blkbd1 -sep35
+               | +blkbd6 +sep16 +sep81 -blkbd1 -sep48
+               | +blkbd6 +sep57 +sep67 -blkbd1 -sep18 -sep66
+               | +blkbd6 +sep5 +sep67 -blkbd1 -sep57
+               | +blkbd6 +sep18 +sep67 -blkbd1 -sep60
+               | +blkbd5 +blkbd6 +sep61 +sep79 -blkbd1 -sep20 -sep78
+               | +blkbd6 +sep20 +sep79 -blkbd1 -sep58
+               | +blkbd6 +sep7 +sep79 -blkbd1 -sep61
+               | +blkbd6 +sep20 +sep57 -blkbd1 -sep19 -sep60
+               | +blkbd6 +sep20 +sep33 -blkbd1 -sep19 -sep46
+               | +blkbd6 +sep20 +sep43 -blkbd1 -sep19 -sep30
+               | +blkbd6 +sep20 +sep37 -blkbd1 -sep19 -sep51
+               | +blkbd6 +sep51 -blkbd1 -sep19 -sep97
+               | +blkbd6 +sep30 -blkbd1 -sep19 -sep75
+               | +blkbd6 +sep46 -blkbd1 -sep19 -sep86
+               | +blkbd6 +sep60 -blkbd1 -sep19 -sep65
+               | +blkbd6 +sep18 +sep35 -blkbd1 -sep17 -sep48
+               | +blkbd6 +sep18 +sep45 -blkbd1 -sep17 -sep32
+               | +blkbd6 +sep18 +sep29 -blkbd1 -sep17 -sep49
+               | +blkbd6 +sep18 +sep52 -blkbd1 -sep17 -sep38
+               | +blkbd6 +sep38 -blkbd1 -sep17 -sep77
+               | +blkbd6 +sep49 -blkbd1 -sep17 -sep88
+               | +blkbd6 +sep32 -blkbd1 -sep17 -sep71
+               | +blkbd6 +sep48 -blkbd1 -sep17 -sep79
+               | +blkbd6 +sep16 +sep47 -blkbd1 -sep15 -sep34
+               | +blkbd6 +sep16 +sep31 -blkbd1 -sep15 -sep44
+               | +blkbd6 +sep16 +sep50 -blkbd1 -sep15 -sep36
+               | +blkbd6 +sep16 +sep39 -blkbd1 -sep15 -sep53
+               | +blkbd6 +sep53 -blkbd1 -sep15 -sep90
+               | +blkbd6 +sep36 -blkbd1 -sep15 -sep73
+               | +blkbd6 +sep44 -blkbd1 -sep15 -sep84
+               | +blkbd6 +sep34 -blkbd1 -sep15 -sep67
+               | +blkbd6 +sep21 +sep33 -blkbd1 -sep22 -sep46
+               | +blkbd6 +sep21 +sep43 -blkbd1 -sep22 -sep30
+               | +blkbd6 +sep21 +sep37 -blkbd1 -sep22 -sep51
+               | +blkbd6 +sep21 +sep54 -blkbd1 -sep22 -sep40
+               | +blkbd6 +sep40 -blkbd1 -sep22 -sep75
+               | +blkbd6 +sep51 -blkbd1 -sep22 -sep86
+               | +blkbd6 +sep30 -blkbd1 -sep22 -sep65
+               | +blkbd6 +sep46 -blkbd1 -sep22 -sep81
+               | +blkbd6 +sep25 +sep31 -blkbd1 -sep26 -sep44
+               | +blkbd6 +sep25 +sep50 -blkbd1 -sep26 -sep36
+               | +blkbd6 +sep25 +sep39 -blkbd1 -sep26 -sep53
+               | +blkbd6 +sep25 +sep56 -blkbd1 -sep26 -sep42
+               | +blkbd6 +sep42 -blkbd1 -sep26 -sep73
+               | +blkbd6 +sep53 -blkbd1 -sep26 -sep84
+               | +blkbd6 +sep36 -blkbd1 -sep26 -sep67
+               | +blkbd6 +sep44 -blkbd1 -sep26 -sep83
+               | +blkbd6 +sep27 +sep43 -blkbd1 -sep28 -sep30
+               | +blkbd6 +sep27 +sep37 -blkbd1 -sep28 -sep51
+               | +blkbd6 +sep27 +sep54 -blkbd1 -sep28 -sep40
+               | +blkbd6 +sep27 +sep104 -blkbd1 -sep28 -sep59
+               | +blkbd6 +sep27 +sep59 -blkbd1 -sep28 -sep86
+               | +blkbd6 +sep40 -blkbd1 -sep28 -sep65
+               | +blkbd6 +sep51 -blkbd1 -sep28 -sep81
+               | +blkbd6 +sep30 -blkbd1 -sep28 -sep94
+               | +blkbd6 +sep23 +sep45 -blkbd1 -sep24 -sep32
+               | +blkbd6 +sep23 +sep29 -blkbd1 -sep24 -sep49
+               | +blkbd6 +sep23 +sep52 -blkbd1 -sep24 -sep38
+               | +blkbd6 +sep23 +sep41 -blkbd1 -sep24 -sep55
+               | +blkbd6 +sep55 -blkbd1 -sep24 -sep88
+               | +blkbd6 +sep38 -blkbd1 -sep24 -sep71
+               | +blkbd6 +sep49 -blkbd1 -sep24 -sep79
+               | +blkbd6 +sep32 -blkbd1 -sep24 -sep69
+#elif solid
+AIR          5 +blkbd1 +air -BBphtm -BBcollim -deta
+COLLIM       5 +BBcollim
+#endif
+*Detector, front (initial)
+DETFT        5 +deta
+*Detector, back (transmitted)
+DETBK        5 +blkbd3 +blkbd5 +air -blkbd2 -blkbd4 -blkbd6
+END
+GEOEND
+*
+*
+******   MEDIA   *****
+*Varying the elemental composition ratio between lead and air to mimick holes in collimator
+*w/ density of lead
+#if solid98
+MATERIAL                           11.35                              LEADvar
+COMPOUND       -0.02      LEAD     -0.98       AIR                    LEADvar
+#elif solid99
+MATERIAL                           11.35                              LEADvar
+COMPOUND       -0.01      LEAD     -0.99       AIR                    LEADvar
+#elif solid999
+MATERIAL                           11.35                              LEADvar
+COMPOUND      -0.001      LEAD    -0.999       AIR                    LEADvar
+#elif sol99999
+MATERIAL                           11.35                              LEADvar
+COMPOUND      -1E-05      LEAD  -0.99999       AIR                    LEADvar
+#endif
+ASSIGNMA    BLCKHOLE   BLKBODY
+ASSIGNMA         AIR       AIR
+ASSIGNMA        PMMA   PHANTOM
+ASSIGNMA       WATER     WATER
+ASSIGNMA         AIR     DETFT     DETBK
+ASSIGNMA         AIR    bbPHTM
+#if holes
+ASSIGNMA        LEAD    COLLIM
+#elif solid
+ASSIGNMA     LEADvar    COLLIM
+#endif
+*
+*
+******   TRANSPORT   *****
+*
+*Trasport thresholds:
+*  Electrons: 100 keV
+*  Photons: 1 keV
+EMFCUT       -0.0001      1E-6             PHANTOM  @LASTREG
+*Simulation of radiation decay
+RADDECAY           2
+*
+*
+******   SCORING   *****
+*
+*Fluence-energy spectra (photon) in front detector (Initial)
+USRTRACK                PHOTON       -21     DETFT         4      1000fluIni
+USRTRACK      0.0005         0                                         &
+*Fluence-energy spectra (photon) in back detector (Transmitted)
+USRTRACK                PHOTON       -22     DETBK         4      1000fluTra
+USRTRACK      0.0005         0                                         &
+DCYSCORE          -1                        fluIni    fluTra          USRTRACK
+*
+*Set the random number seed
+RANDOMIZ         1.0         4
+START     100000000.
+STOP

@@ -1,0 +1,198 @@
+******   GENERAL   *****
+TITLE
+Preliminary Study - SPECT (Tc-99m)
+*The defaults for precision simulations
+DEFAULTS                                                              PRECISIO
+*
+*
+******   PRIMARY   *****
+*
+*Beam (source) characteristics
+*  ISOTOPE = Radioisotope source
+BEAM               0                   0                              ISOTOPE
+*  Tc-99m source
+HI-PROPE          43        99        -1
+*  Centred within phantom
+BEAMPOS         8.08    13.059
+*  Within water region of phantom
+BEAMPOS           0.      10.8        0.      18.6                    CYLI-VOL
+BEAMAXES          0.        0.        1.        0.        1.        0.
+*
+*
+******   GEOMETRY   *****
+GEOBEGIN                                                              COMBNAME
+    0    0          
+*Black body container
+RPP blkbody    -120 250 -150 170 -270 170
+*Air container
+RPP air        -5.42 137.5 -10 30 -150.0 50.0
+*Table
+RPP tbl        -1.0 119.2 0 2.535 -30.2235 30.2235
+*Seperation layers of wall (a = anterior; G = Gypsym; L = Lead, A = Air; P = Plywood)
+YZP walla      120.2
+YZP wallGL     122.6
+YZP wallLP     122.8
+YZP wallPA     124
+YZP wallAG     135.1
+*TLDs (X cm indicates separation from phantom's centre to TLD position)
+*  0cm
+RPP tld1       120.11 120.2 19.535 19.855 -0.16 0.16
+*  20 cm
+RPP tld2       120.11 120.2 19.535 19.855 -21.66 -21.34
+*  40 cm
+RPP tld3       120.11 120.2 19.535 19.855 -41.66 -41.34
+*  60 cm
+RPP tld4       120.11 120.2 19.535 19.855 -61.66 -61.34
+*  80 cm
+RPP tld5       120.11 120.2 19.535 19.855 -81.66 -81.34
+*  100 cm
+RPP tld6       120.11 120.2 19.535 19.855 -101.66 -101.34
+*Phantom bounding box
+RPP BBphtm     -5.42 21.95 2.535 25.159 -13.0 13.5
+*--- Jaszczack phantom geometry ---
+*Internal cylidner
+YCC jzint      0 8.08 10
+*External cylinder
+YCC jzext      0 8.08 11.12
+*Phantom lid
+YCC jzlid      0 8.08 13
+*Top plane, external
+PLA jztop1     0 -1.0 0 8.08 2.535 0
+*Top plane, internal
+PLA jztop2     0 -1.0 0 8.08 3.759 0
+*Bottom plane, internal
+PLA jzbot1     0 -1.0 0 8.08 24.807 0
+*Bottom plane, external
+PLA jzbot2     0 -1.0 0 8.08 22.359 0
+*Plane along source for score visuals (centre of phantom: y=13.059)
+XZP score      13.059
+END
+*
+****   REGIONS   ***
+*
+*Black hole
+BLKBODY      5 +blkbody -air
+*Air
+AIR          5 +air +walla -tld1 -tld2 -tld3 -tld4 -tld5 -tld6 -BBphtm -tbl
+*Table
+TABLE        5 +tbl
+*Gypsum wall board
+WALLG        5 +air +wallGL -walla
+               | +air -wallAG
+*Lead sheet
+WALLL        5 +air +wallLP -wallGL
+*Air pocket in wall
+WALLA        5 +air +wallAG -wallPA
+*Plywood sheet
+WALLP        5 +air +wallPA -wallLP
+*- TLDs - (individual to enable separate scoring)
+TLD1         5 +tld1
+TLD2         5 +tld2
+TLD3         5 +tld3
+TLD4         5 +tld4
+TLD5         5 +tld5
+TLD6         5 +tld6
+*--- Jaszczack phantom regions ---
+*Main body
+PHANTOM      5 +jzext +jztop1 -jzint -jzbot1
+               | +jzext +jztop1 -jztop2
+               | +jzbot2 +jzlid -jzbot1
+*Water inside phantom
+WATER        5 +jzint +jztop2 -jzbot2
+*Phantom bounding box
+bbPHTM       5 +jzbot1 +BBphtm
+               | +BBphtm -jztop1
+               | +BBphtm -jzext -jzbot2
+               | +jzbot2 +BBphtm -jzlid -jzbot1
+END
+GEOEND
+*
+*
+******   MEDIA   *****
+MATERIAL          16                2.07                              SULFUR
+MATERIAL          19               0.862                              POTASSIU
+*------ Wood (general) -----
+*Detwiler et al. (2021) - Compendium of Material Composition Data for Radiation Transport Modeling
+*p. 268
+*Density = 0.64 g/cm3 is average for SOUTHERN PINE (look at book for other wood type densities)
+MATERIAL                            0.64                              WOOD
+COMPOUND   -0.497018    CARBON -0.427435    OXYGEN -0.059642  HYDROGENWOOD
+COMPOUND    -0.00497  NITROGEN  -0.00497    SULFUR -0.001988  MAGNESIUWOOD
+COMPOUND   -0.001988  POTASSIU -0.001988   CALCIUM                    WOOD
+MATERIAL           3               0.534                              LITHIUM
+MATERIAL           9            0.001696                              FLUORINE
+MATERIAL          15                1.82                              PHOSPHO
+*LiF:Mg,Cu,P
+*Bilski (2002) and Sadek et al. (2016)
+*Percentages of Li and F for MTS were taken from Sadek but adjusted for MCP dopants
+MATERIAL                             2.5                              MCP
+COMPOUND    -26.2995   LITHIUM  -72.1808  FLUORINE      -0.2  MAGNESIUMCP
+COMPOUND       -1.25   PHOSPHO     -0.05    COPPER                    MCP
+*Gypsum (wallboard)
+*Composition copied from pre-defined gypsum material
+*Density determined empirically from a sample of mass 550 g and volume 385.248 cm^3
+MATERIAL                           1.428                              GYPSUM
+COMPOUND   -0.023416  HYDROGEN -0.557572    OXYGEN -0.186215    SULFURGYPSUM
+COMPOUND   -0.232797   CALCIUM                                        GYPSUM
+ASSIGNMA    BLCKHOLE   BLKBODY
+ASSIGNMA         AIR       AIR
+ASSIGNMA        WOOD     TABLE
+ASSIGNMA      GYPSUM     WALLG
+ASSIGNMA        LEAD     WALLL
+ASSIGNMA         AIR     WALLA
+ASSIGNMA        WOOD     WALLP
+ASSIGNMA         MCP      TLD1      TLD6
+ASSIGNMA        PMMA   PHANTOM
+ASSIGNMA       WATER     WATER
+ASSIGNMA         AIR    bbPHTM
+*
+*
+******   TRANSPORT   *****
+*
+*Trasport thresholds:
+*  Electrons: 100 keV
+*  Photons: 1 keV
+EMFCUT       -0.0001      1E-6                 AIR  @LASTREG
+*Simulation of radiation decay
+RADDECAY           2
+*
+*
+******   SCORING   *****
+*
+*Photon fluence in entire volume (3D cartesian mesh)
+USRBIN            10    PHOTON       -21     137.5       30.       50.fluP
+USRBIN           -5.      -10.     -150.       285        80       400 &
+*Elecrton fluence in entire volume (3D cartesian mesh)
+USRBIN            10  ELECTRON       -22     137.5       30.       50.fluE
+USRBIN           -5.      -10.     -150.       285        80       400 &
+*Ambient dose equivalent H*(10) distribution in entire model (3D cartesian mesh)
+USRBIN            10   DOSE-EQ       -24     137.5       30.       50.dosDisH
+USRBIN           -5.      -10.     -150.       285        80       400 &
+*Ambient dose equivalent deposited in each TLD
+USRBIN            12   DOSE-EQ       -23      TLD6                    tldDosH
+USRBIN          TLD1                             1                     &
+DCYSCORE          -1                          fluP   tldDosH          USRBIN
+*Notation for particles followed: A - all particles; P - photons; E - electrons
+*Fluence-energy spectra for the TLDs
+USRTRACK              ALL-PART       -25      TLD1  0.009216      1000TLD1fluA
+USRTRACK      0.0005         0                                         &
+USRTRACK                PHOTON       -25      TLD1  0.009216      1000TLD1fluP
+USRTRACK      0.0005         0                                         &
+USRTRACK              ELECTRON       -25      TLD1  0.009216      1000TLD1fluE
+USRTRACK      0.0005         0                                         &
+USRTRACK              ALL-PART       -25      TLD2  0.009216      1000TLD2fluA
+USRTRACK      0.0005         0                                         &
+USRTRACK              ALL-PART       -25      TLD3  0.009216      1000TLD3fluA
+USRTRACK      0.0005         0                                         &
+USRTRACK              ALL-PART       -25      TLD4  0.009216      1000TLD4fluA
+USRTRACK      0.0005         0                                         &
+USRTRACK              ALL-PART       -25      TLD5  0.009216      1000TLD5fluA
+USRTRACK      0.0005         0                                         &
+USRTRACK              ALL-PART       -25      TLD6  0.009216      1000TLD6fluA
+USRTRACK      0.0005         0                                         &
+*
+*Set the random number seed
+RANDOMIZ         1.0         5
+*Set the number of primary histories to be simulated in the run
+START           2.E9
+STOP
